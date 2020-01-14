@@ -117,8 +117,16 @@ h2.portfolioHeading {
 
 .containerLarge {
 	width: 50%;
-	height: 300px;
 	padding-right: 20px;
+	padding-bottom: 30px;
+	color: #FFFFFF;
+	float: left;
+}
+
+.containerSmall {
+	width: 25%;
+	padding-right: 20px;
+	padding-bottom: 30px;
 	color: #FFFFFF;
 	float: left;
 }
@@ -132,7 +140,7 @@ h2.portfolioHeading {
 	background-image: url('images/binary-1695475_1920.jpg');
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: 100%;
+	background-size: cover;
 	padding: 20px;
 	overflow: auto;
 	border: 2px solid #333333;
@@ -140,6 +148,20 @@ h2.portfolioHeading {
 
 .projectBox:hover {
 	border: 2px solid #CA6702;
+}
+
+.containerLarge .projectBox {
+	height: 250px;
+}
+
+.containerSmall .projectBox {
+	height: 200px;
+
+}
+
+.containerSmall .projectBox li {
+	font-size: 0.85rem;
+
 }
 
 
