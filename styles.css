@@ -110,7 +110,11 @@ h2.portfolioHeading {
 	text-transform: uppercase;
 }
 
-//do you want to keep this????!!!!
+.containerLarge {
+	width: 50%;
+	height: 200px;
+}
+
 article {
 	height: 1000px; 
 }
