@@ -26,12 +26,12 @@ nav a {
 	text-decoration: none;
 }
 
-.nav-container-logo {
+.navContainerLogo {
 	float: left;
 	padding: 0;
 }
 
-.nav-container {
+.navContainer {
 	float: right;
 	padding: 0;
 }
@@ -141,7 +141,7 @@ article {
 	nav li {
 		padding: 10px 3px;
 	}
-	.nav-container-logo {
+	.navContainerLogo {
 		display: none;
 	}
 	
