@@ -117,16 +117,14 @@ h2.portfolioHeading {
 
 .containerLarge {
 	width: 50%;
-	padding-right: 25px;
-	padding-bottom: 25px;
+	padding: 10px 10px;
 	color: #FFFFFF;
 	float: left;
 }
 
 .containerSmall {
 	width: 25%;
-	padding-right: 25px;
-	padding-bottom: 25px;
+	padding: 10px 10px;
 	color: #FFFFFF;
 	float: left;
 }
@@ -197,12 +195,18 @@ main ul {
 		padding: 10px 10px;
 	}
 	
+	main {
+		width: 95%;
+	}
+	
 	.containerLarge {
 		width: 100%;
+		padding: 10px 10px;
 	}
 	
 	.containerSmall {
 		width: 50%;
+		padding: 10px 10px;
 	}
 }
 
@@ -234,14 +238,19 @@ main ul {
 	header p {
 		padding: 3px 20px;
 	}
-
+	
+	main {
+		width: 95%;
+	}
 	
 	.containerLarge {
 		width: 100%;
+		padding: 10px 5px;
 	}
 	
 	.containerSmall {
 		width: 100%;
+		padding: 10px 5px;
 	}
 	
 	.containerLarge .projectBox, .containerSmall .projectBox {
