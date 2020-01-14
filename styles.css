@@ -6,7 +6,7 @@ html {
 	font-family: "Verdana", sans-serif;
 	font-size: 16px;
 	background-color: #FFFFFF;
-	color: #CA6702;
+	color: #000000;
 }
 
 nav {
@@ -62,4 +62,24 @@ nav img {
 article {
 	padding: 50px;
 	height: 1000px; 
+}
+
+
+@media screen and (max-width: 768px) {
+	nav li {
+		padding: 10px 10px;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	html {
+		font-size: 14px;
+	}
+	
+	nav li {
+		padding: 10px 3px;
+	}
+	.nav-container-logo {
+		display: none;
+	}
 }
