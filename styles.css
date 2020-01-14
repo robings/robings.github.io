@@ -104,6 +104,10 @@ main {
 	font-family: "Helvetica Neue";
 }
 
+main section {
+	padding-top: 50px;
+}
+
 h2.portfolioHeading {
 	font-size: 1.25rem;
 	color: #CA6702;
