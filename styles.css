@@ -234,4 +234,21 @@ main ul {
 	header p {
 		padding: 3px 20px;
 	}
+
+	
+	.containerLarge {
+		width: 100%;
+	}
+	
+	.containerSmall {
+		width: 100%;
+	}
+	
+	.containerLarge .projectBox, .containerSmall .projectBox {
+		height: 150px;
+	}
+	
+	.containerLarge .projectBox li, .containerSmall .projectBox li {
+		font-size: 1rem;
+	}
 }
