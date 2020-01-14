@@ -116,7 +116,27 @@ h2.portfolioHeading {
 
 .containerLarge {
 	width: 50%;
-	height: 200px;
+	height: 300px;
+	padding-right: 20px;
+	color: #FFFFFF;
+}
+
+.projectBox {
+	background-image: url('images/binary-1695475_1920.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+	padding: 20px;
+	overflow: auto;
+}
+
+main h3 {
+	font-size: 1.15rem;
+}
+
+main ul {
+	float: right;
+	padding-right: 10px;
 }
 
 article {
