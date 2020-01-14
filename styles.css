@@ -97,7 +97,7 @@ header span {
 }
 
 main {
-	width: 1000px;
+	width: 80%;
 	background-color: #FFFFFF;
 	overflow: auto;
 	margin: 0 auto;
@@ -117,16 +117,16 @@ h2.portfolioHeading {
 
 .containerLarge {
 	width: 50%;
-	padding-right: 20px;
-	padding-bottom: 30px;
+	padding-right: 25px;
+	padding-bottom: 25px;
 	color: #FFFFFF;
 	float: left;
 }
 
 .containerSmall {
 	width: 25%;
-	padding-right: 20px;
-	padding-bottom: 30px;
+	padding-right: 25px;
+	padding-bottom: 25px;
 	color: #FFFFFF;
 	float: left;
 }
@@ -142,7 +142,7 @@ h2.portfolioHeading {
 	background-position: center;
 	background-size: cover;
 	padding: 20px;
-	overflow: auto;
+	overflow: hidden;
 	border: 2px solid #333333;
 }
 
@@ -175,11 +175,6 @@ main ul {
 	padding-right: 10px;
 }
 
-article {
-	height: 1000px; 
-}
-
-
 @media screen and (max-width: 768px) {
 	html {
 		font-size: 15px;
@@ -200,6 +195,14 @@ article {
 	
 	nav li {
 		padding: 10px 10px;
+	}
+	
+	.containerLarge {
+		width: 100%;
+	}
+	
+	.containerSmall {
+		width: 50%;
 	}
 }
 
