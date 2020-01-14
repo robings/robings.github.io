@@ -18,6 +18,7 @@ nav {
 	position: fixed;
 	top: 0;
 	border-bottom: 1px solid #333333;
+	height: 48px;
 }
 
 nav a {
@@ -61,7 +62,7 @@ nav img {
 
 header {
 	padding-top: 50px;
-	height: 300px;
+	height: 250px;
 	background-color: #999999;
 	color: #FFFFFF;
 	background-image: url('images/digital-1742687_1920.jpg');
@@ -105,6 +106,19 @@ article {
 		font-size: 15px;
 	}
 	
+	nav {
+		height: 46px;
+	}
+	
+	nav img {
+		padding: 2px;
+	}
+	
+	header {
+		height: 220px;
+		padding-top: 40px;
+	}
+	
 	nav li {
 		padding: 10px 10px;
 	}
@@ -112,7 +126,16 @@ article {
 
 @media screen and (max-width: 375px) {
 	html {
-		font-size: 14px;
+		font-size: 12px;
+	}
+	
+	nav {
+		height: 40px;
+	}
+	
+	header {
+		height: 200px;
+		padding-top: 40px;
 	}
 	
 	nav li {
@@ -120,14 +143,6 @@ article {
 	}
 	.nav-container-logo {
 		display: none;
-	}
-	
-	header {
-		height: 220px;
-	}
-	
-	header h1 {
-		margin-top: 3px;
 	}
 	
 	header h2 {
