@@ -96,6 +96,21 @@ header span {
 	white-space: nowrap;
 }
 
+main {
+	width: 1000px;
+	background-color: #FFFFFF;
+	overflow: auto;
+	margin: 0 auto;
+	font-family: "Helvetica Neue";
+}
+
+h2.portfolioHeading {
+	font-size: 1.25rem;
+	color: #CA6702;
+	text-transform: uppercase;
+}
+
+//do you want to keep this????!!!!
 article {
 	height: 1000px; 
 }
