@@ -6,6 +6,7 @@ html {
 	font-family: "Helvetica-Neue";
 	font-size: 16px;
 	background-color: #FFFFFF;
+	color: #CA6702;
 }
 
 nav {
@@ -14,6 +15,13 @@ nav {
 	background-color: #000000;
 	color: #CA6702;
 	padding: 0;
+	position: fixed;
+	top: 0;
+}
+
+nav a {
+	color: #CA6702;
+	text-decoration: none;
 }
 
 .nav-container-logo {
@@ -31,21 +39,27 @@ nav ul {
 	text-transform: uppercase;
 	padding: 0;
 	padding-right: 20px;
-	margin: 5px 0px;
+	margin: 0;
 }
 
 nav li {
 	float: left;
-	padding: 10px;
-	border: 2px solid rgba(0, 0, 0, 0);
+	padding: 10px 20px;
+	border: 3px solid rgba(0, 0, 0, 0);
 }
 
 nav li:hover {
-	border: 2px solid #CA6702;
+	border-top: 3px solid #CA6702;
 }
 
 nav img {
 	width: 42px;
 	height:42px;
 	padding: 5px;
+}
+
+
+article {
+	padding: 50px;
+	height: 1000px; 
 }
