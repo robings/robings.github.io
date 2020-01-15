@@ -199,6 +199,10 @@ main ul {
 		width: 95%;
 	}
 	
+	main section {
+		padding-top: 40px;
+	}
+	
 	.containerLarge {
 		width: 100%;
 		padding: 10px 10px;
@@ -241,6 +245,10 @@ main ul {
 	
 	main {
 		width: 95%;
+	}
+	
+	main section {
+		padding-top: 35px;
 	}
 	
 	.containerLarge {
