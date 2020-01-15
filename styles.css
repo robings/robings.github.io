@@ -212,6 +212,36 @@ img.photo {
 	margin: 20px;
 }
 
+footer {
+	background-color: #000000;
+	color: #CA6702;
+	padding: 5px 20px;
+	overflow: auto;
+	border-top: 1px solid #CA6702;
+	border-bottom: 1px solid #CA6702;
+}
+
+.contactLeft {
+	float: left;
+	background-image: url('images/email-309491_640.png');
+	background-size: 32px 32px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-color: #000000;
+	padding: 0px 0px 0px 40px;
+	margin-top: 10px;
+}
+
+.contactRight {
+	float: right;
+	padding: 5px;
+}
+
+.contactRight img {
+	width: 32px;
+	height: 32px;
+}
+
 @media screen and (max-width: 925px) {
 	
 	img.photo {
@@ -222,7 +252,8 @@ img.photo {
 	}
 	
 	#idAboutMe h4 {
-		margin-top: 40px;
+		margin-top: 60px;
+		margin-left: 10px;
 	}
 }
 
@@ -273,6 +304,10 @@ img.photo {
 		margin: 10px;
 	}
 	
+	#idAboutMe h4 {
+		margin-top: 0px;
+		margin-left: 0px;
+	}	
 }
 
 @media screen and (max-width: 375px) {
@@ -340,7 +375,5 @@ img.photo {
 	#idAboutMe div {
 		height: 325px;
 	}
-	
-	
 }
 
