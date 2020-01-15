@@ -213,8 +213,33 @@ img.photo {
 }
 
 footer {
-	background-color: #333333;
+	background-color: #000000;
+	color: #CA6702;
 	padding: 5px 20px;
+	overflow: auto;
+	border-top: 1px solid #CA6702;
+	border-bottom: 1px solid #CA6702;
+}
+
+.contactLeft {
+	float: left;
+	background-image: url('images/email-309491_640.png');
+	background-size: 32px 32px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-color: #000000;
+	padding: 0px 0px 0px 40px;
+	margin-top: 10px;
+}
+
+.contactRight {
+	float: right;
+	padding: 5px;
+}
+
+.contactRight img {
+	width: 32px;
+	height: 32px;
 }
 
 @media screen and (max-width: 925px) {
