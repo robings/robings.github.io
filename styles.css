@@ -192,8 +192,9 @@ img.photo {
 	background-repeat: no-repeat;
 	background-position: right center;
 	background-size: 1750px;
-	height: 310px;
+	height: 325px;
 	font-size: 1rem;
+	overflow: auto;
 }
 
 #idAboutMe h4 {
