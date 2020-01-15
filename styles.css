@@ -177,12 +177,22 @@ img.photo {
 	height: 256px;
 	width: 256px;
 	float: left;
+	border: 1px solid #CA6702;
 	border-radius: 128px;
 	margin: 20px;
 }
 
-#idAboutMe {
-	
+#idAboutMe div {
+	border-top: 1px solid #333333;
+	border-bottom: 1px solid #333333;
+	background-color: #999999;
+	color: #FFFFFF;
+	padding: 10px;
+	background-image: url('images/beautiful-bloom-blooming-blossom-371393.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 300px;
 }
 
 #idAboutMe ul {
