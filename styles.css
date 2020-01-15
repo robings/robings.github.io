@@ -190,9 +190,16 @@ img.photo {
 	padding: 10px;
 	background-image: url('images/beautiful-bloom-blooming-blossom-371393.jpg');
 	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	height: 300px;
+	background-position: right center;
+	background-size: 1750px;
+	height: 310px;
+	font-size: 1rem;
+}
+
+#idAboutMe h4 {
+	font-size: 1 rem;
+	color: #CA6702;
+	margin-top: 0;
 }
 
 #idAboutMe ul {
@@ -200,6 +207,23 @@ img.photo {
 	float: left;
 }
 
+#idAboutMe p {
+	margin: 20px;
+}
+
+@media screen and (max-width: 925px) {
+	
+	img.photo {
+		height: 128px;
+		width: 128px;
+		border-radius: 64px;
+		margin: 20px;
+	}
+	
+	#idAboutMe h4 {
+		margin-top: 30px;
+	}
+}
 
 @media screen and (max-width: 768px) {
 	html {
@@ -240,6 +264,14 @@ img.photo {
 		width: 50%;
 		padding: 10px 10px;
 	}
+	
+	img.photo {
+		height: 256px;
+		width: 256px;
+		border-radius: 128px;
+		margin: 10px;
+	}
+	
 }
 
 @media screen and (max-width: 375px) {
@@ -296,4 +328,18 @@ img.photo {
 	.containerLarge .projectBox li, .containerSmall .projectBox li {
 		font-size: 1rem;
 	}
+	
+	img.photo {
+		height: 128px;
+		width: 128px;
+		border-radius: 64px;
+		margin: 10px;
+	}
+	
+	#idAboutMe div {
+		height: 325px;
+	}
+	
+	
 }
+
