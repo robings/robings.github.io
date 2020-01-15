@@ -307,8 +307,7 @@ footer {
 	#idAboutMe h4 {
 		margin-top: 0px;
 		margin-left: 0px;
-	}
-	
+	}	
 }
 
 @media screen and (max-width: 375px) {
@@ -376,7 +375,5 @@ footer {
 	#idAboutMe div {
 		height: 325px;
 	}
-	
-	
 }
 
