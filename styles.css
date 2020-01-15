@@ -109,7 +109,7 @@ main section {
 	overflow: auto;
 }
 
-h2.portfolioHeading {
+h2 {
 	font-size: 1.25rem;
 	color: #CA6702;
 	text-transform: uppercase;
@@ -172,6 +172,24 @@ main ul {
 	float: right;
 	padding-right: 10px;
 }
+
+img.photo {
+	height: 256px;
+	width: 256px;
+	float: left;
+	border-radius: 128px;
+	margin: 20px;
+}
+
+#idAboutMe {
+	
+}
+
+#idAboutMe ul {
+	margin-top: 0px;
+	float: left;
+}
+
 
 @media screen and (max-width: 768px) {
 	html {
