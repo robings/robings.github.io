@@ -101,7 +101,7 @@ main {
 	background-color: #FFFFFF;
 	overflow: auto;
 	margin: 0 auto;
-	font-family: "Helvetica Neue";
+	font-family: "Helvetica Neue", sans-serif;
 }
 
 main section {
@@ -109,7 +109,7 @@ main section {
 	overflow: auto;
 }
 
-h2.portfolioHeading {
+h2 {
 	font-size: 1.25rem;
 	color: #CA6702;
 	text-transform: uppercase;
@@ -173,6 +173,59 @@ main ul {
 	padding-right: 10px;
 }
 
+img.photo {
+	height: 256px;
+	width: 256px;
+	float: left;
+	border: 1px solid #CA6702;
+	border-radius: 128px;
+	margin: 20px;
+}
+
+#idAboutMe div {
+	border-top: 1px solid #333333;
+	border-bottom: 1px solid #333333;
+	background-color: #999999;
+	color: #FFFFFF;
+	padding: 10px;
+	background-image: url('images/beautiful-bloom-blooming-blossom-371393.jpg');
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-size: 1750px;
+	height: 325px;
+	font-size: 1rem;
+	overflow: auto;
+}
+
+#idAboutMe h4 {
+	font-size: 1rem;
+	color: #CA6702;
+	margin-top: 0;
+}
+
+#idAboutMe ul {
+	margin-top: 0px;
+	float: left;
+}
+
+#idAboutMe p {
+	margin: 20px;
+}
+
+@media screen and (max-width: 925px) {
+	
+	img.photo {
+		height: 128px;
+		width: 128px;
+		border-radius: 64px;
+		margin: 20px;
+	}
+	
+	#idAboutMe h4 {
+		margin-top: 40px;
+	}
+}
+
 @media screen and (max-width: 768px) {
 	html {
 		font-size: 15px;
@@ -212,6 +265,14 @@ main ul {
 		width: 50%;
 		padding: 10px 10px;
 	}
+	
+	img.photo {
+		height: 256px;
+		width: 256px;
+		border-radius: 128px;
+		margin: 10px;
+	}
+	
 }
 
 @media screen and (max-width: 375px) {
@@ -268,4 +329,18 @@ main ul {
 	.containerLarge .projectBox li, .containerSmall .projectBox li {
 		font-size: 1rem;
 	}
+	
+	img.photo {
+		height: 128px;
+		width: 128px;
+		border-radius: 64px;
+		margin: 10px;
+	}
+	
+	#idAboutMe div {
+		height: 325px;
+	}
+	
+	
 }
+
