@@ -101,7 +101,7 @@ main {
 	background-color: #FFFFFF;
 	overflow: auto;
 	margin: 0 auto;
-	font-family: "Helvetica Neue";
+	font-family: "Helvetica Neue", sans-serif;
 }
 
 main section {
