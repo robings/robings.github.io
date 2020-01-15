@@ -96,10 +96,82 @@ header span {
 	white-space: nowrap;
 }
 
-article {
-	height: 1000px; 
+main {
+	width: 80%;
+	background-color: #FFFFFF;
+	overflow: auto;
+	margin: 0 auto;
+	font-family: "Helvetica Neue";
 }
 
+main section {
+	padding-top: 50px;
+	overflow: auto;
+}
+
+h2.portfolioHeading {
+	font-size: 1.25rem;
+	color: #CA6702;
+	text-transform: uppercase;
+}
+
+.containerLarge {
+	width: 50%;
+	padding: 10px 10px;
+	color: #FFFFFF;
+	float: left;
+}
+
+.containerSmall {
+	width: 25%;
+	padding: 10px 10px;
+	color: #FFFFFF;
+	float: left;
+}
+
+.containerLarge a, .containerSmall a {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+.projectBox {
+	background-image: url('images/matcha-powder-2356768_1920.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	padding: 20px;
+	overflow: hidden;
+	border: 2px solid #333333;
+}
+
+.projectBox:hover {
+	border: 2px solid #CA6702;
+}
+
+.containerLarge .projectBox {
+	height: 250px;
+}
+
+.containerSmall .projectBox {
+	height: 200px;
+
+}
+
+.containerSmall .projectBox li {
+	font-size: 0.85rem;
+
+}
+
+
+main h3 {
+	font-size: 1.15rem;
+	margin:0 ;
+}
+
+main ul {
+	float: right;
+	padding-right: 10px;
+}
 
 @media screen and (max-width: 768px) {
 	html {
@@ -120,6 +192,24 @@ article {
 	}
 	
 	nav li {
+		padding: 10px 10px;
+	}
+	
+	main {
+		width: 95%;
+	}
+	
+	main section {
+		padding-top: 40px;
+	}
+	
+	.containerLarge {
+		width: 100%;
+		padding: 10px 10px;
+	}
+	
+	.containerSmall {
+		width: 50%;
 		padding: 10px 10px;
 	}
 }
@@ -151,5 +241,31 @@ article {
 	
 	header p {
 		padding: 3px 20px;
+	}
+	
+	main {
+		width: 95%;
+	}
+	
+	main section {
+		padding-top: 35px;
+	}
+	
+	.containerLarge {
+		width: 100%;
+		padding: 10px 5px;
+	}
+	
+	.containerSmall {
+		width: 100%;
+		padding: 10px 5px;
+	}
+	
+	.containerLarge .projectBox, .containerSmall .projectBox {
+		height: 150px;
+	}
+	
+	.containerLarge .projectBox li, .containerSmall .projectBox li {
+		font-size: 1rem;
 	}
 }
