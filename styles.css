@@ -50,7 +50,6 @@ nav li:hover {
 
 nav img {
 	width: 42px;
-	height:42px;
 	padding: 5px;
 }
 
@@ -160,7 +159,6 @@ main ul {
 }
 
 img.photo {
-	height: 256px;
 	width: 256px;
 	float: left;
 	border: 1px solid #CA6702;
@@ -225,7 +223,6 @@ footer {
 @media screen and (max-width: 925px) {
 	
 	img.photo {
-		height: 128px;
 		width: 128px;
 		border-radius: 64px;
 		margin: 20px;
@@ -274,7 +271,6 @@ footer {
 	}
 	
 	img.photo {
-		height: 256px;
 		width: 256px;
 		border-radius: 128px;
 		margin: 10px;
@@ -338,7 +334,6 @@ footer {
 	}
 	
 	img.photo {
-		height: 128px;
 		width: 128px;
 		border-radius: 64px;
 		margin: 10px;
