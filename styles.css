@@ -169,7 +169,7 @@ img.photo {
 	border-top: 1px solid #333333;
 	background-color: #999999;
 	color: #FFFFFF;
-	padding: 10px 10px 10px 10px;
+	padding: 10px;
 	background-image: url('images/beautiful-bloom-blooming-blossom-371393.jpg');
 	background-position: right center;
 	background-size: 1750px;
@@ -327,10 +327,6 @@ footer {
 		width: 128px;
 		border-radius: 64px;
 		margin: 10px;
-	}
-	
-	#idAboutMe div {
-		height: 325px;
 	}
 }
 
