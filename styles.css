@@ -1,0 +1,332 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: "Verdana", sans-serif;
+	font-size: 16px;
+	background-color: #FFFFFF;
+	scroll-behavior: smooth;
+}
+
+nav {
+	width: 100%;
+	overflow: auto;
+	background-color: #000000;
+	position: fixed;
+	padding-bottom: 3px;
+	border-bottom: 1px solid #333333;
+}
+
+nav a {
+	color: #CA6702;
+	text-decoration: none;
+}
+
+.navContainerLogo {
+	float: left;
+}
+
+.navContainer {
+	float: right;
+}
+
+nav ul {
+	list-style: none;
+	text-transform: uppercase;
+	padding-right: 20px;
+	margin: 0;
+}
+
+nav li {
+	float: left;
+	padding: 10px 20px;
+	border: 3px solid rgba(0, 0, 0, 0);
+}
+
+nav li:hover {
+	border-top: 3px solid #CA6702;
+}
+
+nav img {
+	width: 42px;
+	padding: 5px;
+}
+
+header {
+	padding-top: 50px;
+	padding-bottom: 25px;
+	background-color: #999999;
+	color: #FFFFFF;
+	background-image: url('images/digital-1742687_1920.jpg');
+	background-position: center;
+	background-size: 100%;
+}
+
+header h1 {
+	padding-left: 20px;
+	text-transform: uppercase;
+}
+
+header h2 {
+	color: #FFFFFF;
+	text-align: right;
+	padding-right: 50px;
+}
+
+header p {
+	font-size: 0.75rem;
+	text-align: right;
+	padding: 10px 50px;
+}
+
+header span {
+	white-space: nowrap;
+}
+
+main {
+	width: 80%;
+	overflow: auto;
+	margin: 0 auto;
+	font-family: "Helvetica Neue", sans-serif;
+}
+
+main section {
+	padding-top: 50px;
+}
+
+h2 {
+	font-size: 1.25rem;
+	color: #CA6702;
+	text-transform: uppercase;
+}
+
+.containerLarge, .containerSmall {
+	padding: 10px;
+	float: left;
+}
+
+.containerLarge {
+	width: 50%;
+}
+
+.containerSmall {
+	width: 25%;
+}
+
+.containerLarge a, .containerSmall a {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+.projectBox {
+	background-image: url('images/matcha-powder-2356768_1920.jpg');
+	background-position: center;
+	background-size: cover;
+	padding: 20px;
+	border: 2px solid #333333;
+	overflow: auto;
+}
+
+.projectBox:hover {
+	border: 2px solid #CA6702;
+}
+
+.containerLarge .projectBox {
+	min-height: 250px;
+}
+
+.containerSmall .projectBox {
+	min-height: 200px;
+
+}
+
+.containerSmall .projectBox li {
+	font-size: 0.85rem;
+
+}
+
+
+main h3 {
+	font-size: 1.15rem;
+	margin:0 ;
+}
+
+main ul {
+	float: right;
+	padding-right: 10px;
+}
+
+img.photo {
+	width: 256px;
+	float: left;
+	border: 1px solid #CA6702;
+	border-radius: 128px;
+	margin: 20px;
+}
+
+#idAboutMe div {
+	border-top: 1px solid #333333;
+	background-color: #999999;
+	color: #FFFFFF;
+	padding: 10px;
+	background-image: url('images/beautiful-bloom-blooming-blossom-371393.jpg');
+	background-position: right center;
+	background-size: 1750px;
+	overflow: auto;
+}
+
+#idAboutMe h4 {
+	color: #CA6702;
+	margin-top: 0;
+}
+
+#idAboutMe ul {
+	margin-top: 0px;
+	float: left;
+}
+
+#idAboutMe p {
+	margin: 20px;
+}
+
+footer {
+	background-color: #000000;
+	color: #CA6702;
+	padding: 5px 20px;
+	overflow: auto;
+	border-top: 1px solid #CA6702;
+	border-bottom: 1px solid #CA6702;
+}
+
+.contactLeft {
+	float: left;
+	background-image: url('images/email-309491_640.png');
+	background-size: 32px 32px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding: 0px 0px 0px 40px;
+	margin-top: 10px;
+}
+
+.contactRight {
+	float: right;
+	padding: 5px;
+}
+
+.contactRight img {
+	width: 32px;
+}
+
+@media screen and (max-width: 925px) {
+	
+	img.photo {
+		width: 128px;
+		border-radius: 64px;
+		margin: 20px;
+	}
+	
+	#idAboutMe h4 {
+		margin-top: 60px;
+		margin-left: 10px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	html {
+		font-size: 15px;
+	}
+
+	header {
+		padding-top: 40px;
+		padding-bottom: 20px;
+	}
+	
+	nav li {
+		padding: 10px 10px;
+	}
+	
+	main {
+		width: 95%;
+	}
+	
+	main section {
+		padding-top: 40px;
+	}
+	
+	.containerLarge {
+		width: 100%;
+	}
+	
+	.containerSmall {
+		width: 50%;
+	}
+	
+	img.photo {
+		width: 256px;
+		border-radius: 128px;
+		margin: 10px;
+	}
+	
+	#idAboutMe h4 {
+		margin-top: 0px;
+		margin-left: 0px;
+	}	
+}
+
+@media screen and (max-width: 440px) {
+	nav li {
+		padding: 10px 3px;
+	}
+	
+	.navContainerLogo {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	html {
+		font-size: 12px;
+	}
+	
+	header {
+		padding-top: 40px;
+		padding-bottom: 20px;
+	}
+	
+	header h2 {
+		padding-right: 20px;
+	}
+	
+	header p {
+		padding: 3px 20px;
+	}
+	
+	main {
+		width: 95%;
+	}
+	
+	main section {
+		padding-top: 35px;
+	}
+	
+	.containerLarge, .containerSmall {
+		width: 100%;
+		padding: 10px 5px;
+	}
+
+	.containerLarge .projectBox, .containerSmall .projectBox {
+		min-height: 150px;
+	}
+	
+	.containerLarge .projectBox li, .containerSmall .projectBox li {
+		font-size: 1rem;
+	}
+	
+	img.photo {
+		width: 128px;
+		border-radius: 64px;
+		margin: 10px;
+	}
+}
+
