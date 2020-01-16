@@ -135,11 +135,11 @@ h2 {
 }
 
 .containerLarge .projectBox {
-	height: 250px;
+	min-height: 250px;
 }
 
 .containerSmall .projectBox {
-	height: 200px;
+	min-height: 200px;
 
 }
 
@@ -331,7 +331,7 @@ footer {
 	}
 	
 	.containerLarge .projectBox, .containerSmall .projectBox {
-		height: 150px;
+		min-height: 150px;
 	}
 	
 	.containerLarge .projectBox li, .containerSmall .projectBox li {
