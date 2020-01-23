@@ -207,6 +207,7 @@ footer {
 	background-position: left center;
 	padding: 0px 0px 0px 40px;
 	margin-top: 10px;
+	min-height: 18px;
 }
 
 .contactRight {
