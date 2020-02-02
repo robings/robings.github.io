@@ -186,9 +186,17 @@ img.photo {
 	float: left;
 }
 
+#idAboutMe li {
+	padding: 3px 0;
+}
+
 #idAboutMe p {
 	margin: 20px;
 }
+
+/*.aboutMeList {*/
+/*	display: inline;*/
+/*}*/
 
 footer {
 	background-color: #000000;
@@ -203,7 +211,7 @@ footer a {
 	color: #CA6702;
 }
 
-ion-icon {
+footer ion-icon {
 	font-size: 1.5rem;
 }
 
