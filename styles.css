@@ -221,22 +221,6 @@ footer ion-icon {
 	padding: 5px;
 }
 
-
-
-@media screen and (max-width: 925px) {
-	
-	img.photo {
-		width: 128px;
-		border-radius: 64px;
-		margin: 20px;
-	}
-	
-	#idAboutMe h4 {
-		margin-top: 60px;
-		margin-left: 10px;
-	}
-}
-
 @media screen and (max-width: 768px) {
 	html {
 		font-size: 15px;
@@ -279,12 +263,16 @@ footer ion-icon {
 	}	
 }
 
-@media screen and (max-width: 440px) {
-	nav li {
-		padding: 10px 3px;
+@media screen and (max-width: 607px) {
+	img.photo {
+		width: 128px;
+		border-radius: 64px;
+		margin: 10px;
 	}
-	
-	.navContainerLogo {
+}
+
+@media screen and (max-width: 440px) {
+	nav .navContainerLogo {
 		display: none;
 	}
 }
@@ -292,6 +280,10 @@ footer ion-icon {
 @media screen and (max-width: 414px) {
 	html {
 		font-size: 12px;
+	}
+
+	nav li {
+		padding: 10px 3px;
 	}
 	
 	header {
@@ -326,12 +318,6 @@ footer ion-icon {
 	
 	.containerLarge .projectBox li, .containerSmall .projectBox li {
 		font-size: 1rem;
-	}
-	
-	img.photo {
-		width: 128px;
-		border-radius: 64px;
-		margin: 10px;
 	}
 }
 
