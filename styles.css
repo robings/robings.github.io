@@ -12,10 +12,10 @@ html {
 nav {
 	width: 100%;
 	overflow: auto;
-	background-color: #000000;
+	background-color: #1C2527;
 	position: fixed;
 	padding-bottom: 3px;
-	border-bottom: 1px solid #333333;
+	border-bottom: 1px solid rgba(202, 103, 2, 0.25);
 }
 
 nav a {
@@ -199,12 +199,12 @@ img.photo {
 /*}*/
 
 footer {
-	background-color: #000000;
+	background-color: #1C2527;
 	color: #CA6702;
 	padding: 5px 20px;
 	overflow: auto;
-	border-top: 1px solid #CA6702;
-	border-bottom: 1px solid #CA6702;
+	border-top: 1px solid rgba(202, 103, 2, 0.5);
+	border-bottom: 1px solid rgba(202, 103, 2, 0.5);
 }
 
 footer a {
