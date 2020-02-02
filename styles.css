@@ -194,6 +194,11 @@ img.photo {
 	margin: 20px;
 }
 
+#idAboutMe ion-icon {
+	-ms-display: none;
+	overflow: hidden;
+}
+
 footer {
 	background-color: #1C2527;
 	color: #CA6702;
