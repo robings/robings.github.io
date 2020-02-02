@@ -12,10 +12,10 @@ html {
 nav {
 	width: 100%;
 	overflow: auto;
-	background-color: #000000;
+	background-color: #1C2527;
 	position: fixed;
 	padding-bottom: 3px;
-	border-bottom: 1px solid #333333;
+	border-bottom: 1px solid rgba(202, 103, 2, 0.25);
 }
 
 nav a {
@@ -186,51 +186,39 @@ img.photo {
 	float: left;
 }
 
+#idAboutMe li {
+	padding: 3px 0;
+}
+
 #idAboutMe p {
 	margin: 20px;
 }
 
 footer {
-	background-color: #000000;
+	background-color: #1C2527;
 	color: #CA6702;
 	padding: 5px 20px;
 	overflow: auto;
-	border-top: 1px solid #CA6702;
-	border-bottom: 1px solid #CA6702;
+	border-top: 1px solid rgba(202, 103, 2, 0.5);
+	border-bottom: 1px solid rgba(202, 103, 2, 0.5);
+}
+
+footer a {
+	color: #CA6702;
+}
+
+footer ion-icon {
+	font-size: 1.5rem;
 }
 
 .contactLeft {
 	float: left;
-	background-image: url('images/email-309491_640.png');
-	background-size: 32px;
-	background-repeat: no-repeat;
-	background-position: left center;
-	padding: 0px 0px 0px 40px;
-	margin-top: 10px;
-	min-height: 18px;
+	padding: 5px;
 }
 
 .contactRight {
 	float: right;
 	padding: 5px;
-}
-
-.contactRight img {
-	width: 32px;
-}
-
-@media screen and (max-width: 925px) {
-	
-	img.photo {
-		width: 128px;
-		border-radius: 64px;
-		margin: 20px;
-	}
-	
-	#idAboutMe h4 {
-		margin-top: 60px;
-		margin-left: 10px;
-	}
 }
 
 @media screen and (max-width: 768px) {
@@ -275,19 +263,27 @@ footer {
 	}	
 }
 
-@media screen and (max-width: 440px) {
-	nav li {
-		padding: 10px 3px;
+@media screen and (max-width: 607px) {
+	img.photo {
+		width: 128px;
+		border-radius: 64px;
+		margin: 10px;
 	}
-	
-	.navContainerLogo {
+}
+
+@media screen and (max-width: 440px) {
+	nav .navContainerLogo {
 		display: none;
 	}
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
 	html {
 		font-size: 12px;
+	}
+
+	nav li {
+		padding: 10px 3px;
 	}
 	
 	header {
@@ -322,12 +318,6 @@ footer {
 	
 	.containerLarge .projectBox li, .containerSmall .projectBox li {
 		font-size: 1rem;
-	}
-	
-	img.photo {
-		width: 128px;
-		border-radius: 64px;
-		margin: 10px;
 	}
 }
 
