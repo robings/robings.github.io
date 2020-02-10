@@ -132,6 +132,12 @@ h2 {
 	border: 2px solid #CA6702;
 }
 
+.projectBox.projectOne {
+	background-image: url('images/CollectionApp.png');
+	background-position: left;
+	color: #CA6702;
+}
+
 .containerLarge .projectBox {
 	min-height: 250px;
 }
