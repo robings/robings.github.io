@@ -195,6 +195,7 @@ img.photo {
 #idAboutMe ul {
 	margin-top: 0px;
 	float: left;
+	background-color: transparent;
 }
 
 #idAboutMe li {
