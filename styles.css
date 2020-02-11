@@ -95,12 +95,9 @@ main section {
 	padding-top: 50px;
 }
 
-h2, h3 {
+h2 {
 	color: #CA6702;
 	text-transform: uppercase;
-}
-
-h2 {
 	font-size: 1.25rem;
 }
 
@@ -131,10 +128,6 @@ h2 {
 	overflow: auto;
 }
 
-.projectBox:hover {
-	border: 2px solid #CA6702;
-}
-
 .projectBox.projectOne {
 	background-image: url('images/CollectionApp.png');
 	background-position: left;
@@ -145,7 +138,16 @@ h2 {
 	bottom: 0;
 	right: 0;
 	width: 100%;
-	background-color: #1C2527;
+	background-color: rgba(28, 37, 39, 0.75);
+}
+
+.projectBoxBottom a {
+	float: right;
+	margin: 0 10px 5px 0;
+}
+
+.projectBoxBottom a:hover {
+	color: #CA6702;
 }
 
 .containerLarge .projectBox {
@@ -165,17 +167,23 @@ h2 {
 
 main h3 {
 	font-size: 1.15rem;
+	color: #FFFFFF;
 	width: 100%;
 	margin: 0;
-	background-color: #1C2527;
+	background-color: rgba(28, 37, 39, 0.75);
 	padding: 2px 5px;
 }
 
 main ul {
+	float: right;
 	padding-right: 10px;
-	width: 100%;
 	color: #FFFFFF;
-	background-color: #1C2527;
+}
+
+.projectBoxBottom ul {
+	border-bottom: 1px solid #999999;
+	margin: 5px 0;
+	clear: both;
 }
 
 img.photo {
