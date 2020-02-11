@@ -95,10 +95,13 @@ main section {
 	padding-top: 50px;
 }
 
-h2 {
-	font-size: 1.25rem;
+h2, h3 {
 	color: #CA6702;
 	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 1.25rem;
 }
 
 .containerLarge, .containerSmall {
@@ -137,6 +140,14 @@ h2 {
 	background-position: left;
 }
 
+.projectBoxBottom {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	background-color: #1C2527;
+}
+
 .containerLarge .projectBox {
 	min-height: 250px;
 }
@@ -163,9 +174,8 @@ main h3 {
 main ul {
 	padding-right: 10px;
 	width: 100%;
+	color: #FFFFFF;
 	background-color: #1C2527;
-	margin-top: 25%;
-	margin-bottom: 0;
 }
 
 img.photo {
