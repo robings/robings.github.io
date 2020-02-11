@@ -120,6 +120,7 @@ h2 {
 }
 
 .projectBox {
+	position: relative;
 	background-image: url('images/matcha-powder-2356768_1920.jpg');
 	background-position: center;
 	background-size: cover;
@@ -160,7 +161,6 @@ main h3 {
 }
 
 main ul {
-	float: right;
 	padding-right: 10px;
 	width: 100%;
 	background-color: #1C2527;
@@ -196,6 +196,7 @@ img.photo {
 	margin-top: 0px;
 	float: left;
 	background-color: transparent;
+	width: auto;
 }
 
 #idAboutMe li {
