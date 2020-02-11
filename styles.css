@@ -130,7 +130,9 @@ h2 {
 
 .projectBox.projectOne {
 	background-image: url('images/CollectionApp.png');
-	background-position: left;
+	background-position: center;
+	background-size: 100%;
+	background-repeat: no-repeat;
 }
 
 .projectBoxBottom {
@@ -138,7 +140,7 @@ h2 {
 	bottom: 0;
 	right: 0;
 	width: 100%;
-	background-color: rgba(28, 37, 39, 0.75);
+	background-color: rgba(28, 37, 39, 0.5);
 }
 
 .projectBoxBottom a {
