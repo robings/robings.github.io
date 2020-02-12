@@ -133,6 +133,7 @@ h2 {
 	background-position: center;
 	background-size: 100%;
 	background-repeat: no-repeat;
+	border: 1px solid #999999;
 }
 
 .projectBoxBottom {
@@ -143,9 +144,15 @@ h2 {
 	background-color: rgba(28, 37, 39, 0.5);
 }
 
+.projectBoxBottom div {
+	width: 100%;
+	overflow: auto;
+	border-top: 1px solid #999999;
+}
+
 .projectBoxBottom a {
 	float: right;
-	margin: 0 10px 5px 0;
+	margin: 2px 10px 2px 0;
 }
 
 .projectBoxBottom a:hover {
@@ -154,6 +161,10 @@ h2 {
 
 .containerLarge .projectBox {
 	min-height: 250px;
+}
+
+.containerLarge .projectBox li {
+	font-size: 0.9rem;
 }
 
 .containerSmall .projectBox {
@@ -183,7 +194,6 @@ main ul {
 }
 
 .projectBoxBottom ul {
-	border-bottom: 1px solid #999999;
 	margin: 5px 0;
 	clear: both;
 }
