@@ -14,6 +14,7 @@ nav {
 	overflow: auto;
 	background-color: #1C2527;
 	position: fixed;
+	z-index: 1;
 	padding-bottom: 3px;
 	border-bottom: 1px solid rgba(202, 103, 2, 0.25);
 }
@@ -133,7 +134,6 @@ h2 {
 	background-position: center;
 	background-size: 100%;
 	background-repeat: no-repeat;
-	border: 1px solid #999999;
 }
 
 .projectBoxBottom {
@@ -141,13 +141,18 @@ h2 {
 	bottom: 0;
 	right: 0;
 	width: 100%;
-	background-color: rgba(28, 37, 39, 0.5);
+	background-color: rgba(28, 37, 39, 0.7);
 }
 
 .projectBoxBottom div {
 	width: 100%;
 	overflow: auto;
 	border-top: 1px solid #999999;
+	background-color: #1C2527;
+}
+
+.projectBoxBottom span {
+	color: #CA6702;
 }
 
 .projectBoxBottom a {
@@ -163,16 +168,12 @@ h2 {
 	min-height: 250px;
 }
 
-.containerLarge .projectBox li {
-	font-size: 0.9rem;
-}
-
 .containerSmall .projectBox {
 	min-height: 200px;
 
 }
 
-.containerSmall .projectBox li {
+.projectBox li {
 	font-size: 0.85rem;
 
 }
