@@ -14,6 +14,7 @@ nav {
 	overflow: auto;
 	background-color: #1C2527;
 	position: fixed;
+	z-index: 1;
 	padding-bottom: 3px;
 	border-bottom: 1px solid rgba(202, 103, 2, 0.25);
 }
@@ -96,9 +97,9 @@ main section {
 }
 
 h2 {
-	font-size: 1.25rem;
 	color: #CA6702;
 	text-transform: uppercase;
+	font-size: 1.25rem;
 }
 
 .containerLarge, .containerSmall {
@@ -120,16 +121,54 @@ h2 {
 }
 
 .projectBox {
+	position: relative;
 	background-image: url('images/matcha-powder-2356768_1920.jpg');
 	background-position: center;
 	background-size: cover;
-	padding: 20px;
 	border: 2px solid #333333;
 	overflow: auto;
 }
 
-.projectBox:hover {
-	border: 2px solid #CA6702;
+.projectBox.projectOne {
+	background-image: url('images/CollectionApp.png');
+	background-position: center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.projectBoxBottom {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	background-color: rgba(28, 37, 39, 0.7);
+}
+
+.projectBoxBottom div {
+	width: 100%;
+	overflow: auto;
+	border-top: 1px solid #999999;
+	background-color: #1C2527;
+}
+
+.projectBoxBottom span {
+	color: #CA6702;
+}
+
+.projectBoxBottom a {
+	float: right;
+	border-left: 1px solid #999999;
+	padding-left: 3px;
+	margin: 2px 10px 2px 0;
+}
+
+.projectBoxBottom a:hover {
+	color: #CA6702;
+}
+
+#idPortfolio ion-icon {
+	-ms-display: none;
+	overflow: hidden;
 }
 
 .containerLarge .projectBox {
@@ -141,7 +180,7 @@ h2 {
 
 }
 
-.containerSmall .projectBox li {
+.projectBox li {
 	font-size: 0.85rem;
 
 }
@@ -149,12 +188,22 @@ h2 {
 
 main h3 {
 	font-size: 1.15rem;
-	margin:0 ;
+	color: #FFFFFF;
+	width: 100%;
+	margin: 0;
+	background-color: rgba(28, 37, 39, 0.75);
+	padding: 2px 5px;
 }
 
 main ul {
 	float: right;
 	padding-right: 10px;
+	color: #FFFFFF;
+}
+
+.projectBoxBottom ul {
+	margin: 5px 0;
+	clear: both;
 }
 
 img.photo {
@@ -184,6 +233,8 @@ img.photo {
 #idAboutMe ul {
 	margin-top: 0px;
 	float: left;
+	background-color: transparent;
+	width: auto;
 }
 
 #idAboutMe li {
