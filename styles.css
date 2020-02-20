@@ -271,6 +271,11 @@ img.photo {
 	overflow: hidden;
 }
 
+#idAboutMe img.csm {
+	width: 32px;
+	vertical-align: text-top;
+}
+
 footer {
 	background-color: #1C2527;
 	color: #CA6702;
