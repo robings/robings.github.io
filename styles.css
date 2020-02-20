@@ -129,12 +129,22 @@ h2 {
 	overflow: auto;
 }
 
-.projectBox.projectOne {
+.projectBox:hover > .projectBoxBottom ul {
+	display: block;
+}
+
+.projectBox.collectionApp {
 	background-image: url('images/CollectionApp.png');
-	background-position: center;
 	background-size: 100%;
 	background-repeat: no-repeat;
 }
+
+.projectBox.pairsGame {
+	background-image: url('images/pairsGame.png');
+	background-position: top;
+}
+
+
 
 .projectBoxBottom {
 	position: absolute;
@@ -142,6 +152,17 @@ h2 {
 	right: 0;
 	width: 100%;
 	background-color: rgba(28, 37, 39, 0.7);
+}
+
+.projectBoxBottom ul {
+	display: none;
+}
+
+.projectBoxBottom ul a {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	float: none;
 }
 
 .projectBoxBottom div {
@@ -374,6 +395,12 @@ footer ion-icon {
 	
 	.containerLarge .projectBox li, .containerSmall .projectBox li {
 		font-size: 1rem;
+	}
+}
+
+@media (hover: none) {
+	.projectBoxBottom ul {
+		display: block;
 	}
 }
 
