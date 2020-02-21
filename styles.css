@@ -303,6 +303,18 @@ footer ion-icon {
 	padding: 5px;
 }
 
+.copyright {
+	width: 100%;
+	float: none;
+	clear: both;
+	display: block;
+	color: #999999;
+	font-size: 0.6rem;
+	text-align: right;
+	padding-top: 3px;
+	border-top: 1px solid #333333;
+}
+
 @media screen and (max-width: 768px) {
 	html {
 		font-size: 15px;
