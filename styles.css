@@ -231,7 +231,7 @@ img.photo {
 	width: 256px;
 	border: 1px solid #CA6702;
 	border-radius: 128px;
-	margin: 20px;
+	margin: 0 20px 20px 0;
 	float: left;
 }
 
@@ -240,7 +240,7 @@ img.photo {
 	overflow: auto;
 	background-color: #999999;
 	color: #FFFFFF;
-	padding: 10px;
+	padding: 20px;
 	background-image: url('images/wooden-floor-1853405_1920.jpg');
 	background-position: center;
 	background-size: cover;
@@ -250,10 +250,6 @@ img.photo {
 	width: 100%;
 }
 
-#idAboutMe .aboutMeContainer div:last-child {
-	display: block;
-}
-
 #idAboutMe h4 {
 	color: #CA6702;
 	margin-top: 0;
@@ -261,6 +257,7 @@ img.photo {
 
 #idAboutMe ul {
 	margin-top: 0px;
+	padding: 0 20px;
 	float: left;
 	background-color: transparent;
 }
@@ -270,7 +267,7 @@ img.photo {
 }
 
 #idAboutMe p {
-	margin: 20px;
+	margin: 20px 0;
 }
 
 #idAboutMe img.csm {
@@ -317,6 +314,17 @@ footer ion-icon {
 	border-top: 1px solid #333333;
 }
 
+@media screen and (max-width: 1002px) {
+	#idAboutMe .aboutMeContainer div:last-child {
+		clear: both;
+	}
+	img.photo {
+		width: 128px;
+		border-radius: 64px;
+		margin: 0 15px 15px 0;
+	}
+}
+
 @media screen and (max-width: 768px) {
 	html {
 		font-size: 15px;
@@ -347,24 +355,10 @@ footer ion-icon {
 		width: 50%;
 	}
 	
-	img.photo {
-		width: 256px;
-		border-radius: 128px;
-		margin: 10px;
-	}
-	
 	#idAboutMe h4 {
 		margin-top: 0px;
 		margin-left: 0px;
 	}	
-}
-
-@media screen and (max-width: 607px) {
-	img.photo {
-		width: 128px;
-		border-radius: 64px;
-		margin: 10px;
-	}
 }
 
 @media screen and (max-width: 440px) {
@@ -414,6 +408,10 @@ footer ion-icon {
 	
 	.containerLarge .projectBox li, .containerSmall .projectBox li {
 		font-size: 1rem;
+	}
+
+	#idAboutMe .aboutMeContainer {
+		padding: 11px;
 	}
 }
 
