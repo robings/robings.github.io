@@ -166,6 +166,10 @@ h2 {
 	float: none;
 }
 
+.projectBoxBottom ul a:hover {
+	border: 0;
+}
+
 .projectBoxBottom div {
 	width: 100%;
 	overflow: auto;
@@ -258,7 +262,7 @@ img.photo {
 }
 
 #idAboutMe ul {
-	margin-top: 0px;
+	margin: 0px;
 	padding: 0 20px;
 	float: left;
 	background-color: transparent;
