@@ -232,6 +232,7 @@ img.photo {
 	border: 1px solid #CA6702;
 	border-radius: 128px;
 	margin: 20px;
+	float: left;
 }
 
 #idAboutMe .aboutMeContainer {
@@ -245,8 +246,12 @@ img.photo {
 	background-size: cover;
 }
 
-#idAboutMe div {
-	float: left;
+#idAboutMe .aboutMeContainer div {
+	width: 100%;
+}
+
+#idAboutMe .aboutMeContainer div:last-child {
+	display: block;
 }
 
 #idAboutMe h4 {
