@@ -229,21 +229,24 @@ main ul {
 
 img.photo {
 	width: 256px;
-	float: left;
 	border: 1px solid #CA6702;
 	border-radius: 128px;
 	margin: 20px;
 }
 
-#idAboutMe div {
+#idAboutMe .aboutMeContainer {
 	border-top: 1px solid #333333;
+	overflow: auto;
 	background-color: #999999;
 	color: #FFFFFF;
 	padding: 10px;
-	background-image: url('images/beautiful-bloom-blooming-blossom-371393.jpg');
-	background-position: right center;
-	background-size: 1750px;
-	overflow: auto;
+	background-image: url('images/wooden-floor-1853405_1920.jpg');
+	background-position: center;
+	background-size: cover;
+}
+
+#idAboutMe div {
+	float: left;
 }
 
 #idAboutMe h4 {
@@ -255,7 +258,6 @@ img.photo {
 	margin-top: 0px;
 	float: left;
 	background-color: transparent;
-	width: auto;
 }
 
 #idAboutMe li {
@@ -264,11 +266,6 @@ img.photo {
 
 #idAboutMe p {
 	margin: 20px;
-}
-
-#idAboutMe ion-icon {
-	-ms-display: none;
-	overflow: hidden;
 }
 
 #idAboutMe img.csm {
