@@ -59,9 +59,10 @@ header {
 	padding-bottom: 25px;
 	background-color: #999999;
 	color: #FFFFFF;
-	background-image: url('images/digital-1742687_1920.jpg');
-	background-position: center;
-	background-size: 100%;
+	background-image: url('images/musical-instrument-1283358_1920.jpg');
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 header h1 {
@@ -122,19 +123,29 @@ h2 {
 
 .projectBox {
 	position: relative;
-	background-image: url('images/matcha-powder-2356768_1920.jpg');
+	background-image: url('images/digital-1742687_1920.jpg');
 	background-position: center;
 	background-size: cover;
 	border: 2px solid #333333;
 	overflow: auto;
 }
 
-.projectBox.projectOne {
+.projectBox:hover > .projectBoxBottom ul {
+	display: block;
+}
+
+.projectBox.collectionApp {
 	background-image: url('images/CollectionApp.png');
-	background-position: center;
 	background-size: 100%;
 	background-repeat: no-repeat;
 }
+
+.projectBox.pairsGame {
+	background-image: url('images/pairsGame.png');
+	background-position: top;
+}
+
+
 
 .projectBoxBottom {
 	position: absolute;
@@ -142,6 +153,21 @@ h2 {
 	right: 0;
 	width: 100%;
 	background-color: rgba(28, 37, 39, 0.7);
+}
+
+.projectBoxBottom ul {
+	display: none;
+}
+
+.projectBoxBottom ul a {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	float: none;
+}
+
+.projectBoxBottom ul a:hover {
+	border: 0;
 }
 
 .projectBoxBottom div {
@@ -157,13 +183,14 @@ h2 {
 
 .projectBoxBottom a {
 	float: right;
-	border-left: 1px solid #999999;
+	border-left: 1px solid #555555;
 	padding-left: 3px;
 	margin: 2px 10px 2px 0;
 }
 
 .projectBoxBottom a:hover {
 	color: #CA6702;
+	border-left: 1px solid #999999;
 }
 
 #idPortfolio ion-icon {
@@ -208,21 +235,25 @@ main ul {
 
 img.photo {
 	width: 256px;
-	float: left;
 	border: 1px solid #CA6702;
 	border-radius: 128px;
-	margin: 20px;
+	margin: 0 20px 20px 0;
+	float: left;
 }
 
-#idAboutMe div {
+#idAboutMe .aboutMeContainer {
 	border-top: 1px solid #333333;
+	overflow: auto;
 	background-color: #999999;
 	color: #FFFFFF;
-	padding: 10px;
-	background-image: url('images/beautiful-bloom-blooming-blossom-371393.jpg');
-	background-position: right center;
-	background-size: 1750px;
-	overflow: auto;
+	padding: 20px;
+	background-image: url('images/wooden-floor-1853405_1920.jpg');
+	background-position: center;
+	background-size: cover;
+}
+
+#idAboutMe .aboutMeContainer div {
+	width: 100%;
 }
 
 #idAboutMe h4 {
@@ -231,10 +262,10 @@ img.photo {
 }
 
 #idAboutMe ul {
-	margin-top: 0px;
+	margin: 0px;
+	padding: 0 20px;
 	float: left;
 	background-color: transparent;
-	width: auto;
 }
 
 #idAboutMe li {
@@ -242,12 +273,12 @@ img.photo {
 }
 
 #idAboutMe p {
-	margin: 20px;
+	margin: 20px 0;
 }
 
-#idAboutMe ion-icon {
-	-ms-display: none;
-	overflow: hidden;
+#idAboutMe img.csm {
+	width: 32px;
+	vertical-align: text-top;
 }
 
 footer {
@@ -275,6 +306,29 @@ footer ion-icon {
 .contactRight {
 	float: right;
 	padding: 5px;
+}
+
+.copyright {
+	width: 100%;
+	float: none;
+	clear: both;
+	display: block;
+	color: #999999;
+	font-size: 0.6rem;
+	text-align: right;
+	padding-top: 3px;
+	border-top: 1px solid #333333;
+}
+
+@media screen and (max-width: 1002px) {
+	#idAboutMe .aboutMeContainer div:last-child {
+		clear: both;
+	}
+	img.photo {
+		width: 128px;
+		border-radius: 64px;
+		margin: 0 15px 15px 0;
+	}
 }
 
 @media screen and (max-width: 768px) {
@@ -307,24 +361,10 @@ footer ion-icon {
 		width: 50%;
 	}
 	
-	img.photo {
-		width: 256px;
-		border-radius: 128px;
-		margin: 10px;
-	}
-	
 	#idAboutMe h4 {
 		margin-top: 0px;
 		margin-left: 0px;
 	}	
-}
-
-@media screen and (max-width: 607px) {
-	img.photo {
-		width: 128px;
-		border-radius: 64px;
-		margin: 10px;
-	}
 }
 
 @media screen and (max-width: 440px) {
@@ -374,6 +414,16 @@ footer ion-icon {
 	
 	.containerLarge .projectBox li, .containerSmall .projectBox li {
 		font-size: 1rem;
+	}
+
+	#idAboutMe .aboutMeContainer {
+		padding: 11px;
+	}
+}
+
+@media (hover: none) {
+	.projectBoxBottom ul {
+		display: block;
 	}
 }
 
