@@ -59,9 +59,10 @@ header {
 	padding-bottom: 25px;
 	background-color: #999999;
 	color: #FFFFFF;
-	background-image: url('images/digital-1742687_1920.jpg');
-	background-position: center;
-	background-size: 100%;
+	background-image: url('images/musical-instrument-1283358_1920.jpg');
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 header h1 {
@@ -122,7 +123,7 @@ h2 {
 
 .projectBox {
 	position: relative;
-	background-image: url('images/matcha-powder-2356768_1920.jpg');
+	background-image: url('images/digital-1742687_1920.jpg');
 	background-position: center;
 	background-size: cover;
 	border: 2px solid #333333;
@@ -178,13 +179,14 @@ h2 {
 
 .projectBoxBottom a {
 	float: right;
-	border-left: 1px solid #999999;
+	border-left: 1px solid #555555;
 	padding-left: 3px;
 	margin: 2px 10px 2px 0;
 }
 
 .projectBoxBottom a:hover {
 	color: #CA6702;
+	border-left: 1px solid #999999;
 }
 
 #idPortfolio ion-icon {
