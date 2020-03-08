@@ -6,7 +6,8 @@
 	<link rel="stylesheet" type="text/css" href="styles.css" />
 	<script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
-	<script src='script.js'></script>
+	<script defer src='script.js'></script>
+	<script defer src='clockWidget.js'></script>
 	<link rel="icon" type="image/png" href="images/epiphone32orange.png" />
 	<title>Robin Gordon-Stables - Full Stack Web Developer</title>
 </head>
@@ -65,16 +66,65 @@
 				</div>
 			</div>
 			<div class="containerSmall">
-				<div class="projectBox">
-					<h3>Project Name</h3>
+				<div class="projectBox clock">
+					<h3>Clock Exercise</h3>
+					<div id='clockContainer'>
+						<svg width='150px' height='150px' viewBox='0 0 400 400'>
+							<circle r='152' cx='200' cy='200' style='fill: #1C2527' />
+							<circle r='150' cx='200' cy='200' style='fill: #1C2527; stroke-width: 1; stroke: #999999;' />
+							<circle r='125' cx='200' cy='200' style='fill: #1C2527; stroke-width: 1; stroke: #999999;' />
+							<circle r='123' cx='200' cy='200' style='fill: #FFFFFF;' />
+							<line id='minutes' x1='200' y1='120' x2='200' y2='80' style='stroke-width: 1; stroke: #CA6702;' />
+							<line id='minutes' x1='200' y1='80' x2='197' y2='86' style='stroke-width: 1; stroke: #CA6702;' />
+							<line id='minutes' x1='200' y1='80' x2='203' y2='86' style='stroke-width: 1; stroke: #CA6702;' />
+
+
+							<g id='turningClockFace'>
+								<text x='188' y='67' style='fill: #EBBD3F; '>XII</text>
+								<g style='transform: rotate(30deg); transform-origin: center;'>
+									<text x='198' y='67' style='fill: #EBBD3F;'>I</text>
+								</g>
+								<g style='transform: rotate(60deg); transform-origin: center;'>
+									<text x='194' y='67' style='fill: #EBBD3F;'>II</text>
+								</g>
+								<g style='transform: rotate(90deg); transform-origin: center;'>
+									<text x='192' y='67' style='fill: #EBBD3F;'>III</text>
+								</g>
+								<g style='transform: rotate(120deg); transform-origin: center;'>
+									<text x='188' y='67' style='fill: #EBBD3F;'>IIII</text>
+								</g>
+								<g style='transform: rotate(150deg); transform-origin: center;'>
+									<text x='194' y='67' style='fill: #EBBD3F;'>V</text>
+								</g>
+								<g style='transform: rotate(180deg); transform-origin: center;'>
+									<text x='190' y='67' style='fill: #EBBD3F;'>VI</text>
+								</g>
+								<g style='transform: rotate(210deg); transform-origin: center;'>
+									<text x='188' y='67' style='fill: #EBBD3F;'>VII</text>
+								</g>
+								<g style='transform: rotate(240deg); transform-origin: center;'>
+									<text x='184' y='67' style='fill: #EBBD3F;'>VIII</text>
+								</g>
+								<g style='transform: rotate(270deg); transform-origin: center;'>
+									<text x='192' y='67' style='fill: #EBBD3F;'>IX</text>
+								</g>
+								<g style='transform: rotate(300deg); transform-origin: center;'>
+									<text x='195' y='67' style='fill: #EBBD3F;'>X</text>
+								</g>
+								<g style='transform: rotate(330deg); transform-origin: center;'>
+									<text x='190' y='67' style='fill: #EBBD3F;'>XI</text>
+								</g>
+							</g>
+						</svg>
+					</div>
 					<div class="projectBoxBottom">
 						<ul>
-							<li>Brief description of project</li>
-							<li><span>Languages used:</span> programming languages used</li>
+							<li>Clocks created with css animation, transitions and js</li>
+							<li><span>Languages used:</span> html, css, js, svg</li>
 						</ul>
 						<div>
-							<a href="https://github.com/robings?tab=repositories" target="_blank">Git Repository</a>
-							<a href="#top">Site</a>
+							<a href="https://github.com/robings/clockExercise" target="_blank">Git Repository</a>
+							<a href="https://dev.maydenacademy.co.uk/students/2020/jan/robin/ClocksExercise/" target="_blank">Site</a>
 						</div>
 					</div>
 				</div>
@@ -125,7 +175,7 @@
 				</div>
 			</div>	
 			
-			<p>Click on the links at the bottom of a project to see more details.</p>
+			<p class='info'>Click on the links at the bottom of a project to see more details.</p>
 			
 		</section>
 		
