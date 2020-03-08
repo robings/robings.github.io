@@ -1,12 +1,14 @@
+var msieFlag = 0
+
 function detectMSIE() {
     var browser= window.navigator.userAgent
     console.log (browser)
     if (browser.indexOf('MSIE ') > 0) {
-        console.log('It is IE')
+        msieFlag = 1
     } else if (browser.indexOf('Trident/') > 0) {
-        console.log('It is IE')
+        msieFlag = 1
     } else {
-        console.log ('not IE')
+        msieFlag = 0
     }
 }
 
