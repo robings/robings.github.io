@@ -13,3 +13,10 @@ function detectMSIE() {
 }
 
 detectMSIE()
+
+if (msieFlag == 1) {
+   document.getElementById('clockContainer').style.display = 'none'
+   document.querySelector('.projectBox.clock').style.backgroundImage = 'url(\'images/clockScreenshot.png\')'
+   document.querySelector('.projectBox.clock').style.backgroundSize = 'contain'
+   document.querySelector('.projectBox.clock').style.backgroundRepeat = 'no-repeat'
+}

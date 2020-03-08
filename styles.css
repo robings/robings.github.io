@@ -145,7 +145,15 @@ h2 {
 	background-position: top;
 }
 
+.projectBox.clock {
+	padding: 0;
+}
 
+#clockContainer {
+	padding: 0 0 5px 0;
+	width: 150px;
+	margin: 0 auto;
+}
 
 .projectBoxBottom {
 	position: absolute;
