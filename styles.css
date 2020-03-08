@@ -147,6 +147,7 @@ h2 {
 
 .projectBox.clock {
 	padding: 0;
+	overflow: hidden;
 }
 
 #clockContainer {
