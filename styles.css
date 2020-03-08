@@ -242,6 +242,10 @@ main ul {
 	clear: both;
 }
 
+.info {
+	font-size: 0.75rem;
+}
+
 img.photo {
 	width: 256px;
 	border: 1px solid #CA6702;
