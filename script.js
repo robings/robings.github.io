@@ -28,6 +28,10 @@ if (msieFlag == 1) {
    let msieLi2 = document.createElement('li')
     msieLi2.textContent=msieMessage
     msieLi2.style.color='#FF0000'
+    let msieLi3 = document.createElement('li')
+    msieLi3.textContent=msieMessage
+    msieLi3.style.color='#FF0000'
    document.querySelector('.projectBox.clock ul').appendChild(msieLi)
    document.querySelector('.projectBox.pairsGame ul').appendChild(msieLi2)
+   document.querySelector('.projectBox.financeCalculator ul').appendChild(msieLi3)
 }
