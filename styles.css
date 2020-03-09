@@ -156,6 +156,12 @@ h2 {
 	margin: 0 auto;
 }
 
+.projectBox.financeCalculator {
+	background-image: url('images/financeCalculator.png');
+	background-position: left;
+	background-size: cover;
+}
+
 .projectBoxBottom {
 	position: absolute;
 	bottom: 0;
