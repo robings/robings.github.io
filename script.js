@@ -22,16 +22,20 @@ if (msieFlag == 1) {
    document.querySelector('.projectBox.clock').style.backgroundSize = 'contain'
    document.querySelector('.projectBox.clock').style.backgroundRepeat = 'no-repeat'
    let msieMessage = 'Sorry, IE is not supported'
-   let msieLi = document.createElement('li')
-   msieLi.textContent=msieMessage
-   msieLi.style.color='#FF0000'
-   let msieLi2 = document.createElement('li')
-    msieLi2.textContent=msieMessage
-    msieLi2.style.color='#FF0000'
-    let msieLi3 = document.createElement('li')
-    msieLi3.textContent=msieMessage
-    msieLi3.style.color='#FF0000'
-   document.querySelector('.projectBox.clock ul').appendChild(msieLi)
-   document.querySelector('.projectBox.pairsGame ul').appendChild(msieLi2)
-   document.querySelector('.projectBox.financeCalculator ul').appendChild(msieLi3)
+   let msieClock = document.createElement('li')
+   msieClock.textContent=msieMessage
+   msieClock.style.color='#FF0000'
+   let msiePairsGame = document.createElement('li')
+   msiePairsGame.textContent=msieMessage
+   msiePairsGame.style.color='#FF0000'
+   let msieFinanceCalculator = document.createElement('li')
+   msieFinanceCalculator.textContent=msieMessage
+   msieFinanceCalculator.style.color='#FF0000'
+   let msieTimeboxer = document.createElement('li')
+   msieTimeboxer.textContent=msieMessage
+   msieTimeboxer.style.color='#FF0000'
+   document.querySelector('.projectBox.clock ul').appendChild(msieClock)
+   document.querySelector('.projectBox.pairsGame ul').appendChild(msiePairsGame)
+   document.querySelector('.projectBox.financeCalculator ul').appendChild(msieFinanceCalculator)
+   document.querySelector('.projectBox.timeboxer ul').appendChild(msieTimeboxer)
 }
