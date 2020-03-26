@@ -31,9 +31,9 @@ if (msieFlag == 1) {
    let msieFinanceCalculator = document.createElement('li')
    msieFinanceCalculator.textContent=msieMessage
    msieFinanceCalculator.style.color='#FF0000'
-    let msieTimeboxer = document.createElement('li')
-    msieTimeboxer.textContent=msieMessage
-    msieTimeboxer.style.color='#FF0000'
+   let msieTimeboxer = document.createElement('li')
+   msieTimeboxer.textContent=msieMessage
+   msieTimeboxer.style.color='#FF0000'
    document.querySelector('.projectBox.clock ul').appendChild(msieClock)
    document.querySelector('.projectBox.pairsGame ul').appendChild(msiePairsGame)
    document.querySelector('.projectBox.financeCalculator ul').appendChild(msieFinanceCalculator)
