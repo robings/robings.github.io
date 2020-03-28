@@ -177,6 +177,7 @@ h2 {
 
 .projectBoxBottom ul {
 	display: none;
+	padding: 0 20px;
 }
 
 .projectBoxBottom ul a {
