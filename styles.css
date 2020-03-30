@@ -168,6 +168,11 @@ h2 {
 	background-position: top;
 }
 
+.projectBox.fastTimesTables {
+	background-image: url('images/fastTimesTables.png');
+	background-position: top left;
+}
+
 .projectBoxBottom {
 	position: absolute;
 	bottom: 0;
