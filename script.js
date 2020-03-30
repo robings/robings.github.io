@@ -2,9 +2,9 @@ let msieFlag = 0
 let msEdgeFlag = 0
 let msEdge18Flag = 0
 
-
 function detectMS() {
     let browser= window.navigator.userAgent
+
     if (browser.indexOf('MSIE ') > 0) {
         msieFlag = 1
     } else if (browser.indexOf('Trident/') > 0) {
