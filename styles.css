@@ -168,6 +168,11 @@ h2 {
 	background-position: top;
 }
 
+.projectBox.fastTimesTables {
+	background-image: url('images/fastTimesTables.png');
+	background-position: top left;
+}
+
 .projectBoxBottom {
 	position: absolute;
 	bottom: 0;
@@ -215,11 +220,6 @@ h2 {
 	border-left: 1px solid #999999;
 }
 
-#idPortfolio ion-icon {
-	-ms-display: none;
-	overflow: hidden;
-}
-
 .containerLarge .projectBox {
 	min-height: 250px;
 }
@@ -234,11 +234,9 @@ h2 {
 
 }
 
-
 main h3 {
 	font-size: 1.15rem;
 	color: #FFFFFF;
-	width: 100%;
 	margin: 0;
 	background-color: rgba(28, 37, 39, 0.75);
 	padding: 2px 5px;
@@ -252,7 +250,6 @@ main ul {
 
 .projectBoxBottom ul {
 	margin: 5px 0;
-	clear: both;
 }
 
 .info {
@@ -276,10 +273,6 @@ img.photo {
 	background-image: url('images/wooden-floor-1853405_1920.jpg');
 	background-position: center;
 	background-size: cover;
-}
-
-#idAboutMe .aboutMeContainer div {
-	width: 100%;
 }
 
 #idAboutMe h4 {
@@ -311,7 +304,6 @@ footer {
 	background-color: #1C2527;
 	color: #CA6702;
 	padding: 5px 20px;
-	overflow: auto;
 	border-top: 1px solid rgba(202, 103, 2, 0.5);
 	border-bottom: 1px solid rgba(202, 103, 2, 0.5);
 }
@@ -335,10 +327,7 @@ footer ion-icon {
 }
 
 .copyright {
-	width: 100%;
-	float: none;
 	clear: both;
-	display: block;
 	color: #999999;
 	font-size: 0.6rem;
 	text-align: right;
@@ -453,4 +442,3 @@ footer ion-icon {
 		display: block;
 	}
 }
-

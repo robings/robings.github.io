@@ -2,9 +2,9 @@ let msieFlag = 0
 let msEdgeFlag = 0
 let msEdge18Flag = 0
 
-
 function detectMS() {
     let browser= window.navigator.userAgent
+
     if (browser.indexOf('MSIE ') > 0) {
         msieFlag = 1
     } else if (browser.indexOf('Trident/') > 0) {
@@ -68,8 +68,12 @@ function addBrowserSupportMessages(msMessage) {
     let msTimeboxer = document.createElement('li')
     msTimeboxer.textContent=msMessage
     msTimeboxer.style.color='#FF0000'
+    let msFastTimesTables = document.createElement('li')
+    msFastTimesTables.textContent=msMessage
+    msFastTimesTables.style.color='#FF0000'
     document.querySelector('.projectBox.clock ul').appendChild(msClock)
     document.querySelector('.projectBox.pairsGame ul').appendChild(msPairsGame)
     document.querySelector('.projectBox.financeCalculator ul').appendChild(msFinanceCalculator)
     document.querySelector('.projectBox.timeboxer ul').appendChild(msTimeboxer)
+    document.querySelector('.projectBox.fastTimesTables ul').appendChild(msFastTimesTables)
 }
