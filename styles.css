@@ -346,9 +346,18 @@ footer ion-icon {
 }
 
 @media screen and (max-width: 1002px) {
+	.containerLarge {
+		width: 100%;
+	}
+
+	.containerSmall {
+		width: 50%;
+	}
+
 	#idAboutMe .aboutMeContainer div:last-child {
 		clear: both;
 	}
+
 	img.photo {
 		width: 128px;
 		border-radius: 64px;
@@ -377,15 +386,7 @@ footer ion-icon {
 	main section {
 		padding-top: 40px;
 	}
-	
-	.containerLarge {
-		width: 100%;
-	}
-	
-	.containerSmall {
-		width: 50%;
-	}
-	
+
 	#idAboutMe h4 {
 		margin-top: 0px;
 		margin-left: 0px;
