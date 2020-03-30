@@ -59,10 +59,11 @@ header {
 	padding-bottom: 25px;
 	background-color: #999999;
 	color: #FFFFFF;
-	background-image: url('images/musical-instrument-1283358_1920.jpg');
-	background-position: top;
+	background-image: url('images/keyboard.jpg');
+	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	border-bottom: 1px solid #CA6702;
 }
 
 header h1 {
@@ -177,6 +178,7 @@ h2 {
 
 .projectBoxBottom ul {
 	display: none;
+	padding: 0 20px;
 }
 
 .projectBoxBottom ul a {
@@ -345,9 +347,18 @@ footer ion-icon {
 }
 
 @media screen and (max-width: 1002px) {
+	.containerLarge {
+		width: 100%;
+	}
+
+	.containerSmall {
+		width: 50%;
+	}
+
 	#idAboutMe .aboutMeContainer div:last-child {
 		clear: both;
 	}
+
 	img.photo {
 		width: 128px;
 		border-radius: 64px;
@@ -376,15 +387,7 @@ footer ion-icon {
 	main section {
 		padding-top: 40px;
 	}
-	
-	.containerLarge {
-		width: 100%;
-	}
-	
-	.containerSmall {
-		width: 50%;
-	}
-	
+
 	#idAboutMe h4 {
 		margin-top: 0px;
 		margin-left: 0px;
