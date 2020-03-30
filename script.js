@@ -68,8 +68,12 @@ function addBrowserSupportMessages(msMessage) {
     let msTimeboxer = document.createElement('li')
     msTimeboxer.textContent=msMessage
     msTimeboxer.style.color='#FF0000'
+    let msFastTimesTables = document.createElement('li')
+    msFastTimesTables.textContent=msMessage
+    msFastTimesTables.style.color='#FF0000'
     document.querySelector('.projectBox.clock ul').appendChild(msClock)
     document.querySelector('.projectBox.pairsGame ul').appendChild(msPairsGame)
     document.querySelector('.projectBox.financeCalculator ul').appendChild(msFinanceCalculator)
     document.querySelector('.projectBox.timeboxer ul').appendChild(msTimeboxer)
+    document.querySelector('.projectBox.fastTimesTables ul').appendChild(msFastTimesTables)
 }
