@@ -146,6 +146,16 @@ h2 {
 	background-position: top;
 }
 
+.projectBox.aptitudeTest {
+	background-image: url('images/aptitudeTest.png');
+	background-position: top;
+}
+
+.projectBox.makeAMealOfIt {
+	background-image: url('images/makeAMealOfIt.png');
+	background-position: top;
+}
+
 .projectBox.clock {
 	padding: 0;
 	overflow: hidden;
