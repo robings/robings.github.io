@@ -36,7 +36,17 @@ detectMS()
 // msEdge18Flag = 1
 
 if (msieFlag) {
-    addBrowserSupportMessages('Sorry, Internet Explorer is not supported')
+    let msInfo = [
+        'Sorry, Internet Explorer is not supported',
+        '.projectBox.pairsGame ul',
+        '.projectBox.academyPortal ul',
+        '.projectBox.aptitudeTest ul',
+        '.projectBox.makeAMealOfIt ul',
+        '.projectBox.financeCalculator ul',
+        '.projectBox.timeboxer ul',
+        '.projectBox.fastTimesTables ul'
+    ]
+    addBrowserSupportMessages(msInfo)
     document.querySelector('#clockContainer').style.display = 'none'
 }
 
@@ -44,33 +54,14 @@ if (msEdgeFlag && !msEdge18Flag) {
     document.querySelector('#clockContainer').style.display = 'none'
 }
 
-function addBrowserSupportMessages(msMessage) {
-    let msPairsGame = document.createElement('li')
-    msPairsGame.textContent=msMessage
-    msPairsGame.style.color='#FF0000'
-    let msAcademyPortal = document.createElement('li')
-    msAcademyPortal.textContent=msMessage
-    msAcademyPortal.style.color='#FF0000'
-    let msAptitudeTest = document.createElement('li')
-    msAptitudeTest.textContent=msMessage
-    msAptitudeTest.style.color='#FF0000'
-    let msMakeAMealOfIt = document.createElement('li')
-    msMakeAMealOfIt.textContent=msMessage
-    msMakeAMealOfIt.style.color='#FF0000'
-    let msFinanceCalculator = document.createElement('li')
-    msFinanceCalculator.textContent=msMessage
-    msFinanceCalculator.style.color='#FF0000'
-    let msTimeboxer = document.createElement('li')
-    msTimeboxer.textContent=msMessage
-    msTimeboxer.style.color='#FF0000'
-    let msFastTimesTables = document.createElement('li')
-    msFastTimesTables.textContent=msMessage
-    msFastTimesTables.style.color='#FF0000'
-    document.querySelector('.projectBox.pairsGame ul').appendChild(msPairsGame)
-    document.querySelector('.projectBox.academyPortal ul').appendChild(msAcademyPortal)
-    document.querySelector('.projectBox.aptitudeTest ul').appendChild(msAptitudeTest)
-    document.querySelector('.projectBox.makeAMealOfIt ul').appendChild(msMakeAMealOfIt)
-    document.querySelector('.projectBox.financeCalculator ul').appendChild(msFinanceCalculator)
-    document.querySelector('.projectBox.timeboxer ul').appendChild(msTimeboxer)
-    document.querySelector('.projectBox.fastTimesTables ul').appendChild(msFastTimesTables)
+function addBrowserSupportMessages(msInfo) {
+    msInfo.forEach((message, index) => {
+        console.log (message, index)
+        if (index != 0) {
+            let msMessage = document.createElement('li')
+            msMessage.textContent = msInfo[0]
+            msMessage.style.color = '#FF0000'
+            document.querySelector(message).appendChild(msMessage)
+        }
+    })
 }
