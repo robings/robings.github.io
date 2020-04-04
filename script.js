@@ -62,6 +62,9 @@ function addBrowserSupportMessages(msMessage) {
     let msPairsGame = document.createElement('li')
     msPairsGame.textContent=msMessage
     msPairsGame.style.color='#FF0000'
+    let msAcademyPortal = document.createElement('li')
+    msAcademyPortal.textContent=msMessage
+    msAcademyPortal.style.color='#FF0000'
     let msAptitudeTest = document.createElement('li')
     msAptitudeTest.textContent=msMessage
     msAptitudeTest.style.color='#FF0000'
@@ -79,6 +82,7 @@ function addBrowserSupportMessages(msMessage) {
     msFastTimesTables.style.color='#FF0000'
     document.querySelector('.projectBox.clock ul').appendChild(msClock)
     document.querySelector('.projectBox.pairsGame ul').appendChild(msPairsGame)
+    document.querySelector('.projectBox.academyPortal ul').appendChild(msAcademyPortal)
     document.querySelector('.projectBox.aptitudeTest ul').appendChild(msAptitudeTest)
     document.querySelector('.projectBox.makeAMealOfIt ul').appendChild(msMakeAMealOfIt)
     document.querySelector('.projectBox.financeCalculator ul').appendChild(msFinanceCalculator)
