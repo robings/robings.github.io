@@ -29,7 +29,7 @@ function detectMS() {
 detectMS()
 
 // for quick test of MSIE specific stuff uncomment the next line
-msieFlag = 1
+// msieFlag = 1
 // for quick test of Edge specific stuff uncomment the next line
 // msEdgeFlag = 1
 //uncomment both Edge flags to test for Edge18 specific stuff
