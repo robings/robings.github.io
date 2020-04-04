@@ -29,7 +29,7 @@ function detectMS() {
 detectMS()
 
 // for quick test of MSIE specific stuff uncomment the next line
-// msieFlag = 1
+msieFlag = 1
 // for quick test of Edge specific stuff uncomment the next line
 // msEdgeFlag = 1
 //uncomment both Edge flags to test for Edge18 specific stuff
@@ -55,13 +55,10 @@ if (msEdgeFlag && !msEdge18Flag) {
 }
 
 function addBrowserSupportMessages(msInfo) {
-    msInfo.forEach((message, index) => {
-        console.log (message, index)
-        if (index != 0) {
-            let msMessage = document.createElement('li')
+    for (var i=1; i<(msInfo.length); i++) {
+            var msMessage = document.createElement('li')
             msMessage.textContent = msInfo[0]
             msMessage.style.color = '#FF0000'
-            document.querySelector(message).appendChild(msMessage)
-        }
-    })
+            document.querySelector(msInfo[i]).appendChild(msMessage)
+    }
 }
