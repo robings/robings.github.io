@@ -36,29 +36,15 @@ detectMS()
 // msEdge18Flag = 1
 
 if (msieFlag) {
-    swapClockProjectBackground()
     addBrowserSupportMessages('Sorry, Internet Explorer is not supported')
+    document.querySelector('#clockContainer').style.display = 'none'
 }
 
 if (msEdgeFlag && !msEdge18Flag) {
-    swapClockProjectBackground()
-    let msClock = document.createElement('li')
-    msClock.textContent='Sorry older Edge Browsers are not supported'
-    msClock.style.color='#FF0000'
-    document.querySelector('.projectBox.clock ul').appendChild(msClock)
-}
-
-function swapClockProjectBackground() {
-    document.getElementById('clockContainer').style.display = 'none'
-    document.querySelector('.projectBox.clock').style.backgroundImage = 'url(\'images/clockScreenshot.png\')'
-    document.querySelector('.projectBox.clock').style.backgroundSize = 'contain'
-    document.querySelector('.projectBox.clock').style.backgroundRepeat = 'no-repeat'
+    document.querySelector('#clockContainer').style.display = 'none'
 }
 
 function addBrowserSupportMessages(msMessage) {
-    let msClock = document.createElement('li')
-    msClock.textContent=msMessage
-    msClock.style.color='#FF0000'
     let msPairsGame = document.createElement('li')
     msPairsGame.textContent=msMessage
     msPairsGame.style.color='#FF0000'
@@ -80,7 +66,6 @@ function addBrowserSupportMessages(msMessage) {
     let msFastTimesTables = document.createElement('li')
     msFastTimesTables.textContent=msMessage
     msFastTimesTables.style.color='#FF0000'
-    document.querySelector('.projectBox.clock ul').appendChild(msClock)
     document.querySelector('.projectBox.pairsGame ul').appendChild(msPairsGame)
     document.querySelector('.projectBox.academyPortal ul').appendChild(msAcademyPortal)
     document.querySelector('.projectBox.aptitudeTest ul').appendChild(msAptitudeTest)
