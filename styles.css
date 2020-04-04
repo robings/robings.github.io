@@ -146,6 +146,11 @@ h2 {
 	background-position: top;
 }
 
+.projectBox.academyPortal {
+	background-image: url('images/academyPortal.png');
+	background-position: top;
+}
+
 .projectBox.aptitudeTest {
 	background-image: url('images/aptitudeTest.png');
 	background-position: top;
