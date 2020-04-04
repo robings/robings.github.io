@@ -68,7 +68,13 @@ header {
 
 header h1 {
 	padding-left: 20px;
+	margin: 20px 0 5px 0;
 	text-transform: uppercase;
+}
+
+#clockContainer {
+	padding: 0 0 0 20px;
+	float: left;
 }
 
 header h2 {
@@ -146,6 +152,11 @@ h2 {
 	background-position: top;
 }
 
+.projectBox.academyPortal {
+	background-image: url('images/academyPortal.png');
+	background-position: top left;
+}
+
 .projectBox.aptitudeTest {
 	background-image: url('images/aptitudeTest.png');
 	background-position: top;
@@ -154,17 +165,6 @@ h2 {
 .projectBox.makeAMealOfIt {
 	background-image: url('images/makeAMealOfIt.png');
 	background-position: top;
-}
-
-.projectBox.clock {
-	padding: 0;
-	overflow: hidden;
-}
-
-#clockContainer {
-	padding: 0 0 5px 0;
-	width: 150px;
-	margin: 0 auto;
 }
 
 .projectBox.financeCalculator {
@@ -397,6 +397,10 @@ footer ion-icon {
 	nav .navContainerLogo {
 		display: none;
 	}
+
+	#clockContainer {
+		display: none;
+	}
 }
 
 @media screen and (max-width: 414px) {
@@ -435,7 +439,7 @@ footer ion-icon {
 	}
 
 	.containerLarge .projectBox, .containerSmall .projectBox {
-		min-height: 150px;
+		min-height: 200px;
 	}
 	
 	.containerLarge .projectBox li, .containerSmall .projectBox li {
