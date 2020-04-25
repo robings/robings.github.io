@@ -287,7 +287,11 @@ img.photo {
 
 #idAboutMe h4 {
 	color: #CA6702;
-	margin-top: 0;
+	background-color: rgba(28, 37, 39, 0.75);
+	margin: 0 0 10px 50px;
+	padding: 3px 0;
+	border-top: 1px solid #CA6702;
+	border-bottom: 1px solid #CA6702;
 }
 
 #idAboutMe ul {
@@ -308,6 +312,15 @@ img.photo {
 #idAboutMe img.csm {
 	width: 32px;
 	vertical-align: text-top;
+}
+
+#idAboutMe a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+#idAboutMe a:hover {
+	color: #CA6702;
 }
 
 footer {
@@ -363,6 +376,11 @@ footer ion-icon {
 		border-radius: 64px;
 		margin: 0 15px 15px 0;
 	}
+
+	#idAboutMe h4 {
+		margin-left: 0px;
+		padding: 0 0 0 5px;
+	}	
 }
 
 @media screen and (max-width: 768px) {
@@ -386,11 +404,6 @@ footer ion-icon {
 	main section {
 		padding-top: 40px;
 	}
-
-	#idAboutMe h4 {
-		margin-top: 0px;
-		margin-left: 0px;
-	}	
 }
 
 @media screen and (max-width: 440px) {
