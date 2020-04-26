@@ -39,7 +39,6 @@ if (msieFlag) {
     let msInfo = [
         'Sorry, Internet Explorer is not supported',
         '.projectBox.pairsGame ul',
-        '.projectBox.academyPortal ul',
         '.projectBox.aptitudeTest ul',
         '.projectBox.makeAMealOfIt ul',
         '.projectBox.financeCalculator ul',
