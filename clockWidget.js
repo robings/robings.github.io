@@ -5,7 +5,7 @@ for (let i=0; i<(12*4); i++) {
     newLine.setAttribute('y1', '70')
     newLine.setAttribute('x2', '200')
     newLine.setAttribute('y2', '74')
-    newLine.style.stroke='#999999'
+    newLine.style.stroke='#000000'
     newLine.style.strokeWidth='1'
     newLine.style.transform=`rotate(${i*7.5}deg)`
     newLine.style.transformOrigin='center'
