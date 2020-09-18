@@ -64,6 +64,11 @@ header {
 	background-repeat: no-repeat;
 	background-size: cover;
 	border-bottom: 1px solid #CA6702;
+	overflow: auto;
+}
+
+header div:first-child {
+	float: left;
 }
 
 header h1 {
@@ -75,6 +80,7 @@ header h1 {
 #clockContainer {
 	padding: 0 0 0 20px;
 	float: left;
+	width: 175px;
 }
 
 header h2 {
