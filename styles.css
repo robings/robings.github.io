@@ -1,22 +1,35 @@
+@font-face {
+	font-family: "IBMPlexMono";
+	src: url("./fonts/IBMPlexMono-Regular.ttf");
+}
+
+@font-face {
+	font-family: 'IBMPlexSans';
+	src: url('./fonts/IBMPlexSans-Regular.ttf');
+}
+
 * {
 	box-sizing: border-box;
 }
 
 html {
-	font-family: "Verdana", sans-serif;
+	font-family: "Courier New", "Courier", sans-serif;
 	font-size: 16px;
 	background-color: #FFFFFF;
 	scroll-behavior: smooth;
 }
 
 nav {
-	width: 100%;
+	width: 80%;
 	overflow: auto;
-	background-color: #1C2527;
+	background-color: rgba(28, 37, 39, 0.95);
 	position: fixed;
+	left: 50%;
+	transform: translate(-50%);
 	z-index: 1;
 	padding-bottom: 3px;
 	border-bottom: 1px solid rgba(202, 103, 2, 0.25);
+	border-radius: 0 0 10px 10px;
 }
 
 nav a {
@@ -58,12 +71,20 @@ header {
 	padding-top: 50px;
 	padding-bottom: 25px;
 	background-color: #999999;
-	color: #FFFFFF;
+	color: #EBEDFF;
 	background-image: url('images/keyboard.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	border-bottom: 1px solid #CA6702;
+	border-radius: 0 0 10px 10px;
+	overflow: auto;
+	width: 80%;
+	margin: 0 auto;
+}
+
+header div:first-child {
+	float: left;
 }
 
 header h1 {
@@ -72,15 +93,20 @@ header h1 {
 	text-transform: uppercase;
 }
 
+h1, h2, h3, h4, footer {
+	font-family: "IBMPlexMono", "sans-serif";
+}
+
 #clockContainer {
 	padding: 0 0 0 20px;
 	float: left;
+	width: 175px;
 }
 
 header h2 {
-	color: #FFFFFF;
 	text-align: right;
 	padding-right: 50px;
+	color: #EBEDFF;
 }
 
 header p {
@@ -97,7 +123,7 @@ main {
 	width: 80%;
 	overflow: auto;
 	margin: 0 auto;
-	font-family: "Helvetica Neue", sans-serif;
+	font-family: "Courier New", "Courier", sans-serif;
 }
 
 main section {
@@ -135,6 +161,7 @@ h2 {
 	background-size: cover;
 	border: 2px solid #333333;
 	overflow: auto;
+	border-radius: 7px;
 }
 
 .projectBox:hover > .projectBoxBottom ul {
@@ -224,6 +251,7 @@ h2 {
 	border-left: 1px solid #555555;
 	padding-left: 3px;
 	margin: 2px 10px 2px 0;
+	font-size: 0.9rem;
 }
 
 .projectBoxBottom a:hover {
@@ -241,8 +269,7 @@ h2 {
 }
 
 .projectBox li {
-	font-size: 0.85rem;
-
+	font-size: 0.8rem;
 }
 
 main h3 {
@@ -284,6 +311,7 @@ img.photo {
 	background-image: url('images/wooden-floor-1853405_1920.jpg');
 	background-position: center;
 	background-size: cover;
+	border-radius: 10px 10px 0 0;
 }
 
 #idAboutMe h4 {
@@ -293,6 +321,7 @@ img.photo {
 	padding: 3px 0;
 	border-top: 1px solid #CA6702;
 	border-bottom: 1px solid #CA6702;
+	border-radius: 5px;
 }
 
 #idAboutMe ul {
@@ -359,7 +388,7 @@ footer ion-icon {
 	border-top: 1px solid #333333;
 }
 
-@media screen and (max-width: 1002px) {
+@media screen and (max-width: 1060px) {
 	.containerLarge {
 		width: 100%;
 	}
@@ -398,8 +427,12 @@ footer ion-icon {
 		padding: 10px 10px;
 	}
 	
-	main {
+	nav, header, main {
 		width: 95%;
+	}
+
+	#clockContainer {
+		width: 150px;
 	}
 	
 	main section {
@@ -425,6 +458,10 @@ footer ion-icon {
 	nav li {
 		padding: 10px 3px;
 	}
+
+	nav, header {
+		border-radius: 0 0 7px 7px;
+	}
 	
 	header {
 		padding-top: 40px;
@@ -438,11 +475,7 @@ footer ion-icon {
 	header p {
 		padding: 3px 20px;
 	}
-	
-	main {
-		width: 95%;
-	}
-	
+
 	main section {
 		padding-top: 35px;
 	}
@@ -457,11 +490,20 @@ footer ion-icon {
 	}
 	
 	.containerLarge .projectBox li, .containerSmall .projectBox li {
-		font-size: 1rem;
+		font-size: 0.9rem;
+	}
+
+	.projectBox {
+		border-radius: 5px;
+	}
+
+	#idAboutMe h4 {
+		border-radius: 3px;
 	}
 
 	#idAboutMe .aboutMeContainer {
 		padding: 11px;
+		border-radius: 7px 7px 0 0;
 	}
 }
 
