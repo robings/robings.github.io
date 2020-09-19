@@ -1,32 +1,10 @@
-let msieFlag = 0
-let msEdgeFlag = 0
-let msEdge18Flag = 0
+let msieFlag = 0;
+let msEdgeFlag = 0;
+let msEdge18Flag = 0;
 
-function detectMS() {
-    let browser= window.navigator.userAgent
+detectMS();
+addEventListeners();
 
-    if (browser.indexOf('MSIE ') > 0) {
-        msieFlag = 1
-    } else if (browser.indexOf('Trident/') > 0) {
-        msieFlag = 1
-    } else {
-        msieFlag = 0
-    }
-
-    if (browser.indexOf('Edge/') > 0) {
-        msEdgeFlag = 1;
-    } else {
-        msEdgeFlag = 0;
-    }
-
-    if (browser.indexOf('Edge/18') > 0) {
-        msEdge18Flag = 1;
-    } else {
-        msEdge18Flag = 0;
-    }
-}
-
-detectMS()
 
 // for quick test of MSIE specific stuff uncomment the next line
 // msieFlag = 1
@@ -44,20 +22,63 @@ if (msieFlag) {
         '.projectBox.financeCalculator ul',
         '.projectBox.timeboxer ul',
         '.projectBox.fastTimesTables ul'
-    ]
-    addBrowserSupportMessages(msInfo)
-    document.querySelector('#clockContainer').style.display = 'none'
+    ];
+    addBrowserSupportMessages(msInfo);
+    document.querySelector('#clockContainer').style.display = 'none';
 }
 
 if (msEdgeFlag && !msEdge18Flag) {
-    document.querySelector('#clockContainer').style.display = 'none'
+    document.querySelector('#clockContainer').style.display = 'none';
+}
+
+function detectMS() {
+    let browser = window.navigator.userAgent;
+
+    if (browser.indexOf('MSIE ') > 0) {
+        msieFlag = 1;
+    } else if (browser.indexOf('Trident/') > 0) {
+        msieFlag = 1;
+    } else {
+        msieFlag = 0;
+    }
+
+    if (browser.indexOf('Edge/') > 0) {
+        msEdgeFlag = 1;
+    } else {
+        msEdgeFlag = 0;
+    }
+
+    if (browser.indexOf('Edge/18') > 0) {
+        msEdge18Flag = 1;
+    } else {
+        msEdge18Flag = 0;
+    }
 }
 
 function addBrowserSupportMessages(msInfo) {
     for (var i=1; i<(msInfo.length); i++) {
-            var msMessage = document.createElement('li')
-            msMessage.textContent = msInfo[0]
-            msMessage.style.color = '#FF0000'
-            document.querySelector(msInfo[i]).appendChild(msMessage)
+        var msMessage = document.createElement('li');
+        msMessage.textContent = msInfo[0];
+        msMessage.style.color = '#FF0000';
+        document.querySelector(msInfo[i]).appendChild(msMessage);
+    }
+}
+
+function addEventListeners() {
+    var moreElements = document.querySelectorAll(".more");
+    moreElements.forEach(element => {
+        element.addEventListener('click', (e) => {
+            toggleDetails(e);
+        })
+    });
+}
+
+function toggleDetails(e) {
+    let parentDivClass = e.target.parentNode.parentNode.parentNode.classList[1];
+    let classToBeSelected = `.${parentDivClass} .projectBoxBottom ul`;
+    if (window.getComputedStyle(document.querySelector(classToBeSelected)).display === 'none') {
+        document.querySelector(classToBeSelected).style.display = 'block';
+    } else {
+        document.querySelector(classToBeSelected).style.display = 'none';
     }
 }
