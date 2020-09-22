@@ -461,10 +461,6 @@ footer ion-icon {
 	#clockContainer {
 		display: none;
 	}
-
-	#email {
-		display: none;
-	}
 }
 
 @media screen and (max-width: 414px) {
@@ -543,6 +539,11 @@ footer ion-icon {
 
 	footer {
 		padding: 5px;
+	}
+
+	#email {
+		font-size: 0.9rem;
+		padding-top: 10px;
 	}
 }
 
