@@ -266,6 +266,8 @@ a.maydenLink {
 	border-top: none;
 	color: #FFFFFF;
 	display: none;
+	padding-left: 12px;
+	padding-right: 2px;
 }
 
 .projectBoxBottom a:hover {
