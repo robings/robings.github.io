@@ -221,6 +221,7 @@ a.maydenLink {
 	right: 0;
 	width: 100%;
 	background-color: rgba(28, 37, 39, 0.7);
+	border-radius: 7px 7px 0 0;
 }
 
 .projectBoxBottom ul {
@@ -265,6 +266,8 @@ a.maydenLink {
 	border-top: none;
 	color: #FFFFFF;
 	display: none;
+	padding-left: 12px;
+	padding-right: 2px;
 }
 
 .projectBoxBottom a:hover {
@@ -515,7 +518,7 @@ footer ion-icon {
 		font-size: 0.9rem;
 	}
 
-	.projectBox {
+	.projectBox, .projectBoxBottom {
 		border-radius: 5px;
 	}
 

@@ -78,7 +78,9 @@ function toggleDetails(e) {
     let classToBeSelected = `.${parentDivClass} .projectBoxBottom ul`;
     if (window.getComputedStyle(document.querySelector(classToBeSelected)).display === 'none') {
         document.querySelector(classToBeSelected).style.display = 'block';
+        e.target.textContent = "-";
     } else {
         document.querySelector(classToBeSelected).style.display = 'none';
+        e.target.textContent = "+";
     }
 }
