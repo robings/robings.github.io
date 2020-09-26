@@ -270,6 +270,12 @@ a.maydenLink {
 	padding-right: 2px;
 }
 
+.projectBoxBottom .svg {
+	color: #FFFFFF;
+	width: 16px;
+	display: block;
+}
+
 .projectBoxBottom a:hover {
 	color: #CA6702;
 	border-left: 1px solid #999999;
