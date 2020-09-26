@@ -65,7 +65,7 @@ function addBrowserSupportMessages(msInfo) {
 }
 
 function addEventListeners() {
-    var moreElements = document.querySelectorAll(".more");
+    var moreElements = document.querySelectorAll(".svg");
     moreElements.forEach(element => {
         element.addEventListener('click', (e) => {
             toggleDetails(e);
@@ -74,13 +74,13 @@ function addEventListeners() {
 }
 
 function toggleDetails(e) {
-    let parentDivClass = e.target.parentNode.parentNode.parentNode.classList[1];
+    let parentDivClass = e.target.parentNode.parentNode.parentNode.parentNode.classList[1];
     let classToBeSelected = `.${parentDivClass} .projectBoxBottom ul`;
     if (window.getComputedStyle(document.querySelector(classToBeSelected)).display === 'none') {
         document.querySelector(classToBeSelected).style.display = 'block';
-        e.target.textContent = "-";
+        e.target.src = "./images/icon-collapse.svg";
     } else {
         document.querySelector(classToBeSelected).style.display = 'none';
-        e.target.textContent = "+";
+        e.target.src = "./images/icon-expand.svg";
     }
 }
