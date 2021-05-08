@@ -34,6 +34,7 @@ nav {
 
 nav a {
 	color: #CA6702;
+	font-weight: 700;
 	text-decoration: none;
 	text-transform: uppercase;
 	float: left;
@@ -61,7 +62,13 @@ nav a:hover {
 	border: none;
 }
 
+.navContainerLogo a img {
+	border: 1px solid transparent;
+	margin: 0 2px;
+}
+
 .navContainerLogo a img:hover {
+	filter: grayscale(100%) contrast(200%) brightness(150%);
 	border: 1px solid #FFFFFF;
 	border-radius: 50%;
 }
@@ -78,9 +85,9 @@ nav img {
 header {
 	padding-top: 50px;
 	padding-bottom: 25px;
-	background-color: #999999;
+	background-color: #1C2527;
 	color: #EBEDFF;
-	background-image: url('images/keyboard.jpg');
+	background-image: url('images/wood-blue-hue.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -110,8 +117,12 @@ h1, h2, h3, h4, footer {
 }
 
 #clockContainer {
-	padding: 0 0 0 20px;
-	width: 175px;
+	padding: 20px 20px 0 20px;
+}
+
+#clockContainer svg {
+	border: 1px solid transparent;
+	width: 150px;
 }
 
 #clockContainer svg:hover {
@@ -292,8 +303,9 @@ a.maydenLink {
 }
 
 .projectBoxBottom a:hover {
-	color: #CA6702;
-	border-left: 1px solid #999999;
+	color: #1C2527;
+	background-color: #FFFFFF;
+	border-left: 1px solid #CA6702;
 }
 
 .containerLarge .projectBox {
@@ -345,7 +357,7 @@ img.photo {
 	background-color: #999999;
 	color: #FFFFFF;
 	padding: 20px;
-	background-image: url('images/wooden-floor-1853405_1920.jpg');
+	background-image: url('images/wooden-floor.jpg');
 	background-position: center;
 	background-size: cover;
 	border-radius: 10px 10px 0 0;
@@ -479,8 +491,11 @@ footer .githubLogo:hover {
 	}
 
 	#clockContainer {
-		width: 150px;
 		margin-top: 5px;
+	}
+
+	#clockContainer svg {
+		width: 125px;
 	}
 	
 	main section {
@@ -579,7 +594,7 @@ footer .githubLogo:hover {
 }
 
 @media (hover: none) {
-	nav a:hover, nav a img:hover, #clockContainer svg:hover {
+	nav a:hover {
 		border: none;
 	}
 
@@ -588,12 +603,23 @@ footer .githubLogo:hover {
 		border: 3px solid rgba(0, 0, 0, 0);
 	}
 
+	.navContainerLogo a img, #clockContainer svg:hover {
+		border: 1px solid transparent;
+	}
+
 	.navContainerLogo a img:hover {
 		border: none;
+		filter: none;
 	}
 
 	.projectBoxBottom .more {
 		display: block;
+	}
+
+	.projectBoxBottom a:hover {
+		color: #FFFFFF;
+		background-color: initial;
+		border-left: 1px solid #555555;
 	}
 
 	.projectBox:hover > .projectBoxBottom ul {
