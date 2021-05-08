@@ -438,6 +438,14 @@ footer .githubLogo:hover {
 	padding: 5px;
 }
 
+#emailForTouchScreens {
+	clear: both;
+	text-align: left;
+	padding: 10px;
+	border-top: 1px solid #333333;
+	display: none;
+}
+
 .copyright {
 	clear: both;
 	color: #999999;
@@ -478,12 +486,7 @@ footer .githubLogo:hover {
 	}
 
 	header {
-		padding-top: 40px;
 		padding-bottom: 20px;
-	}
-	
-	nav a {
-		padding: 10px 10px;
 	}
 	
 	nav, header, main {
@@ -496,10 +499,6 @@ footer .githubLogo:hover {
 
 	#clockContainer svg {
 		width: 125px;
-	}
-	
-	main section {
-		padding-top: 40px;
 	}
 }
 
@@ -523,17 +522,8 @@ footer .githubLogo:hover {
 		padding: 10px 6px;
 	}
 
-	nav a:first-child {
-		padding: 10px 6px 10px 0;
-	}
-
 	nav, header {
 		border-radius: 0 0 7px 7px;
-	}
-	
-	header {
-		padding-top: 40px;
-		padding-bottom: 20px;
 	}
 	
 	header h2 {
@@ -545,7 +535,7 @@ footer .githubLogo:hover {
 	}
 
 	main section {
-		padding-top: 35px;
+		padding-top: 52px;
 	}
 	
 	.containerLarge, .containerSmall {
@@ -594,13 +584,28 @@ footer .githubLogo:hover {
 }
 
 @media (hover: none) {
-	nav a:hover {
-		border: none;
+	nav a {
+		padding: 20px 10px;
+		min-width: 48px;
+		min-height: 48px;
+		border-left: 1px solid #555555;
 	}
 
 	nav a:hover {
 		color: #CA6702;
 		border: 3px solid rgba(0, 0, 0, 0);
+		border-left: 1px solid #555555;
+	}
+
+	header {
+		padding-top: 60px;
+	}
+
+	.projectBoxBottom .more {
+		min-width: 48px;
+		min-height: 48px;
+		padding-top: 16px;
+		padding-left: 20px;
 	}
 
 	.navContainerLogo a img, #clockContainer svg:hover {
@@ -616,6 +621,16 @@ footer .githubLogo:hover {
 		display: block;
 	}
 
+	.projectBoxBottom a {
+		min-width: 48px;
+		min-height: 48px;
+		padding-top: 16px;
+	}
+
+	.projectBoxBottom svg {
+		width: 48px;
+	}
+
 	.projectBoxBottom a:hover {
 		color: #FFFFFF;
 		background-color: initial;
@@ -626,9 +641,22 @@ footer .githubLogo:hover {
 		display: none;
 	}
 
+	footer ion-icon {
+		font-size: 48px;
+		padding-left: 10px;
+	}
+
+	footer ion-icon:first-child {
+		padding-left: 5px;
+	}
+
 	footer a ion-icon:hover {
 		border: none;
 		color: #CA6702;
-		font-size: 25px;
+		font-size: 48px;
+	}
+
+	#email {
+		display: none;
 	}
 }

@@ -65,22 +65,41 @@ function addBrowserSupportMessages(msInfo) {
 }
 
 function addEventListeners() {
-    var moreElements = document.querySelectorAll(".svg");
+    var moreElements = document.querySelectorAll(".more");
     moreElements.forEach(element => {
         element.addEventListener('click', (e) => {
             toggleDetails(e);
         })
     });
+
+    var emailButton = document.querySelectorAll('.contactLeft')[0];
+    emailButton.addEventListener('click', () => {
+        toggleEmailForTouchScreen();
+    });
 }
 
 function toggleDetails(e) {
-    let parentDivClass = e.target.parentNode.parentNode.parentNode.parentNode.classList[1];
+    let parentDiv = e.target.parentNode.parentNode.parentNode;
+    if (e.target.classList[0] === 'svg') {
+        parentDivClass = parentDiv.parentNode.classList[1];
+    }
+    else if (e.target.classList[0] === 'more'){
+        parentDivClass = parentDiv.classList[1];
+    }
     let classToBeSelected = `.${parentDivClass} .projectBoxBottom ul`;
     if (window.getComputedStyle(document.querySelector(classToBeSelected)).display === 'none') {
         document.querySelector(classToBeSelected).style.display = 'block';
-        e.target.src = "./images/icon-collapse.svg";
+        e.target.src = './images/icon-collapse.svg';
     } else {
         document.querySelector(classToBeSelected).style.display = 'none';
-        e.target.src = "./images/icon-expand.svg";
+        e.target.src = './images/icon-expand.svg';
+    }
+}
+
+function toggleEmailForTouchScreen() {
+    if (window.getComputedStyle(document.getElementById('email')).display === 'none') {
+        window.getComputedStyle(document.getElementById('emailForTouchScreens')).display === 'none' ?
+        document.getElementById('emailForTouchScreens').style.display = 'block' :
+        document.getElementById('emailForTouchScreens').style.display = 'none';
     }
 }
