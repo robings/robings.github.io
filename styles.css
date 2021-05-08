@@ -519,7 +519,7 @@ footer .githubLogo:hover {
 
 	nav a {
 		font-size: 14px;
-		padding: 10px 6px;
+		padding: 10px;
 	}
 
 	nav, header {
@@ -585,7 +585,7 @@ footer .githubLogo:hover {
 
 @media (hover: none) {
 	nav a {
-		padding: 20px 10px;
+		padding-top: 15px;
 		min-width: 48px;
 		min-height: 48px;
 		border-left: 1px solid #555555;
@@ -610,6 +610,11 @@ footer .githubLogo:hover {
 
 	.navContainerLogo a img, #clockContainer svg:hover {
 		border: 1px solid transparent;
+	}
+
+	.navContainerLogo a img {
+		width: 48px;
+		padding: 8px;
 	}
 
 	.navContainerLogo a img:hover {
