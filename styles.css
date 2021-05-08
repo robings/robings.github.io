@@ -35,31 +35,39 @@ nav {
 nav a {
 	color: #CA6702;
 	text-decoration: none;
+	text-transform: uppercase;
+	float: left;
+	padding: 10px 20px;
+	border: 3px solid rgba(0, 0, 0, 0);
+}
+
+nav a:hover {
+	color: #FFFFFF;
+	border-top: 3px solid #FFFFFF;
+	border-bottom: 3px solid #FFFFFF;
 }
 
 .navContainerLogo {
 	float: left;
 }
 
+.navContainerLogo a {
+	float: none;
+	padding: 0;
+	border: none;
+}
+
+.navContainerLogo a:hover {
+	border: none;
+}
+
+.navContainerLogo a img:hover {
+	border: 1px solid #FFFFFF;
+	border-radius: 50%;
+}
+
 .navContainer {
 	float: right;
-}
-
-nav ul {
-	list-style: none;
-	text-transform: uppercase;
-	padding-right: 20px;
-	margin: 0;
-}
-
-nav li {
-	float: left;
-	padding: 10px 20px;
-	border: 3px solid rgba(0, 0, 0, 0);
-}
-
-nav li:hover {
-	border-top: 3px solid #CA6702;
 }
 
 nav img {
@@ -83,8 +91,12 @@ header {
 	margin: 0 auto;
 }
 
-header div:first-child {
-	float: left;
+header div {
+	float:right;
+}
+
+header div:last-child {
+	float: none;
 }
 
 header h1 {
@@ -99,13 +111,16 @@ h1, h2, h3, h4, footer {
 
 #clockContainer {
 	padding: 0 0 0 20px;
-	float: left;
 	width: 175px;
+}
+
+#clockContainer svg:hover {
+	border: 1px solid #FFFFFF;
+	border-radius: 50%;
 }
 
 header h2 {
 	text-align: right;
-	padding-right: 50px;
 	color: #EBEDFF;
 }
 
@@ -391,6 +406,16 @@ footer ion-icon {
 	font-size: 25px;
 }
 
+footer a ion-icon:hover {
+	border: 1px solid #FFFFFF;
+	color: #FFFFFF;
+	font-size: 23px;
+}
+
+footer .githubLogo:hover {
+	border-radius: 50%;
+}
+
 .contactLeft {
 	float: left;
 	padding: 5px;
@@ -445,7 +470,7 @@ footer ion-icon {
 		padding-bottom: 20px;
 	}
 	
-	nav li {
+	nav a {
 		padding: 10px 10px;
 	}
 	
@@ -455,6 +480,7 @@ footer ion-icon {
 
 	#clockContainer {
 		width: 150px;
+		margin-top: 5px;
 	}
 	
 	main section {
@@ -477,17 +503,13 @@ footer ion-icon {
 		font-size: 12px;
 	}
 
-	nav li {
+	nav a {
 		font-size: 14px;
 		padding: 10px 6px;
 	}
 
-	nav li:first-child {
+	nav a:first-child {
 		padding: 10px 6px 10px 0;
-	}
-
-	nav li:last-child {
-		padding: 10px 0 10px 6px;
 	}
 
 	nav, header {
@@ -557,11 +579,30 @@ footer ion-icon {
 }
 
 @media (hover: none) {
+	nav a:hover, nav a img:hover, #clockContainer svg:hover {
+		border: none;
+	}
+
+	nav a:hover {
+		color: #CA6702;
+		border: 3px solid rgba(0, 0, 0, 0);
+	}
+
+	.navContainerLogo a img:hover {
+		border: none;
+	}
+
 	.projectBoxBottom .more {
 		display: block;
 	}
 
 	.projectBox:hover > .projectBoxBottom ul {
 		display: none;
+	}
+
+	footer a ion-icon:hover {
+		border: none;
+		color: #CA6702;
+		font-size: 25px;
 	}
 }
