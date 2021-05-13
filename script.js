@@ -89,7 +89,7 @@ function toggleDetails(e) {
         e.target.src = './images/icon-collapse.svg';
     } else {
         document.querySelector(classToBeSelected).style.display = 'none';
-        e.target.src = './images/icon-expand.svg';
+        e.target.src = './images/icon-more.svg';
     }
 }
 
