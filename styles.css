@@ -53,7 +53,6 @@ nav a:hover {
 }
 
 .navContainerLogo a {
-	float: none;
 	padding: 0;
 	border: none;
 }
@@ -182,7 +181,7 @@ h2 {
 
 .projectBox {
 	position: relative;
-	background-image: url('images/digital-1742687_1920.jpg');
+	background-image: url('images/digital.jpg');
 	background-position: center;
 	background-size: cover;
 	border: 2px solid #333333;
@@ -192,6 +191,11 @@ h2 {
 
 .projectBox:hover > .projectBoxBottom ul {
 	display: block;
+}
+
+.projectBox.bankOfMumAndDad {
+	background-image: url('images/bankOfMumAndDad.png');
+	background-position: top;
 }
 
 .projectBox.officeSignInApp {
@@ -225,11 +229,6 @@ a.maydenLink {
 	background-position: top;
 }
 
-.projectBox.makeAMealOfIt {
-	background-image: url('images/makeAMealOfIt.png');
-	background-position: top;
-}
-
 .projectBox.financeCalculator {
 	background-image: url('images/financeCalculator.png');
 	background-position: left;
@@ -253,6 +252,7 @@ a.maydenLink {
 .projectBoxBottom ul {
 	display: none;
 	padding: 0 20px;
+	margin: 5px 0;
 }
 
 .projectBoxBottom ul a {
@@ -330,13 +330,7 @@ main h3 {
 }
 
 main ul {
-	float: right;
-	padding-right: 10px;
 	color: #FFFFFF;
-}
-
-.projectBoxBottom ul {
-	margin: 5px 0;
 }
 
 .info {
@@ -440,7 +434,6 @@ footer .githubLogo:hover {
 
 #emailForTouchScreens {
 	clear: both;
-	text-align: left;
 	padding: 10px;
 	border-top: 1px solid #333333;
 	display: none;

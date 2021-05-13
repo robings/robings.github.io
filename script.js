@@ -14,13 +14,10 @@ addEventListeners();
 // msEdge18Flag = 1
 
 if (msieFlag) {
-    let msInfo = [
+    const msInfo = [
         'Sorry, Internet Explorer is not supported',
         '.projectBox.pairsGame ul',
-        '.projectBox.aptitudeTest ul',
-        '.projectBox.makeAMealOfIt ul',
         '.projectBox.financeCalculator ul',
-        '.projectBox.timeboxer ul',
         '.projectBox.fastTimesTables ul'
     ];
     addBrowserSupportMessages(msInfo);
@@ -56,8 +53,8 @@ function detectMS() {
 }
 
 function addBrowserSupportMessages(msInfo) {
-    for (var i=1; i<(msInfo.length); i++) {
-        var msMessage = document.createElement('li');
+    for (let i=1; i<(msInfo.length); i++) {
+        const msMessage = document.createElement('li');
         msMessage.textContent = msInfo[0];
         msMessage.style.color = '#FF0000';
         document.querySelector(msInfo[i]).appendChild(msMessage);
@@ -65,14 +62,14 @@ function addBrowserSupportMessages(msInfo) {
 }
 
 function addEventListeners() {
-    var moreElements = document.querySelectorAll(".more");
+    const moreElements = document.querySelectorAll(".more");
     moreElements.forEach(element => {
         element.addEventListener('click', (e) => {
             toggleDetails(e);
         })
     });
 
-    var emailButton = document.querySelectorAll('.contactLeft')[0];
+    let emailButton = document.querySelectorAll('.contactLeft')[0];
     emailButton.addEventListener('click', () => {
         toggleEmailForTouchScreen();
     });
@@ -80,10 +77,10 @@ function addEventListeners() {
 
 function toggleDetails(e) {
     let parentDiv = e.target.parentNode.parentNode.parentNode;
+    let parentDivClass;
     if (e.target.classList[0] === 'svg') {
         parentDivClass = parentDiv.parentNode.classList[1];
-    }
-    else if (e.target.classList[0] === 'more'){
+    } else if (e.target.classList[0] === 'more') {
         parentDivClass = parentDiv.classList[1];
     }
     let classToBeSelected = `.${parentDivClass} .projectBoxBottom ul`;
@@ -92,7 +89,7 @@ function toggleDetails(e) {
         e.target.src = './images/icon-collapse.svg';
     } else {
         document.querySelector(classToBeSelected).style.display = 'none';
-        e.target.src = './images/icon-expand.svg';
+        e.target.src = './images/icon-more.svg';
     }
 }
 
