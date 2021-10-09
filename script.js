@@ -78,18 +78,21 @@ function addEventListeners() {
 function toggleDetails(e) {
     let parentDiv = e.target.parentNode.parentNode.parentNode;
     let parentDivClass;
+    let svgElement;
     if (e.target.classList[0] === 'svg') {
         parentDivClass = parentDiv.parentNode.classList[1];
+        svgElement = e.target;
     } else if (e.target.classList[0] === 'more') {
         parentDivClass = parentDiv.classList[1];
+        svgElement = e.target.querySelector('.svg');
     }
     let classToBeSelected = `.${parentDivClass} .projectBoxBottom ul`;
     if (window.getComputedStyle(document.querySelector(classToBeSelected)).display === 'none') {
         document.querySelector(classToBeSelected).style.display = 'block';
-        e.target.src = './images/icon-collapse.svg';
+        svgElement.src = './images/icon-collapse.svg';
     } else {
         document.querySelector(classToBeSelected).style.display = 'none';
-        e.target.src = './images/icon-more.svg';
+        svgElement.src = './images/icon-more.svg';
     }
 }
 
