@@ -448,6 +448,21 @@ footer .githubLogo:hover {
 	border-top: 1px solid #333333;
 }
 
+.backToTopIcon {
+	background-color: #1C2527;
+	color: #CA6702;
+	border-radius: 50%;
+	width: 42px;
+	height: 42px;
+	position: fixed;
+	bottom: 10px;
+	right: 20px;
+}
+
+.backToTopIcon:hover {
+	color: #FFFFFF;
+}
+
 @media screen and (max-width: 1060px) {
 	.containerLarge {
 		width: 100%;
@@ -492,6 +507,12 @@ footer .githubLogo:hover {
 
 	#clockContainer svg {
 		width: 125px;
+	}
+
+	.backToTopIcon {
+		background-color: rgba(28, 37, 39, 0.75);
+		bottom: 75px;
+		right: 2px;
 	}
 }
 
@@ -656,5 +677,14 @@ footer .githubLogo:hover {
 
 	#email {
 		display: none;
+	}
+
+	.backToTopIcon {
+		width: 48px;
+		height: 48px;
+	}
+
+	.backToTopIcon:hover {
+		color: #CA6702;
 	}
 }
