@@ -2,6 +2,10 @@ let msieFlag = 0;
 let msEdgeFlag = 0;
 let msEdge18Flag = 0;
 
+if (window.scrollY !== 0) {
+    document.querySelector('.backToTopIcon').style.display = 'block';
+}
+
 detectMS();
 addEventListeners();
 
@@ -16,7 +20,6 @@ addEventListeners();
 if (msieFlag) {
     const msInfo = [
         'Sorry, Internet Explorer is not supported',
-        '.projectBox.pairsGame ul',
         '.projectBox.financeCalculator ul',
         '.projectBox.fastTimesTables ul'
     ];
@@ -29,7 +32,7 @@ if (msEdgeFlag && !msEdge18Flag) {
 }
 
 function detectMS() {
-    let browser = window.navigator.userAgent;
+    const browser = window.navigator.userAgent;
 
     if (browser.indexOf('MSIE ') > 0) {
         msieFlag = 1;
@@ -69,14 +72,22 @@ function addEventListeners() {
         })
     });
 
-    let emailButton = document.querySelectorAll('.contactLeft')[0];
+    const emailButton = document.querySelectorAll('.contactLeft')[0];
     emailButton.addEventListener('click', () => {
         toggleEmailForTouchScreen();
+    });
+
+    document.addEventListener('scroll', () => {
+        if (window.scrollY === 0) {
+            document.querySelector('.backToTopIcon').style.display = 'none';
+        } else if (window.getComputedStyle(document.querySelector('.backToTopIcon')).display === 'none') {
+            document.querySelector('.backToTopIcon').style.display = 'block';
+        }
     });
 }
 
 function toggleDetails(e) {
-    let parentDiv = e.target.parentNode.parentNode.parentNode;
+    const parentDiv = e.target.parentNode.parentNode.parentNode;
     let parentDivClass;
     let svgElement;
     if (e.target.classList[0] === 'svg') {
@@ -86,7 +97,7 @@ function toggleDetails(e) {
         parentDivClass = parentDiv.classList[1];
         svgElement = e.target.querySelector('.svg');
     }
-    let classToBeSelected = `.${parentDivClass} .projectBoxBottom ul`;
+    const classToBeSelected = `.${parentDivClass} .projectBoxBottom ul`;
     if (window.getComputedStyle(document.querySelector(classToBeSelected)).display === 'none') {
         document.querySelector(classToBeSelected).style.display = 'block';
         svgElement.src = './images/icon-collapse.svg';
