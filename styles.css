@@ -276,7 +276,7 @@ footer .githubLogo:hover {
 
 	footer a ion-icon:hover {
 		border: none;
-		color: #CA6702;
+		color: var(--accent-colour);
 		font-size: 48px;
 	}
 
