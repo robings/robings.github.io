@@ -341,7 +341,7 @@ img.photo {
 	width: 256px;
 	border: 1px solid #CA6702;
 	border-radius: 128px;
-	margin: 0 20px 20px 0;
+	margin: 0 20px 40px 0;
 	float: left;
 }
 
@@ -464,6 +464,12 @@ footer .githubLogo:hover {
 	color: #FFFFFF;
 }
 
+@media screen and (max-width: 1180px){
+	img.photo {
+		margin-bottom: 80px;
+	}
+}
+
 @media screen and (max-width: 1060px) {
 	.containerLarge {
 		width: 100%;
@@ -489,7 +495,7 @@ footer .githubLogo:hover {
 	}	
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 820px) {
 	html {
 		font-size: 15px;
 	}
