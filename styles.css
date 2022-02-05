@@ -1,9 +1,9 @@
 :root {
 	--accent-colour: #CA6702;
-	--section-border: #333333;
+	--section-border: #1C2527;
 	--default-background: #FFFFFF;
 	--hover-white: #EEEEEE;
-	--hover-background: #222222;
+	--hover-background: #1C2527;
 	--main-font: "IBMPlexSans", "Courier", sans-serif;
 }
 
@@ -28,12 +28,11 @@ html {
 	scroll-behavior: smooth;
 }
 
+/* nav */
 nav {
-	width: 80%;
+	width: 100%;
 	overflow: auto;
 	position: fixed;
-	left: 50%;
-	transform: translate(-50%);
 	z-index: 1;
 	border-bottom: 1px solid var(--section-border);
 }
@@ -85,6 +84,39 @@ nav img {
 	margin-top: 0.2em;
 }
 
+/* header */
+header {
+	padding: 3em 1.2em 1.5em 1.2em ;
+	border-bottom: 1px solid var(--section-border);
+}
+
+header div {
+	float:right;
+}
+
+header div:last-child {
+	float: none;
+}
+
+header h1 {
+	margin: 20px 0 5px 0;
+	text-transform: uppercase;
+}
+
+#clockContainer {
+	padding: 20px 20px 0 20px;
+}
+
+#clockContainer svg {
+	border: 1px solid transparent;
+	width: 150px;
+}
+
+#clockContainer svg:hover {
+	border: 1px solid var(--accent-colour);
+	border-radius: 50%;
+}
+
 @media screen and (max-width: 1060px) {
 	
 }
@@ -94,19 +126,34 @@ nav img {
 		font-size: 15px;
 	}
 
-	
-	nav {
-		width: 95%;
-	}
-
 	.navContainer a {
 		height: 3.3em;
+	}
+
+	header {
+		padding-bottom: 20px;
+	}
+	
+	#clockContainer {
+		margin-top: 5px;
+	}
+
+	#clockContainer svg {
+		width: 125px;
 	}
 }
 
 @media screen and (max-width: 440px) {
 	nav .navContainerLogo {
 		display: none;
+	}
+
+	#clockContainer {
+		display: none;
+	}
+
+	header p {
+		padding: 3px 20px;
 	}
 }
 
