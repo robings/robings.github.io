@@ -7,8 +7,10 @@
 	--main-font: "IBMPlexSans", "Courier", sans-serif;
 	--header-background: rgba(255, 255, 255, 0.5);
 	--footer-background: #1C2527;
-	--footer-divider: #333333;
+	--divider: #333333;
 	--non-accent-colour: #999999;
+	--iO-link-colour: #F53068;
+	--iO-link-hover-colour: #61FED2;
 }
 
 @font-face {
@@ -139,6 +141,67 @@ header h1, header h2, header p {
 	border: 1px solid var(--accent-colour);
 }
 
+/* main */
+main h2 {
+	color: #CA6702;
+	text-transform: uppercase;
+	font-size: 1.25rem;
+	border-top: 1px solid var(--section-border);
+	border-bottom: 1px solid var(--section-border);
+}
+
+main section {
+	padding: 0.5em;
+}
+
+/* about me */
+#idAboutMe {
+	border-bottom: 1px solid var(--divider);
+}
+
+#idAboutMe .aboutMeContainer {
+	overflow: auto;
+	padding: 1em;
+}
+
+img.photo {
+	width: 256px;
+	border: 1px solid var(--accent-colour);
+	border-radius: 128px;
+	margin: 0 20px 40px 0;
+	float: left;
+}
+
+#idAboutMe h4 {
+	color: var(--accent-colour);
+	background-color: var(--hover-white);
+	margin: 0 0 10px 50px;
+	padding: 3px 0;
+	border-top: 1px solid var(--non-accent-colour);
+	border-bottom: 1px solid var(--non-accent-colour);
+}
+
+#idAboutMe ul {
+	margin: 0;
+	padding: 0 20px;
+	float: left;
+	background-color: transparent;
+}
+
+#idAboutMe li {
+	padding: 3px 0;
+}
+
+#idAboutMe a {
+	color: var(--iO-link-colour);
+	text-decoration: none;
+}
+
+#idAboutMe a:hover {
+	background-color: var(--iO-link-colour);
+	color: var(--hover-white);
+}
+
 /* footer */
 footer {
 	background-color: var(--footer-background);
@@ -189,11 +252,41 @@ footer .githubLogo:hover {
 	font-size: 0.6rem;
 	text-align: right;
 	padding-top: 3px;
-	border-top: 1px solid var(--footer-divider);
+	border-top: 1px solid var(--divider);
+}
+
+/* back to top icon */
+.backToTopIcon {
+	background-color: rgba(28, 37, 39, 0.75);
+	bottom: 75px;
+	right: 2px;
+	color: #CA6702;
+	border-radius: 50%;
+	width: 42px;
+	height: 42px;
+	position: fixed;
+	display: none;
+}
+
+.backToTopIcon:hover {
+	color: #FFFFFF;
 }
 
 @media screen and (max-width: 1060px) {
-	
+	img.photo {
+		width: 128px;
+		border-radius: 64px;
+		margin: 0 15px 15px 0;
+	}
+
+	#idAboutMe h4 {
+		margin-left: 0;
+		padding: 0 0 0 5px;
+	}
+
+	#idAboutMe .aboutMeContainer div:last-child {
+		clear: both;
+	}
 }
 
 @media screen and (max-width: 820px) {
@@ -238,6 +331,10 @@ footer .githubLogo:hover {
 		padding: 10px;
 	}
 
+	main section {
+		padding-top: 52px;
+	}
+
 	#email {
 		font-size: 0.9rem;
 		padding-top: 10px;
@@ -265,6 +362,11 @@ footer .githubLogo:hover {
 		filter: none;
 	}
 
+	#idAboutMe a:hover {
+		background-color: var(--default-background);
+		color: var(--iO-link-colour);
+	}
+
 	footer ion-icon {
 		font-size: 48px;
 		padding-left: 10px;
@@ -282,5 +384,14 @@ footer .githubLogo:hover {
 
 	#email {
 		display: none;
+	}
+
+	.backToTopIcon {
+		width: 48px;
+		height: 48px;
+	}
+
+	.backToTopIcon:hover {
+		color: var(--accent-colour);
 	}
 }
