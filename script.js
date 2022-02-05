@@ -65,46 +65,40 @@ function addBrowserSupportMessages(msInfo) {
 }
 
 function addEventListeners() {
-    const moreElements = document.querySelectorAll(".more");
-    moreElements.forEach(element => {
-        element.addEventListener('click', (e) => {
-            toggleDetails(e);
-        })
+  const moreElements = document.querySelectorAll(".more");
+  moreElements.forEach((element) => {
+    element.addEventListener("click", (e) => {
+      openProjectModal(e);
     });
+  });
 
-    const emailButton = document.querySelectorAll('.contactLeft')[0];
-    emailButton.addEventListener('click', () => {
-        toggleEmailForTouchScreen();
-    });
+  const emailButton = document.querySelectorAll(".contactLeft")[0];
+  emailButton.addEventListener("click", () => {
+    toggleEmailForTouchScreen();
+  });
 
-    document.addEventListener('scroll', () => {
-        if (window.scrollY === 0) {
-            document.querySelector('.backToTopIcon').style.display = 'none';
-        } else if (window.getComputedStyle(document.querySelector('.backToTopIcon')).display === 'none') {
-            document.querySelector('.backToTopIcon').style.display = 'block';
-        }
-    });
+  document.addEventListener("scroll", () => {
+    if (window.scrollY === 0) {
+      document.querySelector(".backToTopIcon").style.display = "none";
+    } else if (
+      window.getComputedStyle(document.querySelector(".backToTopIcon"))
+        .display === "none"
+    ) {
+      document.querySelector(".backToTopIcon").style.display = "block";
+    }
+  });
 }
 
-function toggleDetails(e) {
-    const parentDiv = e.target.parentNode.parentNode.parentNode;
-    let parentDivClass;
-    let svgElement;
-    if (e.target.classList[0] === 'svg') {
-        parentDivClass = parentDiv.parentNode.classList[1];
-        svgElement = e.target;
-    } else if (e.target.classList[0] === 'more') {
-        parentDivClass = parentDiv.classList[1];
-        svgElement = e.target.querySelector('.svg');
-    }
-    const classToBeSelected = `.${parentDivClass} .projectBoxBottom ul`;
-    if (window.getComputedStyle(document.querySelector(classToBeSelected)).display === 'none') {
-        document.querySelector(classToBeSelected).style.display = 'block';
-        svgElement.src = './images/icon-collapse.svg';
-    } else {
-        document.querySelector(classToBeSelected).style.display = 'none';
-        svgElement.src = './images/icon-more.svg';
-    }
+function openProjectModal(e) {
+  const parentDiv = e.target.parentNode.parentNode;
+  const parentDivClass = parentDiv.classList[1];
+  const classToBeSelected = `.${parentDivClass} .modal`;
+  if (
+    window.getComputedStyle(document.querySelector(classToBeSelected))
+      .display === "none"
+  ) {
+    document.querySelector(classToBeSelected).style.display = "block";
+  }
 }
 
 function toggleEmailForTouchScreen() {
