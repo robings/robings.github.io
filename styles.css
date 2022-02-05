@@ -6,6 +6,9 @@
 	--hover-background: #1C2527;
 	--main-font: "IBMPlexSans", "Courier", sans-serif;
 	--header-background: rgba(255, 255, 255, 0.5);
+	--footer-background: #1C2527;
+	--footer-divider: #333333;
+	--non-accent-colour: #999999;
 }
 
 @font-face {
@@ -136,6 +139,59 @@ header h1, header h2, header p {
 	border: 1px solid var(--accent-colour);
 }
 
+/* footer */
+footer {
+	background-color: var(--footer-background);
+	color: var(--accent-colour);
+	padding: 5px;
+	border-top: 1px solid rgba(202, 103, 2, 0.5);
+	border-bottom: 1px solid rgba(202, 103, 2, 0.5);
+}
+
+footer a {
+	color: var(--accent-colour);
+}
+
+footer ion-icon {
+	font-size: 25px;
+}
+
+footer a ion-icon:hover {
+	border: 1px solid var(--hover-white);
+	color: var(--hover-white);
+	font-size: 23px;
+}
+
+footer .githubLogo:hover {
+	border-radius: 50%;
+}
+
+.contactLeft {
+	float: left;
+	padding: 5px;
+}
+
+.contactRight {
+	float: right;
+	padding: 5px;
+}
+
+#emailForTouchScreens {
+	clear: both;
+	padding: 10px;
+	border-top: 1px solid #333333;
+	display: none;
+}
+
+.copyright {
+	clear: both;
+	color:  var(--non-accent-colour);
+	font-size: 0.6rem;
+	text-align: right;
+	padding-top: 3px;
+	border-top: 1px solid var(--footer-divider);
+}
+
 @media screen and (max-width: 1060px) {
 	
 }
@@ -181,6 +237,11 @@ header h1, header h2, header p {
 		font-size: 14px;
 		padding: 10px;
 	}
+
+	#email {
+		font-size: 0.9rem;
+		padding-top: 10px;
+	}
 }
 
 @media (hover: none) {
@@ -191,7 +252,7 @@ header h1, header h2, header p {
 	}
 
 	nav a:hover {
-		color: #CA6702;
+		color: var(--accent-colour);
 		background-color: var(--default-background);
 	}
 
@@ -202,5 +263,24 @@ header h1, header h2, header p {
 
 	.navContainerLogo a img:hover {
 		filter: none;
+	}
+
+	footer ion-icon {
+		font-size: 48px;
+		padding-left: 10px;
+	}
+
+	footer ion-icon:first-child {
+		padding-left: 5px;
+	}
+
+	footer a ion-icon:hover {
+		border: none;
+		color: #CA6702;
+		font-size: 48px;
+	}
+
+	#email {
+		display: none;
 	}
 }
