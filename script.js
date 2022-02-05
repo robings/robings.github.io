@@ -72,6 +72,13 @@ function addEventListeners() {
     });
   });
 
+  const closeModalElements = document.querySelectorAll(".closeModal");
+  closeModalElements.forEach((element) => {
+    element.addEventListener("click", (e) => {
+      closeProjectModal(e);
+    });
+  });
+
   const emailButton = document.querySelectorAll(".contactLeft")[0];
   emailButton.addEventListener("click", () => {
     toggleEmailForTouchScreen();
@@ -98,6 +105,18 @@ function openProjectModal(e) {
       .display === "none"
   ) {
     document.querySelector(classToBeSelected).style.display = "block";
+  }
+}
+
+function closeProjectModal(e) {
+  const parentDiv = e.target.parentNode.parentNode.parentNode;
+  const parentDivClass = parentDiv.classList[1];
+  const classToBeSelected = `.${parentDivClass} .modal`;
+  if (
+    window.getComputedStyle(document.querySelector(classToBeSelected))
+      .display === "block"
+  ) {
+    document.querySelector(classToBeSelected).style.display = "none";
   }
 }
 
