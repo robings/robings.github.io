@@ -5,6 +5,7 @@
 	--hover-white: #EEEEEE;
 	--hover-background: #1C2527;
 	--main-font: "IBMPlexSans", "Courier", sans-serif;
+	--header-background: rgba(255, 255, 255, 0.5);
 }
 
 @font-face {
@@ -35,6 +36,7 @@ nav {
 	position: fixed;
 	z-index: 1;
 	border-bottom: 1px solid var(--section-border);
+	background-color: var(--default-background);
 }
 
 nav a {
@@ -88,6 +90,11 @@ nav img {
 header {
 	padding: 3em 1.2em 1.5em 1.2em ;
 	border-bottom: 1px solid var(--section-border);
+	background-image: url('images/html-code.jpg');
+	background-position: top;
+	background-repeat: no-repeat;
+	overflow: auto;
+	width: 100%;
 }
 
 header div {
@@ -101,6 +108,17 @@ header div:last-child {
 header h1 {
 	margin: 20px 0 5px 0;
 	text-transform: uppercase;
+	color: var(--accent-colour);
+}
+
+header h1 span {
+	white-space: nowrap;
+}
+
+header h1, header h2, header p {
+	background-color: var(--header-background);
+	width: fit-content;
+	border-radius: 0.25em;
 }
 
 #clockContainer {
@@ -110,11 +128,12 @@ header h1 {
 #clockContainer svg {
 	border: 1px solid transparent;
 	width: 150px;
+	background-color: var(--header-background);
+	border-radius: 50%;
 }
 
 #clockContainer svg:hover {
 	border: 1px solid var(--accent-colour);
-	border-radius: 50%;
 }
 
 @media screen and (max-width: 1060px) {
@@ -150,10 +169,6 @@ header h1 {
 
 	#clockContainer {
 		display: none;
-	}
-
-	header p {
-		padding: 3px 20px;
 	}
 }
 
