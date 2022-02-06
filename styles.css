@@ -4,7 +4,6 @@
 	--default-background: #FFFFFF;
 	--hover-white: #EEEEEE;
 	--hover-background: #1C2527;
-	--main-font: "IBMPlexSans", "Courier", sans-serif;
 	--header-background: rgba(255, 255, 255, 0.5);
 	--top-link-background: rgba(255, 255, 255, 0.75);
 	--footer-background: #1C2527;
@@ -13,6 +12,8 @@
 	--iO-link-colour: #F53068;
 	--iO-link-hover-colour: #61FED2;
 	--danger: #FF0000;
+	--main-font: "IBMPlexSans", "Courier", sans-serif;
+	--alternative-font: "IBMPlexMono", "Courier", sans-serif;
 }
 
 @font-face {
@@ -302,7 +303,7 @@ main h3 {
 }
 
 .projectBox .modalInternal ul span {
-	font-family: "IBMPlexMono", "sans-serif";
+	font-family: var(--alternative-font);
 	color: var(--accent-colour);
 }
 
