@@ -4,13 +4,16 @@
 	--default-background: #FFFFFF;
 	--hover-white: #EEEEEE;
 	--hover-background: #1C2527;
-	--main-font: "IBMPlexSans", "Courier", sans-serif;
 	--header-background: rgba(255, 255, 255, 0.5);
+	--top-link-background: rgba(255, 255, 255, 0.75);
 	--footer-background: #1C2527;
 	--divider: #333333;
 	--non-accent-colour: #999999;
 	--iO-link-colour: #F53068;
 	--iO-link-hover-colour: #61FED2;
+	--danger: #FF0000;
+	--main-font: "IBMPlexSans", "Courier", sans-serif;
+	--alternative-font: "IBMPlexMono", "Courier", sans-serif;
 }
 
 @font-face {
@@ -37,6 +40,7 @@ html {
 /* nav */
 nav {
 	width: 100%;
+	height: 55px;
 	overflow: auto;
 	position: fixed;
 	z-index: 1;
@@ -62,13 +66,18 @@ nav a:hover {
 
 .navContainerLogo {
 	float: left;
+	height: 100%;
+}
+
+.navContainer a {
+	height: 100%;
 }
 
 .navContainerLogo a {
 	padding: 0;
 	border-top: 5px solid transparent;
-	height: 3.35em;
-	width: 3.35em;
+	height: 100%;
+	width: 50px;
 }
 
 .navContainerLogo a:hover {
@@ -82,13 +91,12 @@ nav a:hover {
 
 .navContainer {
 	float: right;
+	height: 100%;
 }
 
 nav img {
 	width: 42px;
-	padding: 0.3em;
-	margin-left: 0.25em;
-	margin-top: 0.2em;
+	padding: 10px 5px 0 8px;
 }
 
 /* header */
@@ -142,15 +150,224 @@ header h1, header h2, header p {
 }
 
 /* main */
-main h2 {
-	color: #CA6702;
-	text-transform: uppercase;
-	font-size: 1.25rem;
-	border-top: 1px solid var(--section-border);
-	border-bottom: 1px solid var(--section-border);
+main section {
+	padding: 0.5em;
+	padding-top: 2.5em;
+	overflow: auto;
 }
 
-main section {
+main h2 {
+	color: var(--hover-white);
+	text-transform: uppercase;
+	font-size: 1.25rem;
+	border-top: 1px solid var(--accent-colour);
+	border-bottom: 1px solid var(--accent-colour);
+	background-color: var(--hover-background);
+	padding-left: 0.25em;
+}
+
+main h3 {
+	font-size: 1.15rem;
+	color: var(--accent-colour);
+	margin: 0;
+	padding: 2px 5px;
+	border-bottom: 1px solid var(--divider);
+	background-color: var(--default-background);
+}
+
+.containerLarge, .containerSmall {
+	float: left;
+	padding: 0.5em;
+}
+
+.containerLarge {
+	width: 50%;
+}
+
+.containerSmall {
+	width: 25%;
+}
+
+.projectBox {
+	border: 1px solid var(--accent-colour);
+	position: relative;
+	min-height: 250px;
+}
+
+.projectBox p {
+	background-color: var(--header-background);
+	padding: 0.5em;
+	border-top: 1px solid var(--non-accent-colour);
+	border-bottom: 1px solid var(--non-accent-colour);
+}
+
+.projectBox p span {
+	white-space: nowrap;
+}
+
+.projectBoxFooter {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	border-top: 1px solid var(--accent-colour);
+	background-color: var(--default-background);
+	width: 100%;
+}
+
+.projectBox .modalFooter {
+	width: 100%;
+	border-top: 1px solid var(--accent-colour);
+}
+
+.projectBoxFooter a, .projectBoxFooter .more, .projectBox .modalFooter a {
+	padding-left: 3px;
+	padding-right: 3px;
+	font-size: 1rem;
+	color: var(--accent-colour);
+	border-left: 5px solid transparent;
+	float: right;
+	cursor: pointer;
+	height: 100%;
+}
+
+.projectBoxFooter a, .projectBox .modalFooter a {
+	text-decoration: none;
+}
+
+.projectBoxFooter a:hover, .projectBoxFooter .more:hover, .projectBox .modalFooter a:hover {
+	color: var(--hover-white);
+	background-color: var(--hover-background);
+	border-left: 5px solid var(--accent-colour);
+}
+
+.projectBox .modal {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	background-color: rgba(0, 0, 0, 0.75);
+	display: none;
+}
+
+.projectBox .modalInternal {
+	width: 80%;
+	max-height: 100%;
+	overflow: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
+	border: 1px solid var(--accent-colour);
+	background-color: var(--default-background);
+}
+
+.projectBox .modalInternal h3 {
+	overflow: auto;
+}
+
+.projectBox .modalInternal .closeModal {
+	color: var(--hover-background);
+	font-weight: 400;
+	font-size: 16px;
+	border: 1px solid var(--hover-white);
+	border-radius: 50%;
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+	padding: 0 0 3px 4px;
+	float: right;
+}
+
+.projectBox .modalInternal .closeModal:hover {
+	color: var(--danger);
+	border-color: var(--danger);
+}
+
+.projectBox .modalInternal img {
+	width: 100%;
+}
+
+.projectBox .modalInternal ul {
+	margin: 0;
+	padding: 0 0 0.5em 1.6em;
+	list-style: none;
+}
+
+.projectBox .modalInternal ul li:before {
+	content: "\2022";
+	color: var(--accent-colour);
+	display: inline-block;
+	width: 1em;
+	margin-left: -1em;
+}
+
+.projectBox .modalInternal ul span {
+	font-family: var(--alternative-font);
+	color: var(--accent-colour);
+}
+
+.iOLink {
+	color: var(--iO-link-colour);
+	text-decoration: none;
+}
+
+.iOLink:hover {
+	background-color: var(--iO-link-colour);
+	color: var(--hover-white);
+}
+
+.projectBox.bankOfMumAndDad {
+	background-image: url('images/bankOfMumAndDad.png');
+	background-position: top;
+	background-size: cover;
+}
+
+.projectBox.officeSignInApp {
+	background-image: url('images/signInScreen.png');
+	background-size: cover;
+	background-position: top;
+}
+
+.projectBox.academyPortal {
+	background-image: url('images/academyPortal.png');
+	background-position: top left;
+	background-size: cover;
+}
+
+.projectBox.financeCalculator {
+	background-image: url('images/financeCalculator.png');
+	background-position: left;
+	background-size: cover;
+}
+
+.projectBox.fastTimesTables {
+	background-image: url('images/fastTimesTables.png');
+	background-position: top left;
+	background-size: cover;
+}
+
+.projectBox.aptitudeTest {
+	background-image: url('images/aptitudeTest.png');
+	background-position: top;
+	background-size: cover;
+}
+
+.projectBox.pairsGame {
+	background-image: url('images/pairsGame.png');
+	background-position: top;
+	background-size: cover;
+}
+
+.projectBox.collectionApp {
+	background-image: url('images/CollectionApp.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.info {
+	font-size: 0.75rem;
 	padding: 0.5em;
 }
 
@@ -190,16 +407,6 @@ img.photo {
 
 #idAboutMe li {
 	padding: 3px 0;
-}
-
-#idAboutMe a {
-	color: var(--iO-link-colour);
-	text-decoration: none;
-}
-
-#idAboutMe a:hover {
-	background-color: var(--iO-link-colour);
-	color: var(--hover-white);
 }
 
 /* footer */
@@ -257,11 +464,13 @@ footer .githubLogo:hover {
 
 /* back to top icon */
 .backToTopIcon {
-	background-color: rgba(28, 37, 39, 0.75);
+	background-color: var(--top-link-background);
 	bottom: 75px;
-	right: 2px;
-	color: #CA6702;
-	border-radius: 50%;
+	right: 0;
+	color: var(--accent-colour);
+	border: 1px solid var(--hover-background);
+	border-right: none;
+	border-left: 5px solid var(--top-link-background);
 	width: 42px;
 	height: 42px;
 	position: fixed;
@@ -269,10 +478,20 @@ footer .githubLogo:hover {
 }
 
 .backToTopIcon:hover {
-	color: #FFFFFF;
+	color: var(--hover-white);
+	background-color: var(--hover-background);
+	border-left-color: var(--accent-colour);
 }
 
 @media screen and (max-width: 1060px) {
+	.containerLarge {
+		width: 100%;
+	}
+
+	.containerSmall {
+		width: 50%;
+	}
+	
 	img.photo {
 		width: 128px;
 		border-radius: 64px;
@@ -294,8 +513,12 @@ footer .githubLogo:hover {
 		font-size: 15px;
 	}
 
-	.navContainer a {
-		height: 3.3em;
+	nav {
+		height: 52px;
+	}
+
+	nav img {
+		width: 40px;
 	}
 
 	header {
@@ -326,13 +549,21 @@ footer .githubLogo:hover {
 		font-size: 12px;
 	}
 
-	nav a {
-		font-size: 14px;
-		padding: 10px;
+	nav {
+		height: 49px;
 	}
 
-	main section {
-		padding-top: 52px;
+	.navContainer a {
+		font-size: 14px;
+		padding: 1em;
+	}
+
+	.containerLarge, .containerSmall {
+		width: 100%;
+	}
+
+	.projectBox {
+		min-height: 200px;
 	}
 
 	#email {
@@ -362,6 +593,40 @@ footer .githubLogo:hover {
 		filter: none;
 	}
 
+	main section {
+		padding-top: 40px;
+	}
+
+	.projectBoxFooter a, .projectBoxFooter .more, .projectBox .modalFooter a {
+		height: 48px;
+		padding: 15px 10px 0 10px;
+		font-size: 1.15rem;
+		border-left: 3px solid var(--accent-colour);
+		background-color: var(--hover-background);
+		color: var(--hover-white);
+	}
+
+	.projectBoxFooter a:hover, .projectBoxFooter .more:hover, .projectBox .modalFooter a:hover {
+		color: var(--hover-white);
+		background-color: var(--hover-background);
+		border-left: 3px solid var(--accent-colour);
+	}
+
+	.projectBox .modalInternal .closeModal {
+		min-width: 48px;
+		min-height: 48px;
+		font-size: 32px;
+		padding: 4px 0 0 13px;
+		color: var(--danger);
+		border: 1px solid var(--hover-white);
+	}
+
+	.projectBox .modalInternal .closeModal:hover {
+		color: var(--danger);
+		border: 1px solid var(--danger);
+		background-color: var(--default-background);
+	}
+
 	#idAboutMe a:hover {
 		background-color: var(--default-background);
 		color: var(--iO-link-colour);
@@ -389,9 +654,12 @@ footer .githubLogo:hover {
 	.backToTopIcon {
 		width: 48px;
 		height: 48px;
+		border-left: none;
 	}
 
 	.backToTopIcon:hover {
 		color: var(--accent-colour);
+		border-left: none;
+		background-color: var(--top-link-background);
 	}
 }
