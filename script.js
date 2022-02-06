@@ -11,57 +11,58 @@ addEventListeners();
 
 
 // for quick test of MSIE specific stuff uncomment the next line
-// msieFlag = 1
+// msieFlag = 1;
 // for quick test of Edge specific stuff uncomment the next line
 // msEdgeFlag = 1
 //uncomment both Edge flags to test for Edge18 specific stuff
 // msEdge18Flag = 1
 
 if (msieFlag) {
-    const msInfo = [
-        'Sorry, Internet Explorer is not supported',
-        '.projectBox.financeCalculator ul',
-        '.projectBox.fastTimesTables ul'
-    ];
-    addBrowserSupportMessages(msInfo);
-    document.querySelector('#clockContainer').style.display = 'none';
+  const msInfo = [
+    "Sorry, Internet Explorer is not supported",
+    ".financeCalculator ul",
+    ".fastTimesTables ul",
+  ];
+  addBrowserSupportMessages(msInfo);
+  document.querySelector("#clockContainer").style.display = "none";
 }
 
 if (msEdgeFlag && !msEdge18Flag) {
-    document.querySelector('#clockContainer').style.display = 'none';
+  document.querySelector("#clockContainer").style.display = "none";
 }
 
 function detectMS() {
-    const browser = window.navigator.userAgent;
+  const browser = window.navigator.userAgent;
 
-    if (browser.indexOf('MSIE ') > 0) {
-        msieFlag = 1;
-    } else if (browser.indexOf('Trident/') > 0) {
-        msieFlag = 1;
-    } else {
-        msieFlag = 0;
-    }
+  if (browser.indexOf("MSIE ") > 0) {
+    msieFlag = 1;
+  } else if (browser.indexOf("Trident/") > 0) {
+    msieFlag = 1;
+  } else {
+    msieFlag = 0;
+  }
 
-    if (browser.indexOf('Edge/') > 0) {
-        msEdgeFlag = 1;
-    } else {
-        msEdgeFlag = 0;
-    }
+  if (browser.indexOf("Edge/") > 0) {
+    msEdgeFlag = 1;
+  } else {
+    msEdgeFlag = 0;
+  }
 
-    if (browser.indexOf('Edge/18') > 0) {
-        msEdge18Flag = 1;
-    } else {
-        msEdge18Flag = 0;
-    }
+  if (browser.indexOf("Edge/18") > 0) {
+    msEdge18Flag = 1;
+  } else {
+    msEdge18Flag = 0;
+  }
 }
 
 function addBrowserSupportMessages(msInfo) {
-    for (let i=1; i<(msInfo.length); i++) {
-        const msMessage = document.createElement('li');
-        msMessage.textContent = msInfo[0];
-        msMessage.style.color = '#FF0000';
-        document.querySelector(msInfo[i]).appendChild(msMessage);
-    }
+  console.log(msInfo[1], msInfo[2]);
+  for (let i = 1; i < msInfo.length; i++) {
+    const msMessage = document.createElement("li");
+    msMessage.textContent = msInfo[0];
+    msMessage.style.color = "#FF0000";
+    document.querySelector(msInfo[i]).appendChild(msMessage);
+  }
 }
 
 function addEventListeners() {

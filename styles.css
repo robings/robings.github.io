@@ -253,7 +253,7 @@ main h3 {
 
 .projectBox .modalInternal {
 	width: 80%;
-	max-height: 100vh;
+	max-height: 100%;
 	overflow: auto;
 	position: absolute;
 	top: 50%;
