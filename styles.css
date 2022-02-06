@@ -6,6 +6,7 @@
 	--hover-background: #1C2527;
 	--main-font: "IBMPlexSans", "Courier", sans-serif;
 	--header-background: rgba(255, 255, 255, 0.5);
+	--top-link-background: rgba(255, 255, 255, 0.75);
 	--footer-background: #1C2527;
 	--divider: #333333;
 	--non-accent-colour: #999999;
@@ -166,26 +167,34 @@ main h3 {
 	color: var(--accent-colour);
 	margin: 0;
 	padding: 2px 5px;
-	border-bottom: 1px solid var(--accent-colour);
+	border-bottom: 1px solid var(--divider);
+	background-color: var(--default-background);
 }
 
 .containerLarge, .containerSmall {
 	float: left;
-	border: 1px solid var(--accent-colour);
+	padding: 0.5em;
 }
 
 .containerLarge {
 	width: 50%;
 }
 
+.containerSmall {
+	width: 25%;
+}
+
 .projectBox {
+	border: 1px solid var(--accent-colour);
 	position: relative;
 	min-height: 250px;
-	padding: 0.5em;
 }
 
 .projectBox p {
 	background-color: var(--header-background);
+	padding: 0.5em;
+	border-top: 1px solid var(--non-accent-colour);
+	border-bottom: 1px solid var(--non-accent-colour);
 }
 
 .projectBox p span {
@@ -201,7 +210,12 @@ main h3 {
 	width: 100%;
 }
 
-.projectBoxFooter a, .projectBoxFooter .more {
+.projectBox .modalFooter {
+	width: 100%;
+	border-top: 1px solid var(--accent-colour);
+}
+
+.projectBoxFooter a, .projectBoxFooter .more, .projectBox .modalFooter a {
 	padding-left: 3px;
 	padding-right: 3px;
 	font-size: 1rem;
@@ -212,11 +226,11 @@ main h3 {
 	height: 100%;
 }
 
-.projectBoxFooter a {
+.projectBoxFooter a, .projectBox .modalFooter a {
 	text-decoration: none;
 }
 
-.projectBoxFooter a:hover, .projectBoxFooter .more:hover {
+.projectBoxFooter a:hover, .projectBoxFooter .more:hover, .projectBox .modalFooter a:hover {
 	color: var(--hover-white);
 	background-color: var(--hover-background);
 	border-left: 5px solid var(--accent-colour);
@@ -285,10 +299,72 @@ main h3 {
 	margin-left: -1em;
 }
 
+.projectBox .modalInternal ul span {
+	font-family: "IBMPlexMono", "sans-serif";
+	color: var(--accent-colour);
+}
+
+.iOLink {
+	color: var(--iO-link-colour);
+	text-decoration: none;
+}
+
+.iOLink:hover {
+	background-color: var(--iO-link-colour);
+	color: var(--hover-white);
+}
+
 .projectBox.bankOfMumAndDad {
 	background-image: url('images/bankOfMumAndDad.png');
 	background-position: top;
 	background-size: cover;
+}
+
+.projectBox.officeSignInApp {
+	background-image: url('images/signInScreen.png');
+	background-size: cover;
+	background-position: top;
+}
+
+.projectBox.academyPortal {
+	background-image: url('images/academyPortal.png');
+	background-position: top left;
+	background-size: cover;
+}
+
+.projectBox.financeCalculator {
+	background-image: url('images/financeCalculator.png');
+	background-position: left;
+	background-size: cover;
+}
+
+.projectBox.fastTimesTables {
+	background-image: url('images/fastTimesTables.png');
+	background-position: top left;
+	background-size: cover;
+}
+
+.projectBox.aptitudeTest {
+	background-image: url('images/aptitudeTest.png');
+	background-position: top;
+	background-size: cover;
+}
+
+.projectBox.pairsGame {
+	background-image: url('images/pairsGame.png');
+	background-position: top;
+	background-size: cover;
+}
+
+.projectBox.collectionApp {
+	background-image: url('images/CollectionApp.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.info {
+	font-size: 0.75rem;
+	padding: 0.5em;
 }
 
 /* about me */
@@ -327,16 +403,6 @@ img.photo {
 
 #idAboutMe li {
 	padding: 3px 0;
-}
-
-#idAboutMe a {
-	color: var(--iO-link-colour);
-	text-decoration: none;
-}
-
-#idAboutMe a:hover {
-	background-color: var(--iO-link-colour);
-	color: var(--hover-white);
 }
 
 /* footer */
@@ -394,11 +460,13 @@ footer .githubLogo:hover {
 
 /* back to top icon */
 .backToTopIcon {
-	background-color: rgba(28, 37, 39, 0.75);
+	background-color: var(--top-link-background);
 	bottom: 75px;
-	right: 2px;
-	color: #CA6702;
-	border-radius: 50%;
+	right: 0;
+	color: var(--accent-colour);
+	border: 1px solid var(--hover-background);
+	border-right: none;
+	border-left: 5px solid var(--top-link-background);
 	width: 42px;
 	height: 42px;
 	position: fixed;
@@ -406,12 +474,18 @@ footer .githubLogo:hover {
 }
 
 .backToTopIcon:hover {
-	color: #FFFFFF;
+	color: var(--hover-white);
+	background-color: var(--hover-background);
+	border-left-color: var(--accent-colour);
 }
 
 @media screen and (max-width: 1060px) {
 	.containerLarge {
 		width: 100%;
+	}
+
+	.containerSmall {
+		width: 50%;
 	}
 	
 	img.photo {
@@ -484,6 +558,10 @@ footer .githubLogo:hover {
 		width: 100%;
 	}
 
+	.projectBox {
+		min-height: 200px;
+	}
+
 	#email {
 		font-size: 0.9rem;
 		padding-top: 10px;
@@ -515,7 +593,7 @@ footer .githubLogo:hover {
 		padding-top: 40px;
 	}
 
-	.projectBoxFooter a, .projectBoxFooter .more {
+	.projectBoxFooter a, .projectBoxFooter .more, .projectBox .modalFooter a {
 		height: 48px;
 		padding: 15px 10px 0 10px;
 		font-size: 1.15rem;
@@ -524,7 +602,7 @@ footer .githubLogo:hover {
 		color: var(--hover-white);
 	}
 
-	.projectBoxFooter a:hover, .projectBoxFooter .more:hover {
+	.projectBoxFooter a:hover, .projectBoxFooter .more:hover, .projectBox .modalFooter a:hover {
 		color: var(--hover-white);
 		background-color: var(--hover-background);
 		border-left: 3px solid var(--accent-colour);
@@ -573,9 +651,12 @@ footer .githubLogo:hover {
 	.backToTopIcon {
 		width: 48px;
 		height: 48px;
+		border-left: none;
 	}
 
 	.backToTopIcon:hover {
 		color: var(--accent-colour);
+		border-left: none;
+		background-color: var(--top-link-background);
 	}
 }
