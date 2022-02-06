@@ -11,100 +11,114 @@ addEventListeners();
 
 
 // for quick test of MSIE specific stuff uncomment the next line
-// msieFlag = 1
+// msieFlag = 1;
 // for quick test of Edge specific stuff uncomment the next line
 // msEdgeFlag = 1
 //uncomment both Edge flags to test for Edge18 specific stuff
 // msEdge18Flag = 1
 
 if (msieFlag) {
-    const msInfo = [
-        'Sorry, Internet Explorer is not supported',
-        '.projectBox.financeCalculator ul',
-        '.projectBox.fastTimesTables ul'
-    ];
-    addBrowserSupportMessages(msInfo);
-    document.querySelector('#clockContainer').style.display = 'none';
+  const msInfo = [
+    "Sorry, Internet Explorer is not supported",
+    ".financeCalculator ul",
+    ".fastTimesTables ul",
+  ];
+  addBrowserSupportMessages(msInfo);
+  document.querySelector("#clockContainer").style.display = "none";
 }
 
 if (msEdgeFlag && !msEdge18Flag) {
-    document.querySelector('#clockContainer').style.display = 'none';
+  document.querySelector("#clockContainer").style.display = "none";
 }
 
 function detectMS() {
-    const browser = window.navigator.userAgent;
+  const browser = window.navigator.userAgent;
 
-    if (browser.indexOf('MSIE ') > 0) {
-        msieFlag = 1;
-    } else if (browser.indexOf('Trident/') > 0) {
-        msieFlag = 1;
-    } else {
-        msieFlag = 0;
-    }
+  if (browser.indexOf("MSIE ") > 0) {
+    msieFlag = 1;
+  } else if (browser.indexOf("Trident/") > 0) {
+    msieFlag = 1;
+  } else {
+    msieFlag = 0;
+  }
 
-    if (browser.indexOf('Edge/') > 0) {
-        msEdgeFlag = 1;
-    } else {
-        msEdgeFlag = 0;
-    }
+  if (browser.indexOf("Edge/") > 0) {
+    msEdgeFlag = 1;
+  } else {
+    msEdgeFlag = 0;
+  }
 
-    if (browser.indexOf('Edge/18') > 0) {
-        msEdge18Flag = 1;
-    } else {
-        msEdge18Flag = 0;
-    }
+  if (browser.indexOf("Edge/18") > 0) {
+    msEdge18Flag = 1;
+  } else {
+    msEdge18Flag = 0;
+  }
 }
 
 function addBrowserSupportMessages(msInfo) {
-    for (let i=1; i<(msInfo.length); i++) {
-        const msMessage = document.createElement('li');
-        msMessage.textContent = msInfo[0];
-        msMessage.style.color = '#FF0000';
-        document.querySelector(msInfo[i]).appendChild(msMessage);
-    }
+  console.log(msInfo[1], msInfo[2]);
+  for (let i = 1; i < msInfo.length; i++) {
+    const msMessage = document.createElement("li");
+    msMessage.textContent = msInfo[0];
+    msMessage.style.color = "#FF0000";
+    document.querySelector(msInfo[i]).appendChild(msMessage);
+  }
 }
 
 function addEventListeners() {
-    const moreElements = document.querySelectorAll(".more");
-    moreElements.forEach(element => {
-        element.addEventListener('click', (e) => {
-            toggleDetails(e);
-        })
+  const moreElements = document.querySelectorAll(".more");
+  moreElements.forEach((element) => {
+    element.addEventListener("click", (e) => {
+      openProjectModal(e);
     });
+  });
 
-    const emailButton = document.querySelectorAll('.contactLeft')[0];
-    emailButton.addEventListener('click', () => {
-        toggleEmailForTouchScreen();
+  const closeModalElements = document.querySelectorAll(".closeModal");
+  closeModalElements.forEach((element) => {
+    element.addEventListener("click", (e) => {
+      closeProjectModal(e);
     });
+  });
 
-    document.addEventListener('scroll', () => {
-        if (window.scrollY === 0) {
-            document.querySelector('.backToTopIcon').style.display = 'none';
-        } else if (window.getComputedStyle(document.querySelector('.backToTopIcon')).display === 'none') {
-            document.querySelector('.backToTopIcon').style.display = 'block';
-        }
-    });
+  const emailButton = document.querySelectorAll(".contactLeft")[0];
+  emailButton.addEventListener("click", () => {
+    toggleEmailForTouchScreen();
+  });
+
+  document.addEventListener("scroll", () => {
+    if (window.scrollY === 0) {
+      document.querySelector(".backToTopIcon").style.display = "none";
+    } else if (
+      window.getComputedStyle(document.querySelector(".backToTopIcon"))
+        .display === "none"
+    ) {
+      document.querySelector(".backToTopIcon").style.display = "block";
+    }
+  });
 }
 
-function toggleDetails(e) {
-    const parentDiv = e.target.parentNode.parentNode.parentNode;
-    let parentDivClass;
-    let svgElement;
-    if (e.target.classList[0] === 'svg') {
-        parentDivClass = parentDiv.parentNode.classList[1];
-        svgElement = e.target;
-    } else if (e.target.classList[0] === 'more') {
-        parentDivClass = parentDiv.classList[1];
-        svgElement = e.target.querySelector('.svg');
-    }
-    const classToBeSelected = `.${parentDivClass} .projectBoxBottom ul`;
-    if (window.getComputedStyle(document.querySelector(classToBeSelected)).display === 'none') {
-        document.querySelector(classToBeSelected).style.display = 'block';
-        svgElement.src = './images/icon-collapse.svg';
-    } else {
-        document.querySelector(classToBeSelected).style.display = 'none';
-        svgElement.src = './images/icon-more.svg';
-    }
+function openProjectModal(e) {
+  const parentDiv = e.target.parentNode.parentNode;
+  const parentDivClass = parentDiv.classList[1];
+  const classToBeSelected = `.${parentDivClass} .modal`;
+  if (
+    window.getComputedStyle(document.querySelector(classToBeSelected))
+      .display === "none"
+  ) {
+    document.querySelector(classToBeSelected).style.display = "block";
+  }
+}
+
+function closeProjectModal(e) {
+  const parentDiv = e.target.parentNode.parentNode.parentNode.parentNode;
+  const parentDivClass = parentDiv.classList[1];
+  const classToBeSelected = `.${parentDivClass} .modal`;
+  if (
+    window.getComputedStyle(document.querySelector(classToBeSelected))
+      .display === "block"
+  ) {
+    document.querySelector(classToBeSelected).style.display = "none";
+  }
 }
 
 function toggleEmailForTouchScreen() {
