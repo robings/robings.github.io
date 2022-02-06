@@ -39,7 +39,7 @@ html {
 nav {
 	width: 100%;
 	height: 55px;
-	overflow: none;
+	overflow: auto;
 	position: fixed;
 	z-index: 1;
 	border-bottom: 1px solid var(--section-border);
@@ -188,6 +188,10 @@ main h3 {
 	background-color: var(--header-background);
 }
 
+.projectBox p span {
+	white-space: nowrap;
+}
+
 .projectBoxFooter {
 	position: absolute;
 	bottom: 0;
@@ -246,13 +250,15 @@ main h3 {
 
 .projectBox .modalInternal .closeModal {
 	color: var(--hover-white);
+	font-weight: 400;
+	font-size: 16px;
 	border: 1px solid var(--danger);
 	border-radius: 50%;
 	background-color: var(--danger);
 	cursor: pointer;
 	width: 20px;
 	height: 20px;
-	padding: 0 0 1.1em 0.2em;
+	padding: 0 0 3px 5px;
 	float: right;
 }
 
@@ -404,6 +410,10 @@ footer .githubLogo:hover {
 }
 
 @media screen and (max-width: 1060px) {
+	.containerLarge {
+		width: 100%;
+	}
+	
 	img.photo {
 		width: 128px;
 		border-radius: 64px;
@@ -475,6 +485,10 @@ footer .githubLogo:hover {
 		padding-top: 40px;
 	}
 
+	.containerLarge, .containerSmall {
+		width: 100%;
+	}
+
 	#email {
 		font-size: 0.9rem;
 		padding-top: 10px;
@@ -500,6 +514,37 @@ footer .githubLogo:hover {
 
 	.navContainerLogo a img:hover {
 		filter: none;
+	}
+
+	.projectBoxFooter a, .projectBoxFooter .more {
+		height: 48px;
+		padding: 15px 10px 0 10px;
+		font-size: 1.15rem;
+		border-left: 3px solid var(--accent-colour);
+		background-color: var(--hover-background);
+		color: var(--hover-white);
+	}
+
+	.projectBoxFooter a:hover, .projectBoxFooter .more:hover {
+		color: var(--hover-white);
+		background-color: var(--hover-background);
+		border-left: 3px solid var(--accent-colour);
+	}
+
+	.projectBox .modalInternal .closeModal {
+		min-width: 48px;
+		min-height: 48px;
+		font-size: 32px;
+		padding: 4px 0 0 13px;
+		color: var(--danger);
+		border: 1px solid var(--danger);
+		background-color: var(--default-background);
+	}
+
+	.projectBox .modalInternal .closeModal:hover {
+		color: var(--danger);
+		border: 1px solid var(--danger);
+		background-color: var(--default-background);
 	}
 
 	#idAboutMe a:hover {
