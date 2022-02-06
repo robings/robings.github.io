@@ -109,7 +109,7 @@ function openProjectModal(e) {
 }
 
 function closeProjectModal(e) {
-  const parentDiv = e.target.parentNode.parentNode.parentNode;
+  const parentDiv = e.target.parentNode.parentNode.parentNode.parentNode;
   const parentDivClass = parentDiv.classList[1];
   const classToBeSelected = `.${parentDivClass} .modal`;
   if (

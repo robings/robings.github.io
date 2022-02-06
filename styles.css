@@ -11,6 +11,7 @@
 	--non-accent-colour: #999999;
 	--iO-link-colour: #F53068;
 	--iO-link-hover-colour: #61FED2;
+	--danger: #FF0000;
 }
 
 @font-face {
@@ -37,7 +38,8 @@ html {
 /* nav */
 nav {
 	width: 100%;
-	overflow: auto;
+	height: 55px;
+	overflow: none;
 	position: fixed;
 	z-index: 1;
 	border-bottom: 1px solid var(--section-border);
@@ -62,6 +64,10 @@ nav a:hover {
 
 .navContainerLogo {
 	float: left;
+}
+
+.navContainer a {
+	height: 3.35em;
 }
 
 .navContainerLogo a {
@@ -175,6 +181,11 @@ main h3 {
 .projectBox {
 	position: relative;
 	min-height: 250px;
+	padding: 0.5em;
+}
+
+.projectBox p {
+	background-color: var(--header-background);
 }
 
 .projectBoxFooter {
@@ -220,24 +231,52 @@ main h3 {
 }
 
 .projectBox .modalInternal {
-	width: 40%;
+	width: 80%;
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translateY(-50%);
-	transform: translateX(-50%);
+	transform: translateY(-50%) translateX(-50%);
 	border: 1px solid var(--accent-colour);
 	background-color: var(--default-background);
 }
 
+.projectBox .modalInternal h3 {
+	overflow: auto;
+}
+
 .projectBox .modalInternal .closeModal {
-	color: red;
-	border: 1px solid red;
+	color: var(--hover-white);
+	border: 1px solid var(--danger);
 	border-radius: 50%;
+	background-color: var(--danger);
 	cursor: pointer;
 	width: 20px;
 	height: 20px;
-	padding-left: 5px;
+	padding: 0 0 1.1em 0.2em;
+	float: right;
+}
+
+.projectBox .modalInternal .closeModal:hover {
+	background-color: var(--default-background);
+	color: var(--danger);
+}
+
+.projectBox .modalInternal img {
+	width: 100%;
+}
+
+.projectBox .modalInternal ul {
+	margin: 0;
+	padding: 0 0 0.5em 1.6em;
+	list-style: none;
+}
+
+.projectBox .modalInternal ul li:before {
+	content: "\2022";
+	color: var(--accent-colour);
+	display: inline-block;
+	width: 1em;
+	margin-left: -1em;
 }
 
 .projectBox.bankOfMumAndDad {
@@ -386,6 +425,10 @@ footer .githubLogo:hover {
 		font-size: 15px;
 	}
 
+	nav {
+		height: 51px;
+	}
+
 	.navContainer a {
 		height: 3.3em;
 	}
@@ -418,13 +461,18 @@ footer .githubLogo:hover {
 		font-size: 12px;
 	}
 
-	nav a {
+	nav {
+		height: 48px;
+	}
+
+	.navContainer a {
 		font-size: 14px;
-		padding: 10px;
+		height: 3.33em;
+		padding: 1em 0.5em;
 	}
 
 	main section {
-		padding-top: 52px;
+		padding-top: 40px;
 	}
 
 	#email {
