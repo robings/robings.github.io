@@ -64,17 +64,18 @@ nav a:hover {
 
 .navContainerLogo {
 	float: left;
+	height: 100%;
 }
 
 .navContainer a {
-	height: 3.35em;
+	height: 100%;
 }
 
 .navContainerLogo a {
 	padding: 0;
 	border-top: 5px solid transparent;
-	height: 3.35em;
-	width: 3.35em;
+	height: 100%;
+	width: 50px;
 }
 
 .navContainerLogo a:hover {
@@ -88,13 +89,12 @@ nav a:hover {
 
 .navContainer {
 	float: right;
+	height: 100%;
 }
 
 nav img {
 	width: 42px;
-	padding: 0.3em;
-	margin-left: 0.25em;
-	margin-top: 0.2em;
+	padding: 10px 5px 0 8px;
 }
 
 /* header */
@@ -199,7 +199,6 @@ main h3 {
 	border-top: 1px solid var(--accent-colour);
 	background-color: var(--default-background);
 	width: 100%;
-	height: fit-content;
 }
 
 .projectBoxFooter a, .projectBoxFooter .more {
@@ -210,6 +209,7 @@ main h3 {
 	border-left: 5px solid transparent;
 	float: right;
 	cursor: pointer;
+	height: 100%;
 }
 
 .projectBoxFooter a {
@@ -436,11 +436,11 @@ footer .githubLogo:hover {
 	}
 
 	nav {
-		height: 51px;
+		height: 52px;
 	}
 
-	.navContainer a {
-		height: 3.3em;
+	nav img {
+		width: 40px;
 	}
 
 	header {
@@ -472,17 +472,12 @@ footer .githubLogo:hover {
 	}
 
 	nav {
-		height: 48px;
+		height: 49px;
 	}
 
 	.navContainer a {
 		font-size: 14px;
-		height: 3.33em;
-		padding: 1em 0.5em;
-	}
-
-	main section {
-		padding-top: 40px;
+		padding: 1em;
 	}
 
 	.containerLarge, .containerSmall {
@@ -514,6 +509,10 @@ footer .githubLogo:hover {
 
 	.navContainerLogo a img:hover {
 		filter: none;
+	}
+
+	main section {
+		padding-top: 40px;
 	}
 
 	.projectBoxFooter a, .projectBoxFooter .more {
