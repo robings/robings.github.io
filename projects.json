@@ -1,0 +1,43 @@
+{
+  "projects": [
+    {
+      "size": "Large",
+      "class": "bankOfMumAndDad",
+      "title": "Bank of Mum and Dad",
+      "strapline": "A pocket money management App built for coding practice using .NET Core with C#, and React with TS.",
+      "projectInfo": [
+        "An app built for coding practice which provides a simple way to manage pocket money like a bank account.",
+        "The API is built using <span>.NET Core</span> with <span>C#</span>, <span>Entity Framework</span> and a <span>SQL</span> database.",
+        "The frontend is built using <span>React</span> with <span>TypeScript</span>.",
+        "Login is handled with <span>JWT</span>."
+      ],
+      "image": {
+        "url": "images/bankOfMumAndDad.png",
+        "altText": "Screenshot of 'Bank Of Mum And Dad' project"
+      },
+      "links": [
+        {
+          "display": "Code",
+          "url": "https://github.com/robings/bankOfMumAndDad"
+        }
+      ]
+    },
+    {
+      "size": "Small",
+      "class": "bankOfMumAndDad",
+      "title": "Another project",
+      "strapline": "A random project",
+      "projectInfo": ["One", "Two", "Three", "Four"],
+      "image": {
+        "url": "images/bankOfMumAndDad.png",
+        "altText": "Screenshot of 'Bank Of Mum And Dad' project"
+      },
+      "links": [
+        {
+          "display": "A link",
+          "url": "https://github.com/robings/bankOfMumAndDad"
+        }
+      ]
+    }
+  ]
+}

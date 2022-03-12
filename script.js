@@ -3,12 +3,102 @@ let msEdgeFlag = 0;
 let msEdge18Flag = 0;
 
 if (window.scrollY !== 0) {
-    document.querySelector('.backToTopIcon').style.display = 'block';
+  document.querySelector(".backToTopIcon").style.display = "block";
 }
 
-detectMS();
-addEventListeners();
+const getProjects = async () => {
+  const projectsJson = await fetch("./projects.json");
+  const returnableProjects = await projectsJson.json();
+  return returnableProjects;
+};
 
+const buildProjectDisplay = (project) => {
+  const projectElement = document.createElement("div");
+  projectElement.classList =
+    project.size === "Large" ? "containerLarge" : "containerSmall";
+
+  const projectBox = document.createElement("div");
+  projectBox.classList = `projectBox ${project.class}`;
+
+  const header = document.createElement("h3");
+  header.textContent = project.title;
+
+  const strapline = document.createElement("p");
+  strapline.textContent = project.strapline;
+
+  const modal = document.createElement("div");
+  modal.classList = "modal";
+  const modalInternal = document.createElement("div");
+  modalInternal.classList = "modalInternal";
+  const modalHeader = document.createElement("h3");
+  modalHeader.textContent = project.title;
+  const closeButton = document.createElement("div");
+  closeButton.classList = "closeModal";
+  closeButton.title = "Close";
+  closeButton.textContent = "X";
+  modalHeader.appendChild(closeButton);
+
+  const modalImage = document.createElement("img");
+  modalImage.classList = "projectImage";
+  modalImage.src = project.image.url ?? "";
+  modalImage.alt = project.image.alt ?? "";
+
+  const modalUL = document.createElement("ul");
+  project.projectInfo.forEach((i) => {
+    const li = document.createElement("li");
+    li.innerHTML = i;
+    modalUL.appendChild(li);
+  });
+
+  const modalFooter = document.createElement("div");
+  modalFooter.className = "modalFooter";
+  project.links.forEach((l) => {
+    const linkElement = document.createElement("a");
+    linkElement.href = l.url;
+    linkElement.target = "_blank";
+    linkElement.textContent = l.display;
+    modalFooter.appendChild(linkElement);
+  });
+
+  modalInternal.appendChild(modalHeader);
+  modalInternal.appendChild(modalImage);
+  modalInternal.appendChild(modalUL);
+  modalInternal.appendChild(modalFooter);
+  modal.appendChild(modalInternal);
+
+  const footer = document.createElement("div");
+  footer.classList = "projectBoxFooter";
+  const moreLink = document.createElement("div");
+  moreLink.classList = "more";
+  moreLink.textContent = "More...";
+  footer.appendChild(moreLink);
+  project.links.forEach((l) => {
+    const linkElement = document.createElement("a");
+    linkElement.href = l.url;
+    linkElement.target = "_blank";
+    linkElement.textContent = l.display;
+    footer.appendChild(linkElement);
+  });
+
+  projectBox.appendChild(header);
+  projectBox.appendChild(strapline);
+  projectBox.appendChild(modal);
+  projectBox.appendChild(footer);
+  projectElement.appendChild(projectBox);
+  document.getElementById("idPortfolio").appendChild(projectElement);
+};
+
+const setup = async () => {
+  const projects = await getProjects();
+  console.log(projects);
+
+  projects.projects.forEach((p) => buildProjectDisplay(p));
+
+  detectMS();
+  addEventListeners();
+};
+
+setup();
 
 // for quick test of MSIE specific stuff uncomment the next line
 // msieFlag = 1;
@@ -56,7 +146,6 @@ function detectMS() {
 }
 
 function addBrowserSupportMessages(msInfo) {
-  console.log(msInfo[1], msInfo[2]);
   for (let i = 1; i < msInfo.length; i++) {
     const msMessage = document.createElement("li");
     msMessage.textContent = msInfo[0];
@@ -122,9 +211,14 @@ function closeProjectModal(e) {
 }
 
 function toggleEmailForTouchScreen() {
-    if (window.getComputedStyle(document.getElementById('email')).display === 'none') {
-        window.getComputedStyle(document.getElementById('emailForTouchScreens')).display === 'none' ?
-        document.getElementById('emailForTouchScreens').style.display = 'block' :
-        document.getElementById('emailForTouchScreens').style.display = 'none';
-    }
+  if (
+    window.getComputedStyle(document.getElementById("email")).display === "none"
+  ) {
+    window.getComputedStyle(document.getElementById("emailForTouchScreens"))
+      .display === "none"
+      ? (document.getElementById("emailForTouchScreens").style.display =
+          "block")
+      : (document.getElementById("emailForTouchScreens").style.display =
+          "none");
+  }
 }
