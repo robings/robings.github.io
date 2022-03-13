@@ -31,7 +31,7 @@ const buildProjectDisplay = (project) => {
   const modalInternal = document.createElement("div");
   modalInternal.classList = "modalInternal";
   const modalHeader = document.createElement("h3");
-  modalHeader.textContent = project.title;
+  modalHeader.textContent = project.modalTitle;
   const closeButton = document.createElement("div");
   closeButton.classList = "closeModal";
   closeButton.title = "Close";
@@ -85,12 +85,16 @@ const buildProjectDisplay = (project) => {
   projectBox.appendChild(modal);
   projectBox.appendChild(footer);
   projectElement.appendChild(projectBox);
-  document.getElementById("idPortfolio").appendChild(projectElement);
+  const portfolioDiv = document.getElementById("idPortfolio");
+  const noOfChildren = portfolioDiv.children.length;
+  portfolioDiv.insertBefore(
+    projectElement,
+    portfolioDiv.children[noOfChildren - 1]
+  );
 };
 
 const setup = async () => {
   const projects = await getProjects();
-  console.log(projects);
 
   projects.projects.forEach((p) => buildProjectDisplay(p));
 

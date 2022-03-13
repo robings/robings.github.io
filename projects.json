@@ -4,6 +4,7 @@
       "size": "Large",
       "class": "bankOfMumAndDad",
       "title": "Bank of Mum and Dad",
+      "modalTitle": "Bank of Mum and Dad",
       "strapline": "A pocket money management App built for coding practice using .NET Core with C#, and React with TS.",
       "projectInfo": [
         "An app built for coding practice which provides a simple way to manage pocket money like a bank account.",
@@ -23,9 +24,36 @@
       ]
     },
     {
+      "size": "Large",
+      "class": "officeSignInApp",
+      "title": "Office Sign In App - Team Project",
+      "modalTitle": "Office Sign In App",
+      "strapline": "An App for signing visitors into a building using Slim and React.",
+      "projectInfo": [
+        "An App created with fellow <a class=\"iOLink\" href=\"https://io-academy.uk/\" target=\"_blank\">iO Academy</a> Students to allow visitors to an office to sign into the building with an iPad.",
+        "We built a <span>Slim</span> application to run the backend and a <span>React</span> app for the front end.",
+        "Security of the admin page is handled with <span>JWT</span>."
+      ],
+      "image": {
+        "url": "images/signInScreen.png",
+        "altText": "Screenshot of 'Office Sign In App' project"
+      },
+      "links": [
+        {
+          "display": "Code",
+          "url": "https://github.com/iO-Academy/2020-jan-officeSignIn"
+        },
+        {
+          "display": "Demo (6.1 MB)",
+          "url": "demos/officeSignInAppDemo.mp4"
+        }
+      ]
+    },
+    {
       "size": "Small",
       "class": "bankOfMumAndDad",
       "title": "Another project",
+      "modalTitle": "Modal Title",
       "strapline": "A random project",
       "projectInfo": ["One", "Two", "Three", "Four"],
       "image": {
