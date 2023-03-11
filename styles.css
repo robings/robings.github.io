@@ -209,8 +209,7 @@ main h3 {
 	position: absolute;
 	bottom: 0;
 	right: 0;
-	border-top: 1px solid var(--accent-colour);
-	background-color: var(--default-background);
+	background-color: transparent;
 	width: 100%;
 }
 
@@ -225,10 +224,19 @@ main h3 {
 	padding-right: 3px;
 	font-size: 1rem;
 	color: var(--accent-colour);
-	border-left: 5px solid transparent;
+	border-left: 5px solid var(--footer-background);
 	float: right;
 	cursor: pointer;
 	height: 100%;
+	background-color: var(--default-background);
+}
+
+.projectBoxFooter a, .projectBoxFooter .more {
+	border-top: 1px solid var(--footer-background);
+}
+
+.projectBoxFooter a:not(:first-child), .projectBoxFooter .more:not(:first-child), .projectBox .modalFooter a:not(:first-child) {
+	border-right: 1px solid var(--hover-white);
 }
 
 .projectBoxFooter a, .projectBox .modalFooter a {
@@ -237,7 +245,8 @@ main h3 {
 
 .projectBoxFooter a:hover, .projectBoxFooter .more:hover, .projectBox .modalFooter a:hover {
 	color: var(--hover-white);
-	background-color: var(--hover-background);
+	background-color: var(--footer-background);
+	border-top: 1px solid var(--accent-colour);
 	border-left: 5px solid var(--accent-colour);
 }
 
@@ -612,6 +621,10 @@ footer .githubLogo:hover {
 		border-left: 3px solid var(--accent-colour);
 		background-color: var(--hover-background);
 		color: var(--hover-white);
+	}
+
+	.projectBoxFooter a:not(:first-child), .projectBoxFooter .more:not(:first-child), .projectBox .modalFooter a:not(:first-child) {
+		border-right: none;
 	}
 
 	.projectBoxFooter a:hover, .projectBoxFooter .more:hover, .projectBox .modalFooter a:hover {
