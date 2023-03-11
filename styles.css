@@ -481,7 +481,7 @@ footer .githubLogo:hover {
 	color: var(--accent-colour);
 	border: 1px solid var(--hover-background);
 	border-right: none;
-	border-left: 5px solid var(--top-link-background);
+	border-left: 5px solid transparent;
 	width: 42px;
 	height: 42px;
 	position: fixed;
