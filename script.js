@@ -1,3 +1,5 @@
+// swipe code from https://stackoverflow.com/questions/2264072/detect-a-finger-swipe-through-javascript-on-the-iphone-and-android/23230280#23230280
+
 const projects = [
   "bankOfMumAndDad",
   "officeSignIn",
@@ -8,6 +10,10 @@ const projects = [
   "pairsGame",
   "collectionApp",
 ];
+
+var xDown = null;
+var yDown = null;
+
 let projectPosition = 0;
 
 if (window.scrollY !== 0) {
@@ -48,6 +54,13 @@ function addEventListeners() {
   slider.addEventListener("input", () => {
     changeProject(slider.value);
   });
+
+  document
+    .querySelector(".projectDisplay")
+    .addEventListener("touchstart", handleTouchStart, false);
+  document
+    .querySelector(".projectDisplay")
+    .addEventListener("touchmove", handleTouchMove, false);
 }
 
 function toggleEmailForTouchScreen() {
@@ -95,4 +108,38 @@ function changeProject(newValue) {
   const indicatorString = buildIndicatorString(projectPosition);
 
   document.getElementById("carouselIndicator").textContent = indicatorString;
+}
+
+function getTouches(evt) {
+  return evt.touches;
+}
+
+function handleTouchStart(evt) {
+  const firstTouch = getTouches(evt)[0];
+  xDown = firstTouch.clientX;
+  yDown = firstTouch.clientY;
+}
+
+function handleTouchMove(evt) {
+  if (!xDown || !yDown) {
+    return;
+  }
+
+  var xUp = evt.touches[0].clientX;
+  var yUp = evt.touches[0].clientY;
+
+  var xDiff = xDown - xUp;
+  var yDiff = yDown - yUp;
+
+  if (Math.abs(xDiff) > Math.abs(yDiff)) {
+    if (xDiff > 0) {
+      changeProject(projectPosition + 1);
+    }
+    if (xDiff < -0) {
+      changeProject(projectPosition - 1);
+    }
+  }
+
+  xDown = null;
+  yDown = null;
 }
