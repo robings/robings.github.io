@@ -378,7 +378,6 @@ footer .githubLogo:hover {
 
 .backToTopIcon:hover {
 	color: var(--hover-white);
-	background-color: var(--hover-background);
 	border-left-color: var(--accent-colour);
 }
 
