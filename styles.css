@@ -404,6 +404,31 @@ footer .githubLogo:hover {
 		height: 48px;
 	}
 
+	.portfolioControl {
+		color: var(--hover-white);
+		border: 1px solid var(--divider);
+	}
+
+	.leftArrow .portfolioControl {
+		border-left: 3px solid var(--accent-colour);
+		border-left-color: var(--accent-colour);
+	}
+
+	.rightArrow .portfolioControl {
+		border-right: 3px solid var(--divider);
+		border-right-color: var(--accent-colour);
+	}
+	
+	.portfolioControl:hover {
+		color: var(--hover-white);
+		border-left-color: var(--accent-colour);
+	}
+	
+	.rightArrow .portfolioControl:hover {
+		border: 1px solid var(--divider);
+		border-right: 3px solid var(--accent-colour);
+	}
+
 	.skillsSection a:hover {
 		background-color: var(--default-background);
 		color: var(--iO-link-colour);
