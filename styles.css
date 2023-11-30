@@ -23,11 +23,15 @@
 @font-face {
 	font-family: "IBMPlexMono";
 	src: url("./fonts/IBMPlexMono-Regular.ttf");
+	font-weight: 400;
+	font-style: normal;
 }
 
 @font-face {
 	font-family: 'IBMPlexSans';
 	src: url('./fonts/IBMPlexSans-Regular.ttf');
+	font-weight: 400;
+	font-style: normal;
 }
 
 * {
@@ -44,6 +48,12 @@ html {
 .websiteContainer {
 	width: 80%;
 	margin: 0 auto;
+}
+
+/* because Safari knows what you really mean; err... no I want it to look like
+  any other browser */
+h1, h2, h3 {
+	font-weight: normal;
 }
 
 nav {
@@ -71,7 +81,6 @@ nav {
 
 nav a {
 	color: var(--accent-colour);
-	font-weight: 700;
 	text-decoration: none;
 	float: left;
 	padding: 0.5em 1.25em;
@@ -247,7 +256,6 @@ input[type="range"]::-moz-range-thumb  {
 
 .projectDisplay a {
 	color: var(--hover-white);
-	font-weight: 700;
 	text-decoration: none;
 	float: left;
 	padding: 0.5em 1.25em;
@@ -471,7 +479,7 @@ footer .githubLogo:hover {
 	}
 	
 	h1 {
-		font-size: 1.8em;
+		font-size: 1.85em;
 	}
 
 	main {
