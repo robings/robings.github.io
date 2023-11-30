@@ -107,7 +107,7 @@ main {
 	color: var(--defaultTextColour);
 }
 
-main h2 {
+main h2, footer h2 {
 	color: var(--hover-white);
 	text-align: right;
 	font-size: 1.25rem;
@@ -129,16 +129,6 @@ main h2 {
 	color: var(--accent-colour);
 }
 
-.iOLink {
-	color: var(--iO-link-colour);
-	text-decoration: underline;
-}
-
-.iOLink:hover {
-	background-color: var(--iO-link-colour);
-	color: var(--hover-white);
-}
-
 .portfolioCarousel {
 	width: 100%;
 	min-height: 200px;
@@ -152,16 +142,6 @@ main h2 {
 .leftArrow, .rightArrow {
 	width: 10%;
 	float: left;
-}
-
-.leftArrow svg {
-	transform: rotate(-90deg);
-	transform-origin: 50% 50%;
-}
-
-.rightArrow svg {
-	transform: rotate(90deg);
-	transform-origin: 50% 50%;
 }
 
 .portfolioControl {
@@ -197,6 +177,50 @@ main h2 {
 	width: 42px;
 }
 
+label {
+	font-size: 0.85em;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+  background-color: transparent;
+  width: 100%;
+  font: inherit;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 1.75em;
+  border: 1px solid var(--divider);
+  border-radius: 0.8em;
+}
+
+input[type="range"]::-moz-range-track  {
+  height: 1.75em;
+  border: 1px solid var(--divider);
+  border-radius: 0.8em;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.75em;
+  height: 1.75em;
+	background-color: transparent;
+	border: 2px solid var(--accent-colour);
+  border-radius: 50%;
+}
+
+input[type="range"]::-moz-range-thumb  {
+  width: 1.75em;
+  height: 1.75em;
+	background-color: transparent;
+	border: 2px solid var(--accent-colour);
+  border-radius: 50%;
+}
+
 .projectDisplay {
 	width: 80%;
 	border: 1px solid var(--divider);
@@ -208,20 +232,65 @@ main h2 {
 
 .projectDisplay h3 {
 	color: var(--accent-colour);
-	border-bottom: 1px solid var(--hover-white)
+	border-bottom: 1px solid var(--hover-white);
+	margin-bottom: 0;
+}
+
+.projectContainer {
+	overflow: auto;
+	display: none;
+}
+
+.linkContainer {
+	float: right;
+}
+
+.projectDisplay a {
+	color: var(--hover-white);
+	font-weight: 700;
+	text-decoration: none;
+	float: left;
+	padding: 0.5em 1.25em;
+	border-top: 5px solid transparent;
+}
+
+.projectDisplay a:hover {
+	color: var(--accent-colour);
+	background-color: var(--hover-background);
+	border-top: 5px solid var(--hover-white);
 }
 
 .projectDisplay img {
 	border: 1px solid rgba(var(--border), 0.5);
 	border-radius: 7px;
+	width: 100%;
 }
 
 .projectDisplay span {
 	color: var(--accent-colour);
 }
 
-#bankOfMumAndDad img {
+#carouselIndicator {
 	width: 100%;
+	text-align: center;
+}
+
+#bankOfMumAndDad {
+	display: block;
+}
+
+.iOLink, .projectDisplay .iOLink {
+	color: var(--iO-link-colour);
+	text-decoration: underline;
+	float: none;
+	padding: 0;
+	border: 0;
+}
+
+.iOLink:hover, .projectDisplay .iOLink:hover {
+	background-color: var(--iO-link-colour);
+	color: var(--hover-white);
+	border: 0;
 }
 
 .skillsSection {
@@ -244,7 +313,6 @@ footer {
 	background-color: var(--footer-background);
 	color: var(--accent-colour);
 	padding: 5px;
-	border-top: 1px solid rgba(var(--border), 0.5);
 	border-bottom: 1px solid rgba(var(--border), 0.5);
 	width: 100%;
 }
@@ -294,7 +362,7 @@ footer .githubLogo:hover {
 }
 
 .backToTopIcon {
-	background-color: var(--hover-background);
+	background-color: rgba(var(--default-background-rgb), 0.75);
 	bottom: 75px;
 	right: 0;
 	color: var(--accent-colour);
@@ -363,7 +431,6 @@ footer .githubLogo:hover {
 	.backToTopIcon:hover {
 		color: var(--hover-white);
 		border-left: 3px solid var(--accent-colour);
-		background-color: var(--hover-background);
 	}
 }
 
@@ -414,6 +481,10 @@ footer .githubLogo:hover {
 
 	.portfolioControlSlider {
 		display: block;
+	}
+
+	#carouselIndicator {
+		display: none;
 	}
 
 	.leftArrow, .rightArrow {
