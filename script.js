@@ -120,9 +120,9 @@ function changeProject(newValue) {
   const indicatorString = buildIndicatorString(projectPosition);
 
   document.getElementById("carouselIndicator").textContent = indicatorString;
-  document.getElementById(
-    "diagnostics"
-  ).textContent = `input value: ${diagnosticData.original}, output value: ${diagnosticData.new}, input position: ${diagnosticData.oldProjectPosition}, output position: ${diagnosticData.newProjectPosition}`;
+  // document.getElementById(
+  //   "diagnostics"
+  // ).textContent = `input value: ${diagnosticData.original}, output value: ${diagnosticData.new}, input position: ${diagnosticData.oldProjectPosition}, output position: ${diagnosticData.newProjectPosition}`;
 }
 
 function getTouches(evt) {
