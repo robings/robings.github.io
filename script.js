@@ -93,28 +93,30 @@ function changeProject(newValue) {
     newProjectPosition: projectPosition,
   };
 
+  let newValueAsInt = parseInt(newValue);
+
   projects.forEach((p) => {
     if (window.getComputedStyle(document.getElementById(p)).display !== "none")
       document.getElementById(p).style.display = "none";
   });
 
-  if (newValue < 0) {
-    newValue = projects.length - 1;
+  if (newValueAsInt < 0) {
+    newValueAsInt = projects.length - 1;
   }
 
-  if (newValue > projects.length - 1) {
-    newValue = 0;
+  if (newValueAsInt > projects.length - 1) {
+    newValueAsInt = 0;
   }
 
-  diagnosticData.new = newValue;
+  diagnosticData.new = newValueAsInt;
 
-  document.getElementById(projects[newValue]).style.display = "block";
-  projectPosition = newValue;
+  document.getElementById(projects[newValueAsInt]).style.display = "block";
+  projectPosition = newValueAsInt;
 
   diagnosticData.newProjectPosition = projectPosition;
 
-  if (slider.value !== newValue) {
-    slider.value = newValue;
+  if (slider.value !== newValueAsInt.toString()) {
+    slider.value = newValueAsInt.toString();
   }
 
   const indicatorString = buildIndicatorString(projectPosition);
