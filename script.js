@@ -1,90 +1,32 @@
-let msieFlag = 0;
-let msEdgeFlag = 0;
-let msEdge18Flag = 0;
+// swipe code from https://stackoverflow.com/questions/2264072/detect-a-finger-swipe-through-javascript-on-the-iphone-and-android/23230280#23230280
+
+const projects = [
+  "bankOfMumAndDad",
+  "quackingToothTimer",
+  "officeSignIn",
+  "academyPortal",
+  "financeCalculator",
+  "fastTimesTables",
+  "aptitudeTest",
+  "pairsGame",
+];
+
+var xDown = null;
+var yDown = null;
+
+let projectPosition = 0;
 
 if (window.scrollY !== 0) {
-    document.querySelector('.backToTopIcon').style.display = 'block';
+  document.querySelector(".backToTopIcon").style.display = "block";
 }
 
-detectMS();
+var slider = document.getElementById("portfolioControlRange");
+slider.max = projects.length - 1;
+slider.value = 0;
+
 addEventListeners();
 
-
-// for quick test of MSIE specific stuff uncomment the next line
-// msieFlag = 1;
-// for quick test of Edge specific stuff uncomment the next line
-// msEdgeFlag = 1
-//uncomment both Edge flags to test for Edge18 specific stuff
-// msEdge18Flag = 1
-
-if (msieFlag) {
-  const msInfo = [
-    "Sorry, Internet Explorer is not supported",
-    ".financeCalculator ul",
-    ".fastTimesTables ul",
-  ];
-  addBrowserSupportMessages(msInfo);
-  document.querySelector("#clockContainer").style.display = "none";
-}
-
-if (msEdgeFlag && !msEdge18Flag) {
-  document.querySelector("#clockContainer").style.display = "none";
-}
-
-function detectMS() {
-  const browser = window.navigator.userAgent;
-
-  if (browser.indexOf("MSIE ") > 0) {
-    msieFlag = 1;
-  } else if (browser.indexOf("Trident/") > 0) {
-    msieFlag = 1;
-  } else {
-    msieFlag = 0;
-  }
-
-  if (browser.indexOf("Edge/") > 0) {
-    msEdgeFlag = 1;
-  } else {
-    msEdgeFlag = 0;
-  }
-
-  if (browser.indexOf("Edge/18") > 0) {
-    msEdge18Flag = 1;
-  } else {
-    msEdge18Flag = 0;
-  }
-}
-
-function addBrowserSupportMessages(msInfo) {
-  console.log(msInfo[1], msInfo[2]);
-  for (let i = 1; i < msInfo.length; i++) {
-    const msMessage = document.createElement("li");
-    msMessage.textContent = msInfo[0];
-    msMessage.style.color = "#FF0000";
-    document.querySelector(msInfo[i]).appendChild(msMessage);
-  }
-}
-
 function addEventListeners() {
-  const moreElements = document.querySelectorAll(".more");
-  moreElements.forEach((element) => {
-    element.addEventListener("click", (e) => {
-      openProjectModal(e);
-    });
-  });
-
-  const closeModalElements = document.querySelectorAll(".closeModal");
-  closeModalElements.forEach((element) => {
-    element.addEventListener("click", (e) => {
-      closeProjectModal(e);
-    });
-  });
-
-  const emailButton = document.querySelectorAll(".contactLeft")[0];
-  emailButton.addEventListener("click", () => {
-    toggleEmailForTouchScreen();
-  });
-
   document.addEventListener("scroll", () => {
     if (window.scrollY === 0) {
       document.querySelector(".backToTopIcon").style.display = "none";
@@ -95,36 +37,126 @@ function addEventListeners() {
       document.querySelector(".backToTopIcon").style.display = "block";
     }
   });
-}
 
-function openProjectModal(e) {
-  const parentDiv = e.target.parentNode.parentNode;
-  const parentDivClass = parentDiv.classList[1];
-  const classToBeSelected = `.${parentDivClass} .modal`;
-  if (
-    window.getComputedStyle(document.querySelector(classToBeSelected))
-      .display === "none"
-  ) {
-    document.querySelector(classToBeSelected).style.display = "block";
-  }
-}
+  const emailButton = document.querySelectorAll(".contactLeft")[0];
+  emailButton.addEventListener("click", () => {
+    toggleEmailForTouchScreen();
+  });
 
-function closeProjectModal(e) {
-  const parentDiv = e.target.parentNode.parentNode.parentNode.parentNode;
-  const parentDivClass = parentDiv.classList[1];
-  const classToBeSelected = `.${parentDivClass} .modal`;
-  if (
-    window.getComputedStyle(document.querySelector(classToBeSelected))
-      .display === "block"
-  ) {
-    document.querySelector(classToBeSelected).style.display = "none";
-  }
+  document.querySelector(".leftArrow").addEventListener("click", () => {
+    changeProject(projectPosition - 1);
+  });
+
+  document.querySelector(".rightArrow").addEventListener("click", () => {
+    changeProject(projectPosition + 1);
+  });
+
+  slider.addEventListener("input", () => {
+    changeProject(slider.value);
+  });
+
+  document
+    .querySelector(".projectDisplay")
+    .addEventListener("touchstart", handleTouchStart, false);
+  document
+    .querySelector(".projectDisplay")
+    .addEventListener("touchmove", handleTouchMove, false);
 }
 
 function toggleEmailForTouchScreen() {
-    if (window.getComputedStyle(document.getElementById('email')).display === 'none') {
-        window.getComputedStyle(document.getElementById('emailForTouchScreens')).display === 'none' ?
-        document.getElementById('emailForTouchScreens').style.display = 'block' :
-        document.getElementById('emailForTouchScreens').style.display = 'none';
+  if (
+    window.getComputedStyle(document.getElementById("email")).display === "none"
+  ) {
+    window.getComputedStyle(document.getElementById("emailForTouchScreens"))
+      .display === "none"
+      ? (document.getElementById("emailForTouchScreens").style.display =
+          "block")
+      : (document.getElementById("emailForTouchScreens").style.display =
+          "none");
+  }
+}
+
+function buildIndicatorString(position) {
+  let string = "";
+  for (let i = 0; i < projects.length; i++) {
+    i == position ? (string = string + "_ ") : (string = string + ". ");
+  }
+
+  return string.trim();
+}
+
+function changeProject(newValue) {
+  let diagnosticData = {
+    original: newValue,
+    new: newValue,
+    oldProjectPosition: projectPosition,
+    newProjectPosition: projectPosition,
+  };
+
+  let newValueAsInt = parseInt(newValue);
+
+  projects.forEach((p) => {
+    if (window.getComputedStyle(document.getElementById(p)).display !== "none")
+      document.getElementById(p).style.display = "none";
+  });
+
+  if (newValueAsInt < 0) {
+    newValueAsInt = projects.length - 1;
+  }
+
+  if (newValueAsInt > projects.length - 1) {
+    newValueAsInt = 0;
+  }
+
+  diagnosticData.new = newValueAsInt;
+
+  document.getElementById(projects[newValueAsInt]).style.display = "block";
+  projectPosition = newValueAsInt;
+
+  diagnosticData.newProjectPosition = projectPosition;
+
+  if (slider.value !== newValueAsInt.toString()) {
+    slider.value = newValueAsInt.toString();
+  }
+
+  const indicatorString = buildIndicatorString(projectPosition);
+
+  document.getElementById("carouselIndicator").textContent = indicatorString;
+  // document.getElementById(
+  //   "diagnostics"
+  // ).textContent = `input value: ${diagnosticData.original}, output value: ${diagnosticData.new}, input position: ${diagnosticData.oldProjectPosition}, output position: ${diagnosticData.newProjectPosition}`;
+}
+
+function getTouches(evt) {
+  return evt.touches;
+}
+
+function handleTouchStart(evt) {
+  const firstTouch = getTouches(evt)[0];
+  xDown = firstTouch.clientX;
+  yDown = firstTouch.clientY;
+}
+
+function handleTouchMove(evt) {
+  if (!xDown || !yDown) {
+    return;
+  }
+
+  var xUp = evt.touches[0].clientX;
+  var yUp = evt.touches[0].clientY;
+
+  var xDiff = xDown - xUp;
+  var yDiff = yDown - yUp;
+
+  if (Math.abs(xDiff) > Math.abs(yDiff)) {
+    if (xDiff > 0) {
+      changeProject(projectPosition + 1);
     }
+    if (xDiff < -0) {
+      changeProject(projectPosition - 1);
+    }
+  }
+
+  xDown = null;
+  yDown = null;
 }
