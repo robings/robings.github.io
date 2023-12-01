@@ -130,6 +130,11 @@ main h2, footer h2 {
 	display: none;
 }
 
+.carouselContainer {
+	display: table;
+	width: 100%;
+}
+
 .leftArrow, .rightArrow {
 	width: 10%;
 	display: table-cell;
