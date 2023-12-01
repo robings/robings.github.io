@@ -1,21 +1,14 @@
 :root {
 	--defaultTextColour: #EEEEEE;
 	--accent-colour: #CA6702;
+	--non-accent-colour: #818181;
 	--border: 202, 103, 2;
 	--section-border: #1C2527;
 	--default-background: #1C2527;
 	--default-background-rgb: 23, 36, 39;
-	--backdrop-background: #333333;
 	--hover-white: #EEEEEE;
-	--hover-background: #1C2527;
-	--header-background: rgba(255, 255, 255, 0.5);
-	--top-link-background: rgba(255, 255, 255, 0.75);
-	--footer-background: #1C2527;
 	--divider: #333333;
-	--non-accent-colour: #999999;
 	--iO-link-colour: #F53068;
-	--iO-link-hover-colour: #61FED2;
-	--danger: #FF0000;
 	--main-font: "IBMPlexSans", "Courier", sans-serif;
 	--alternative-font: "IBMPlexMono", "Courier", sans-serif;
 }
@@ -89,7 +82,6 @@ nav a {
 
 nav a:hover {
 	color: var(--hover-white);
-	background-color: var(--hover-background);
 	border-top: 5px solid var(--accent-colour);
 }
 
@@ -154,7 +146,6 @@ main h2, footer h2 {
 }
 
 .portfolioControl {
-	background-color: var(--hover-background);
 	color: var(--accent-colour);
 	border: 1px solid var(--divider);
 	border-left: 3px solid var(--divider);
@@ -173,7 +164,6 @@ main h2, footer h2 {
 
 .portfolioControl:hover {
 	color: var(--hover-white);
-	background-color: var(--hover-background);
 	border-left-color: var(--accent-colour);
 }
 
@@ -264,7 +254,6 @@ input[type="range"]::-moz-range-thumb  {
 
 .projectDisplay a:hover {
 	color: var(--accent-colour);
-	background-color: var(--hover-background);
 	border-top: 5px solid var(--hover-white);
 }
 
@@ -318,7 +307,6 @@ input[type="range"]::-moz-range-thumb  {
 }
 
 footer {
-	background-color: var(--footer-background);
 	color: var(--accent-colour);
 	padding: 5px;
 	border-bottom: 1px solid rgba(var(--border), 0.5);
@@ -525,5 +513,15 @@ footer .githubLogo:hover {
 
 	.projectDisplay {
 		width: 100%;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.websiteContainer {
+		width: 75%;
+	}
+
+	nav {
+		width: 75%;
 	}
 }
