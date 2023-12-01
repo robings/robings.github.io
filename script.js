@@ -2,13 +2,13 @@
 
 const projects = [
   "bankOfMumAndDad",
+  "quackingToothTimer",
   "officeSignIn",
   "academyPortal",
   "financeCalculator",
   "fastTimesTables",
   "aptitudeTest",
   "pairsGame",
-  "collectionApp",
 ];
 
 var xDown = null;
