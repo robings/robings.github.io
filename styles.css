@@ -2,15 +2,13 @@
 	--defaultTextColour: #EEEEEE;
 	--accent-colour: #CA6702;
 	--non-accent-colour: #818181;
-	--border: 202, 103, 2;
-	--section-border: #1C2527;
 	--default-background: #1C2527;
 	--default-background-rgb: 23, 36, 39;
 	--hover-white: #EEEEEE;
-	--divider: #333333;
 	--iO-link-colour: #F53068;
+	--border: 202, 103, 2;
+	--divider: #333333;
 	--main-font: "IBMPlexSans", "Courier", sans-serif;
-	--alternative-font: "IBMPlexMono", "Courier", sans-serif;
 }
 
 @font-face {
@@ -43,15 +41,13 @@ html {
 	margin: 0 auto;
 }
 
-/* because Safari knows what you really mean; err... no I want it to look like
-  any other browser */
+/* most browsers seem to default to this setting with only regular font imported, but others don't */
 h1, h2, h3 {
 	font-weight: normal;
 }
 
 nav {
 	color: var(--defaultTextColour);
-	background-color: var(--default-background);
 	width: 80%;
 	padding-top: 10px;
 	position: fixed;
@@ -109,7 +105,7 @@ main {
 }
 
 main h2, footer h2 {
-	color: var(--hover-white);
+	color: var(--defaultTextColour);
 	text-align: right;
 	font-size: 1.25rem;
 	border-bottom: 1px solid rgba(var(--border), 0.5);
@@ -299,7 +295,6 @@ input[type="range"]::-moz-range-thumb  {
 	margin: 0;
 	padding: 0 20px;
 	float: left;
-	background-color: transparent;
 }
 
 .skillsSection li {
