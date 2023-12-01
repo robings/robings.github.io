@@ -86,6 +86,13 @@ function buildIndicatorString(position) {
 }
 
 function changeProject(newValue) {
+  let diagnosticData = {
+    original: newValue,
+    new: newValue,
+    oldProjectPosition: projectPosition,
+    newProjectPosition: projectPosition,
+  };
+
   projects.forEach((p) => {
     if (window.getComputedStyle(document.getElementById(p)).display !== "none")
       document.getElementById(p).style.display = "none";
@@ -99,8 +106,13 @@ function changeProject(newValue) {
     newValue = 0;
   }
 
+  diagnosticData.new = newValue;
+
   document.getElementById(projects[newValue]).style.display = "block";
   projectPosition = newValue;
+
+  diagnosticData.newProjectPosition = projectPosition;
+
   if (slider.value !== newValue) {
     slider.value = newValue;
   }
@@ -108,6 +120,9 @@ function changeProject(newValue) {
   const indicatorString = buildIndicatorString(projectPosition);
 
   document.getElementById("carouselIndicator").textContent = indicatorString;
+  document.getElementById(
+    "diagnostics"
+  ).textContent = `input value: ${diagnosticData.original}, output value: ${diagnosticData.new}, input position: ${diagnosticData.oldProjectPosition}, output position: ${diagnosticData.newProjectPosition}`;
 }
 
 function getTouches(evt) {
