@@ -1,353 +1,231 @@
 <!DOCTYPE html>
 <html lang="en-GB">
-<head>
-	<meta name="viewport" content="width=device-width" />
-	<link rel="stylesheet" type="text/css" href="normalize.css" />
-	<link rel="stylesheet" type="text/css" href="styles.css" />
-	<script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
-	<script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
-	<script defer src='script.js'></script>
-	<script defer src='clockWidget.js'></script>
-	<link rel="icon" type="image/png" href="images/epiphone32orange.png" />
-	<title>Robin Gordon-Stables - Full Stack Developer</title>
-</head>
+	<head>
+		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" type="text/css" href="normalize.css" />
+		<link rel="stylesheet" type="text/css" href="styles.css" />
+		<script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+		<script defer src='script.js'></script>
+		<link rel="icon" type="image/png" href="images/epiphone32orange.png" />
+		<title>Robin Gordon-Stables - Full Stack Developer</title>
+	</head>
 
-<body>
-	<nav>
-		<div class="navContainerLogo">
-			<a href="#top" tabindex="1"><img src="images/epiphone256orange.png" alt="logo, takes you back to top" /></a>
+	<body>
+		<div class="websiteContainer">
+			<nav>
+				<img class="photo" src="images/RGS-570px.jpg" alt="a photo of Robin" />
+				<div class="navbar">
+					<div class="titleContainer">
+						<h1>Robin <span>Gordon-Stables</span></h1>
+					</div>
+					<div class="navbarContainer">
+						<a href="#idPortfolio">Portfolio</a>
+						<a href="#idSkills">Skills</a>
+						<a href="#idContact">Contact</a>	
+					</div>
+				</div>
+			</nav>
+
+			<main>
+				<section class="heroImage">
+					<h2>Full Stack Developer</h2>
+					<p>HTML | CSS | JS | React | C# | SQL | Event Store | Agile &amp; Scrum</p>
+					<p id="idPortfolio">I spent many years as a project manager, but I've always had an interest in coding since starting out writing BASIC on a Commodore VIC20 as a child. In my project management jobs, I found ways to use VBA coding to automate and speed up repetitive tasks. After deciding to change career path, I retrained as a full stack developer with <a class="iOLink" href='https://io-academy.uk/' target='_blank'><span>iO Academy</span></a>, graduating in 2020. I now have three years experience as a software developer.</p>
+				</section>
+				<section class="portfolioSection">
+					<h2>Portfolio</h2>
+					<div class="portfolioCarousel">
+						<div class="portfolioControlSlider">
+							<input type="range" min="0" max="7" id="portfolioControlRange" name="portfolioControlRange" />
+						</div>
+						<div class="carouselContainer">
+							<div class="leftArrow">
+								<div>
+									<a class="portfolioControl">
+										<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+											x="0px" y="0px" viewBox="0 0 32 32">
+											<path d="M5 16 L21 4 L11 16 L21 28 K" fill="currentColor" />
+										</svg>
+									</a>
+								</div>
+							</div>
+							<div class="projectDisplay">
+								<div id="carouselIndicator">_ . . . . . . .</div>
+								<div id="bankOfMumAndDad" class="projectContainer">
+									<h3>Bank Of Mum And Dad</h3>
+									<div class="linkContainer">
+										<a href="https://github.com/robings/bankOfMumAndDad" target="_blank">Code</a>
+									</div>
+									<img src="images/bankOfMumAndDad.png" alt="screenshot of bank of mum and dad project"/>
+									<p>A pocket money management App built for coding practice using <span>.NET Core with C#,</span> and React with TS.</p>
+									<ul>
+										<li>An app built for coding practice which provides a simple way to manage pocket money like a bank account.</li>
+										<li>The API is built using <span>.NET Core</span> with <span>C#</span>, <span>Entity Framework</span> and a <span>SQL</span> database.</li>
+										<li>The frontend is built using <span>React</span> with <span>TypeScript</span>.</li>
+										<li>Login is handled with <span>JWT</span>.</li>
+									</ul>
+								</div>
+								<div id="quackingToothTimer" class="projectContainer">
+									<h3>Quacking Tooth Timer</h3>
+									<div class="linkContainer">
+										<a href="https://robings.github.io/quackingToothTimer/" target="_blank">Site</a>
+										<a href="https://github.com/robings/quackingToothTimer" target="_blank">Code</a>
+									</div>
+									<img src="images/quackingToothTimer.jpg" alt="screenshot of quacking tooth timer project"/>
+									<p>A simple timer built for coding practice using <span>HTML</span>, <span></span>CSS</span> and <span></span>JavaScript</span>.</p>
+									<ul>
+										<li>A timer built for coding practice which provides a fun way to time teeth cleaning.</li>
+										<li>Uses <span>HTML</span> with <span>CSS</span> and <span>JavaScript</span>.</li>
+										<li><span>SVG</span> is used for the turning timer with calculations made in the <span>JavaScript</span> code.</li>
+									</ul>
+								</div>
+								<div id="officeSignIn" class="projectContainer">
+									<h3>Office Sign In App - Team Project</h3>
+									<div class="linkContainer">
+										<a href="demos/officeSignInAppDemo.mp4" target="_blank">Demo (6.1 MB)</a>
+										<a href="https://github.com/iO-Academy/2020-jan-officeSignIn" target="_blank">Code</a>
+									</div>
+									<img src="images/signInScreen.png" alt="screenshot of office sign in project"/>
+									<p>An App for signing visitors into a building using Slim and React.</p>
+									<ul>
+										<li>An App created with fellow <a class="iOLink" href="https://io-academy.uk/" target="_blank">iO Academy</a>
+											Students to allow visitors to an office to sign into the building with an iPad.</li>
+										<li>We built a <span>Slim</span> application to run the backend and a <span>React</span> app for the front end.</li>
+										<li>Security of the admin page is handled with <span>JWT</span>.</li>
+									</ul>
+								</div>
+								<div id="academyPortal" class="projectContainer">
+									<h3>Academy Portal- Team Project</h3>
+									<div class="linkContainer">
+										<a href="demos/academyPortal.mp4" target="_blank">Demo (7.6 MB)</a>
+										<a href="https://github.com/iO-Academy/AcademyPortal" target="_blank">Code</a>
+									</div>
+									<img src="images/academyPortal.png" alt="screenshot of academy portal project"/>
+									<p>A CRM system for managing applications to <a class="iOLink" href="https://io-academy.uk/" target="_blank">iO Academy</a>, built by several cohorts of academy students.</p>
+									<ul>
+										<li>We worked on a delete route for the applicant pages and a new application pathway page for a CRM system.</li>
+										<li><span>Slim</span> PHP framework was used to create routes using <span>Factory</span> and <span>Hydrator</span> patterns combined.</li>
+										<li><span>JavaScript</span> (ES6) was also used in the front end to fire API routes in the application.</li>
+									</ul>
+								</div>
+								<div id="financeCalculator" class="projectContainer">
+									<h3>Finance Calculator</h3>
+									<div class="linkContainer">
+										<a href="https://robings.github.io/financeCalculatorExercise/" target="_blank">Site</a>
+										<a href="https://github.com/robings/financeCalculatorExercise" target="_blank">Code</a>
+									</div>
+									<img src="images/financeCalculator.png" alt="screenshot of finance calculator project"/>
+									<p>A coding exercise to create a basic finance calculator.</p>
+									<ul>
+										<li>A basic financial calculator.</li>
+										<li><span>HTML</span> and <span>Sass</span> were used for static elements, with <span>SVG</span> for the sliders.</li>
+										<li><span>JavaScript</span> (ES6) was used for dynamic elements and for calculation.</li>
+									</ul>
+								</div>
+								<div id="fastTimesTables" class="projectContainer">
+									<h3>Fast Times Tables</h3>
+									<div class="linkContainer">
+										<a href="https://robings.github.io/fastTimesTables/" target="_blank">Site</a>
+										<a href="https://github.com/robings/fastTimesTables" target="_blank">Code</a>
+									</div>
+									<img src="images/fastTimesTables.png" alt="screenshot of fast times tables project"/>
+									<p>A times tables game coded from my son's design.</p>
+									<ul>
+										<li>A project bringing to life my son's idea of a times table game.</li>
+										<li><span>HTML</span> and <span>CSS</span> used for the static elements, with <span>JavaScript</span> (ES6) for the game
+											engine and dynamic elements.</li>
+									</ul>
+								</div>
+								<div id="aptitudeTest" class="projectContainer">
+									<h3>Aptitude Test - Team Project</h3>
+									<div class="linkContainer">
+										<a href="https://github.com/iO-Academy/aptitude-test/tree/master/app" target="_blank">Code</a>
+									</div>
+									<img src="images/aptitudeTest.png" alt="screenshot of aptitude test project"/>
+									<p>A system for delivering apptitude tests for <a class="iOLink" href="https://io-academy.uk/" target="_blank">iO Academy</a>, built by several cohorts of academy students.</p>
+									<ul>
+										<li>A web app to administer aptitude tests, using <span>HTML</span> and <span>Sass</span> for the UI, with
+											<span>JavaScript</span> (ES6) fetch requests to retrieve data from an API, and <span>handlebars</span> for
+											templating.
+										</li>
+										<li>The project gave us valuable experience of working on an <span>existing codebase</span>, <span>bug fixing</span>,
+											and shifting priorities during a sprint.</li>
+										<li>We worked on updating the test taking part of the app to allow for different tests and test lengths.</li>
+									</ul>
+								</div>
+								<div id="pairsGame" class="projectContainer">
+									<h3>Pairs Game - Team Project</h3>
+									<div class="linkContainer">
+										<a href="https://github.com/iO-Academy/2020-jan-pairsGame" target="_blank">Code</a>
+									</div>
+									<img src="images/pairsGame.png" alt="screenshot of pairs game project"/>
+									<p>A game programmed as a practice project with JavaScript.</p>
+									<ul>
+										<li>The aim of the game is to match pairs of images. Once two are revealed, if they are not a pair, they are rehidden
+											and the player must try to remember where they are.</li>
+										<li><span>HTML</span> and <span>CSS</span> were used for static UI elements, with <span>JavaScript</span> (ES6) used for
+											the game engine and dynamic UI elements.</li>
+									</ul>
+								</div>
+							</div>
+							<div class="rightArrow">
+								<div>
+									<a class="portfolioControl">
+										<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+											x="0px" y="0px" viewBox="0 0 32 32">
+											<path d="M24 16 L8 4 L18 16 L8 28 K" fill="currentColor" />
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="skillsSection" id ="idSkills">
+					<h2>Skills</h2>
+					<div>
+						<ul>
+							<li>HTML</li>
+							<li>CSS</li>
+							<li>JavaScript/TypeScript | Node | React</li>
+							<li>C#</li>
+							<li>PHP | Slim</li>
+						</ul>
+						<ul>
+							<li>SQL | Entity Framework</li>
+							<li>Event Store</li>
+							<li>Git | GitHub</li>
+							<li>Agile | Scrum</li>
+							<li>Attended 2 day Scrum Master course in 2020</li>
+						</ul>
+					</div>
+				</section>
+			</main>
+
+			<footer id="idContact">
+				<h2>Contact</h2>
+				<div class="contactLeft">
+					<ion-icon name="mail"></ion-icon>
+				</div>
+				<div class="contactLeft" id="email">robingordonstables&commat;gmail.com</div>
+				<div class="contactRight">
+					<a href="https://linkedin.com/in/robin-gordon-stables" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+					<a href="https://github.com/robings" target="_blank">
+						<ion-icon class="githubLogo" name="logo-github"></ion-icon>
+					</a>
+				</div>
+				<div id="emailForTouchScreens">robingordonstables&commat;gmail.com</div>
+				<div class="copyright">&copy; Robin Gordon-Stables 2020-2023</div>
+			</footer>
 		</div>
-		<div class="navContainer">
-			<a href="#idPortfolio" tabindex="2">Portfolio</a>
-			<a href="#idAboutMe" tabindex="3">About Me</a>
-			<a href="#idContact" tabindex="4">Contact</a>
-		</div>
-	</nav>
-
-	<header>
-		<div id='clockContainer'>
-			<a href="https://robings.github.io/clockExercise/" target="_blank" tabindex="101">
-				<svg viewBox='0 0 304 304'>
-					<circle r='152' cx='152' cy='152' style='fill: #1C2527; fill-opacity: 0;' />
-					<circle r='150' cx='152' cy='152' style='fill: #1C2527; fill-opacity: 0; stroke-width: 1; stroke: #000000;' />
-					<circle r='125' cx='152' cy='152' style='fill: #1C2527; fill-opacity: 0; stroke-width: 1; stroke: #000000;' />
-					<circle r='123' cx='152' cy='152' style='fill: #FFFFFF; fill-opacity: 0;' />
-					<line id='minutes' x1='152' y1='72' x2='152' y2='32' style='stroke-width: 1; stroke: #CA6702;' />
-					<line id='minutes' x1='152' y1='32' x2='149' y2='38' style='stroke-width: 1; stroke: #CA6702;' />
-					<line id='minutes' x1='152' y1='32' x2='155' y2='38' style='stroke-width: 1; stroke: #CA6702;' />
-
-
-					<g id='turningClockFace'>
-						<text x='138' y='19' style='fill: #CA6702; '>XII</text>
-						<g style='transform: rotate(30deg); transform-origin: center;'>
-							<text x='147' y='19' style='fill: #CA6702;'>I</text>
-						</g>
-						<g style='transform: rotate(60deg); transform-origin: center;'>
-							<text x='142' y='19' style='fill: #CA6702;'>II</text>
-						</g>
-						<g style='transform: rotate(90deg); transform-origin: center;'>
-							<text x='137' y='19' style='fill: #CA6702;'>III</text>
-						</g>
-						<g style='transform: rotate(120deg); transform-origin: center;'>
-							<text x='132' y='19' style='fill: #CA6702;'>IIII</text>
-						</g>
-						<g style='transform: rotate(150deg); transform-origin: center;'>
-							<text x='147' y='19' style='fill: #CA6702;'>V</text>
-						</g>
-						<g style='transform: rotate(180deg); transform-origin: center;'>
-							<text x='142' y='19' style='fill: #CA6702;'>VI</text>
-						</g>
-						<g style='transform: rotate(210deg); transform-origin: center;'>
-							<text x='137' y='19' style='fill: #CA6702;'>VII</text>
-						</g>
-						<g style='transform: rotate(240deg); transform-origin: center;'>
-							<text x='132' y='19' style='fill: #CA6702;'>VIII</text>
-						</g>
-						<g style='transform: rotate(270deg); transform-origin: center;'>
-							<text x='142' y='19' style='fill: #CA6702;'>IX</text>
-						</g>
-						<g style='transform: rotate(300deg); transform-origin: center;'>
-							<text x='147' y='19' style='fill: #CA6702;'>X</text>
-						</g>
-						<g style='transform: rotate(330deg); transform-origin: center;'>
-							<text x='142' y='19' style='fill: #CA6702;'>XI</text>
-						</g>
-					</g>
+		<div>
+			<a class="backToTopIcon" href="#top">
+				<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+					x="0px" y="0px" viewBox="0 0 32 32">
+					<path d="M4 24 L16 8 L28 24 L16 14 K" fill="currentColor" />
 				</svg>
 			</a>
 		</div>
-		<div>
-			<h1>Robin <span>Gordon-Stables</span></h1>
-			<h2>Full Stack Developer</h2>
-			<p>HTML | CSS | JS | React | C# | PHP | SQL | Event Store | Agile &amp; Scrum</p>
-		</div>
-	</header>
-
-	<main>
-		<section id="idPortfolio">
-			<h2>Portfolio</h2>
-			<div class="containerLarge">
-				<div class="projectBox bankOfMumAndDad">
-					<h3>Bank Of Mum And Dad</h3>
-					<p>A pocket money management App built for coding practice using <span>.NET Core with C#,</span> and React with TS.</p>
-					<div class="modal">
-						<div class="modalInternal">
-							<h3>Bank Of Mum And Dad<div class="closeModal" title="Close">X</div></h3>
-							<img class="projectImage" src="images/bankOfMumAndDad.png" alt="Screenshot of 'Bank Of Mum And Dad' project" />
-							<ul>
-								<li>An app built for coding practice which provides a simple way to manage pocket money like a bank account.</li>
-								<li>The API is built using <span>.NET Core</span> with <span>C#</span>, <span>Entity Framework</span> and a <span>SQL</span> database.</li>
-								<li>The frontend is built using <span>React</span> with <span>TypeScript</span>.</li>
-								<li>Login is handled with <span>JWT</span>.</li>
-							</ul>
-							<div class="modalFooter">
-								<a href="https://github.com/robings/bankOfMumAndDad" target="_blank">Code</a>
-							</div>
-						</div>
-					</div>
-					<div class="projectBoxFooter">
-						<div class="more">More...</div>
-						<a href="https://github.com/robings/bankOfMumAndDad" target="_blank">Code</a>
-					</div>
-				</div>
-			</div>
-			<div class="containerLarge">
-				<div class="projectBox officeSignInApp">
-					<h3>Office Sign In App - Team Project</h3>
-					<p>An App for signing visitors into a building using Slim and React.</p>
-					<div class="modal">
-						<div class="modalInternal">
-							<h3>Office Sign In App<div class="closeModal" title="Close">X</div></h3>
-							<img class="projectImage" src="images/signInScreen.png" alt="Screenshot of 'Office Sign In App' project" />
-							<ul>
-								<li>An App created with fellow <a class="iOLink" href="https://io-academy.uk/" target="_blank">iO Academy</a>
-									Students to allow visitors to an office to sign into the building with an iPad.</li>
-								<li>We built a <span>Slim</span> application to run the backend and a <span>React</span> app for the front end.</li>
-								<li>Security of the admin page is handled with <span>JWT</span>.</li>
-							</ul>
-							<div class="modalFooter">
-								<a href="https://github.com/iO-Academy/2020-jan-officeSignIn" target="_blank">Code</a>
-								<a href="demos/officeSignInAppDemo.mp4" target="_blank">Demo (6.1 MB)</a>
-							</div>
-						</div>
-					</div>
-					<div class="projectBoxFooter">
-						<div class="more">More...</div>
-						<a href="https://github.com/iO-Academy/2020-jan-officeSignIn" target="_blank" tabindex="202">Code</a>
-						<a href="demos/officeSignInAppDemo.mp4" target="_blank" tabindex="201">Demo (6.1 MB)</a>
-					</div>
-				</div>
-			</div>
-			<div class="containerLarge">
-				<div class="projectBox academyPortal">
-					<h3>Academy Portal - Team Project</h3>
-					<p>A CRM system for managing applications to <a class="iOLink" href="https://io-academy.uk/" target="_blank">iO Academy</a>, built by several cohorts of academy students.</p>
-					<div class="modal">
-						<div class="modalInternal">
-							<h3>Academy Portal<div class="closeModal" title="Close">X</div></h3>
-							<img class="projectImage" src="images/academyPortal.png" alt="Screenshot of 'Academy Portal' project" />
-							<ul>
-								<li>We worked on a delete route for the applicant pages and a new application pathway page for a CRM system.</li>
-								<li><span>Slim</span> PHP framework was used to create routes using <span>Factory</span> and <span>Hydrator</span> patterns combined.</li>
-								<li><span>JavaScript</span> (ES6) was also used in the front end to fire API routes in the application.</li>
-							</ul>
-							<div class="modalFooter">
-								<a href="https://github.com/iO-Academy/AcademyPortal" target="_blank">Code</a>
-								<a href="demos/academyPortal.mp4" target="_blank">Demo (7.6 MB)</a>
-							</div>
-						</div>
-					</div>
-					<div class="projectBoxFooter">
-						<div class="more">More...</div>
-						<a href="https://github.com/iO-Academy/AcademyPortal" target="_blank" tabindex="302">Code</a>
-						<a href="demos/academyPortal.mp4" target="_blank" tabindex="301">Demo (7.6 MB)</a>
-					</div>
-				</div>
-			</div>
-			<div class="containerSmall">
-				<div class="projectBox financeCalculator">
-					<h3>Finance Calculator</h3>
-					<p>A coding exercise to create a basic finance calculator.</p>
-					<div class="modal">
-						<div class="modalInternal">
-							<h3>Finance Calculator<div class="closeModal" title="Close">X</div></h3>
-							<img class="projectImage" src="images/financeCalculator.png" alt="Screenshot of 'Finance Calculator' project" />
-							<ul>
-								<li>A basic financial calculator.</li>
-								<li><span>HTML</span> and <span>Sass</span> were used for static elements, with <span>SVG</span> for the sliders.</li>
-								<li><span>JavaScript</span> (ES6) was used for dynamic elements and for calculation.</li>
-							</ul>
-							<div class="modalFooter">
-								<a href="https://github.com/robings/financeCalculatorExercise" target="_blank">Code</a>
-								<a href="https://robings.github.io/financeCalculatorExercise/" target="_blank">Site</a>
-							</div>
-						</div>
-					</div>
-					<div class="projectBoxFooter">
-						<div class="more">More...</div>
-						<a href="https://github.com/robings/financeCalculatorExercise" target="_blank" tabindex="402">Code</a>
-						<a href="https://robings.github.io/financeCalculatorExercise/" target="_blank" tabindex="401">Site</a>
-					</div>
-				</div>
-			</div>
-			<div class="containerSmall">
-				<div class="projectBox fastTimesTables">
-					<h3>Fast Times Tables</h3>
-					<p>A times tables game coded from my son's design.</p>
-					<div class="modal">
-						<div class="modalInternal">
-							<h3>Fast Times Tables<div class="closeModal" title="Close">X</div></h3>
-							<img class="projectImage" src="images/fastTimesTables.png" alt="Screenshot of 'Fast Times Tables' project" />
-							<ul>
-								<li>A project bringing to life my son's idea of a times table game.</li>
-								<li><span>HTML</span> and <span>CSS</span> used for the static elements, with <span>JavaScript</span> (ES6) for the game
-									engine and dynamic elements.</li>
-								</ul>
-							<div class="modalFooter">
-								<a href="https://github.com/robings/fastTimesTables" target="_blank">Code</a>
-								<a href="https://robings.github.io/fastTimesTables/" target="_blank">Site</a>
-							</div>
-						</div>
-					</div>
-					<div class="projectBoxFooter">
-						<div class="more">More...</div>
-						<a href="https://github.com/robings/fastTimesTables" target="_blank" tabindex="502">Code</a>
-						<a href="https://robings.github.io/fastTimesTables/" target="_blank" tabindex="501">Site</a>
-					</div>
-				</div>
-			</div>
-			<div class="containerLarge">
-				<div class="projectBox aptitudeTest">
-					<h3>Aptitude Test - Team Project</h3>
-					<p>A system for delivering apptitude tests for <a class="iOLink" href="https://io-academy.uk/" target="_blank">iO Academy</a>, built by several cohorts of academy students.</p>
-					<div class="modal">
-						<div class="modalInternal">
-							<h3>Academy Portal<div class="closeModal" title="Close">X</div></h3>
-							<img class="projectImage" src="images/aptitudeTest.png" alt="Screenshot of 'Aptitude Test' project" />
-							<ul>
-								<li>A web app to administer aptitude tests, using <span>HTML</span> and <span>Sass</span> for the UI, with
-									<span>JavaScript</span> (ES6) fetch requests to retrieve data from an API, and <span>handlebars</span> for
-									templating.
-								</li>
-								<li>The project gave us valuable experience of working on an <span>existing codebase</span>, <span>bug fixing</span>,
-									and shifting priorities during a sprint.</li>
-								<li>We worked on updating the test taking part of the app to allow for different tests and test lengths.</li>
-							</ul>
-							<div class="modalFooter">
-								<a href="https://github.com/iO-Academy/aptitude-test/tree/master/app" target="_blank">Code</a>
-							</div>
-						</div>
-					</div>
-					<div class="projectBoxFooter">
-						<div class="more">More...</div>
-						<a href="https://github.com/iO-Academy/aptitude-test/tree/master/app" target="_blank">Code</a>
-					</div>
-				</div>
-			</div>
-			<div class="containerSmall">
-				<div class="projectBox pairsGame">
-					<h3>Pairs Game - Team Project</h3>
-					<p>A game programmed as a practice project with JavaScript.</p>
-					<div class="modal">
-						<div class="modalInternal">
-							<h3>Pairs Game<div class="closeModal" title="Close">X</div></h3>
-							<img class="projectImage" src="images/pairsGame.png" alt="Screenshot of 'Pairs Game' project" />
-							<ul>
-								<li>The aim of the game is to match pairs of images. Once two are revealed, if they are not a pair, they are rehidden
-									and the player must try to remember where they are.</li>
-								<li><span>HTML</span> and <span>CSS</span> were used for static UI elements, with <span>JavaScript</span> (ES6) used for
-									the game engine and dynamic UI elements.</li>
-							</ul>
-							<div class="modalFooter">
-								<a href="https://github.com/iO-Academy/2020-jan-pairsGame" target="_blank">Code</a>
-							</div>
-						</div>
-					</div>
-					<div class="projectBoxFooter">
-						<div class="more">More...</div>
-						<a href="https://github.com/iO-Academy/2020-jan-pairsGame" target="_blank">Code</a>
-					</div>
-				</div>
-			</div>
-			<div class="containerSmall">
-				<div class="projectBox collectionApp">
-					<h3>Collection App</h3>
-					<p>A project to create an app that stores information about a collection.</p>
-					<div class="modal">
-						<div class="modalInternal">
-							<h3>Collection App<div class="closeModal" title="Close">X</div></h3>
-							<img class="projectImage" src="images/CollectionApp.png" alt="Screenshot of 'Collection App' project" />
-							<ul>
-								<li>A web app using a database to store and retrieve items, display them, and add new items.</li>
-								<li><span>HTML</span> and <span>CSS</span> were used for the UI, with <span>PHP</span> and <span>MySQL</span> used for
-								communication with the database and templating.</li>
-							</ul>
-							<div class="modalFooter">
-								<a href="https://github.com/robings/CollectionApp" target="_blank">Code</a>
-							</div>
-						</div>
-					</div>
-					<div class="projectBoxFooter">
-						<div class="more">More...</div>
-						<a href="https://github.com/robings/CollectionApp" target="_blank">Code</a>
-					</div>
-				</div>
-			</div>
-			<p class='info'>Click on the links at the bottom of a project to see more details.</p>
-		</section>
-
-		<section id='idAboutMe'>
-			<h2>About Me</h2>
-			<div class='aboutMeContainer'>
-				<div>
-					<img class="photo" src="images/RGS-570px.jpg" alt="a photo of Robin" />
-					<p>I spent many years as a project manager, but I've always had an interest in coding since starting out writing BASIC on a Commodore VIC20 as a child. In my project management jobs, I found ways to use VBA coding to automate and speed up repetitive tasks. After deciding to change career path, I retrained as a full stack developer with <a class="iOLink" href='https://io-academy.uk/' target='_blank'>iO Academy</a>, graduating in April 2020. I'm now in my first job as a software developer.</p>
-
-				</div>
-				<div>
-					<h4>Skills</h4>
-					<ul>
-						<li>HTML</li>
-						<li>CSS</li>
-						<li>JavaScript/TypeScript | Node | React</li>
-						<li>C#</li>
-						<li>PHP | Slim</li>
-					</ul>
-					<ul>
-						<li>SQL | Entity Framework</li>
-						<li>Event Store</li>
-						<li>Git | GitHub</li>
-						<li>Agile | Scrum</li>
-						<li>Attended 2 day Scrum Master course in 2020</li>
-					</ul>
-				</div>
-			</div>
-		</section>
-	</main>
-
-	<footer id="idContact">
-		<div class="contactLeft">
-			<ion-icon name="mail"></ion-icon>
-		</div>
-		<div class="contactLeft" id="email">robingordonstables&commat;gmail.com</div>
-		<div class="contactRight">
-			<a href="https://linkedin.com/in/robin-gordon-stables" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
-			<a href="https://github.com/robings" target="_blank">
-				<ion-icon class="githubLogo" name="logo-github"></ion-icon>
-			</a>
-		</div>
-		<div id="emailForTouchScreens">robingordonstables&commat;gmail.com</div>
-		<div class="copyright">&copy; Robin Gordon-Stables 2020-2023</div>
-	</footer>
-
-	<div>
-		<a class="backToTopIcon" href="#top">
-			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-				x="0px" y="0px" viewBox="0 0 32 32">
-				<path d="M4 24 L16 8 L28 24 L16 14 K" fill="currentColor" />
-			</svg>
-		</a>
-	</div>
-</body>
-
+	</body>
 </html>
