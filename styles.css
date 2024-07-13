@@ -148,12 +148,16 @@ main h2, footer h2 {
 	display: table-cell;
 	height: 100%;
 	border: 1px solid transparent;
+	border-radius: 7px;
 	cursor:pointer;
 }
 
-.leftArrow:hover, .rightArrow:hover {
-	border: 1px solid var(--divider);
-	border-radius: 7px;
+.leftArrow:hover {
+	border-left-color: var(--divider);
+}
+
+.rightArrow:hover {
+	border-right-color: var(--divider);
 }
 
 .leftArrow:hover .portfolioControl {
@@ -403,11 +407,6 @@ footer .githubLogo:hover {
 		min-height: 48px;
 	}
 
-	nav a:hover {
-		color: var(--accent-colour);
-		background-color: var(--default-background);
-	}
-
 	.navbarContainer {
 		height: 48px;
 	}
@@ -524,10 +523,6 @@ footer .githubLogo:hover {
 	nav {
 		color: var(--default-text-colour-light);
 		background-color: var(--default-background-light);
-		width: 80%;
-		padding-top: 10px;
-		position: fixed;
-		z-index: 1;
 	}
 
 	nav a:hover {
@@ -556,20 +551,18 @@ footer .githubLogo:hover {
 
 	.projectDisplay a:hover {
 		color: var(--accent-colour);
-		border-top: 5px solid var(--hover-colour-light);
+		border-top-color: var(--hover-colour-light);
 	}
 
 	footer a ion-icon:hover {
-		border: 1px solid var(--hover-colour-light);
+		border-color: var(--hover-colour-light);
 		color: var(--hover-colour-light);
-		font-size: 23px;
 	}
 
 	.backToTopIcon {
 		background-color: rgba(var(--default-background-light-rgb), 0.75);
 		color: var(--accent-colour);
-		border: 1px solid var(--divider-light);
-		border-left: 3px solid var(--divider-light);
+		border-color: var(--divider-light);
 	}
 	
 	.backToTopIcon:hover {
@@ -578,11 +571,15 @@ footer .githubLogo:hover {
 	}
 
 	.projectDisplay {
-		border: 1px solid var(--divider-light);
+		border-color: var(--divider-light);
 	}
 
-	.leftArrow:hover, .rightArrow:hover {
-		border: 1px solid var(--divider-light);
+	.leftArrow:hover {
+		border-left-color: var(--divider-light);
+	}
+
+	.rightArrow:hover {
+		border-right-color: var(--divider-light);
 	}
 	
 	.leftArrow:hover .portfolioControl {
@@ -592,25 +589,39 @@ footer .githubLogo:hover {
 	
 	.rightArrow:hover .portfolioControl {
 		color: var(--hover-colour-light);
-		border: 1px solid var(--divider-light);
-		border-right: 3px solid var(--accent-colour);
+		border-color: var(--divider-light);
+		border-right-color: var(--accent-colour);
 	}
 	
 	.portfolioControl {
-		border: 1px solid var(--divider-light);
-		border-left: 3px solid var(--divider-light);
+		border-color: var(--divider-light);
 	}
 	
 	.rightArrow .portfolioControl {
-		border: 1px solid var(--divider-light);
-		border-right: 3px solid var(--divider-light);
+		border-color: var(--divider-light);
 	}
 
 	input[type="range"]::-webkit-slider-runnable-track {
-		border: 1px solid var(--divider-light);
+		border-color: var(--divider-light);
 	}
 	
 	input[type="range"]::-moz-range-track  {
-		border: 1px solid var(--divider-light);
+		border-color: var(--divider-light);
+	}
+}
+
+@media (hover: none) and (prefers-color-scheme: light) {
+	.backToTopIcon {
+		color: var(--hover-colour-light);
+		border-left-color: var(--accent-colour);
+	}
+
+	.backToTopIcon:hover {
+		color: var(--hover-colour-light);
+		border-left-color: var(--accent-colour);
+	}
+
+	footer a ion-icon:hover {
+		color: var(--accent-colour);
 	}
 }
