@@ -1,13 +1,18 @@
 :root {
 	--defaultTextColour: #EEEEEE;
+	--default-text-colour-light: #1C2527;
 	--accent-colour: #CA6702;
 	--non-accent-colour: #818181;
 	--default-background: #1C2527;
+	--default-background-light: #FFFFFF;
 	--default-background-rgb: 23, 36, 39;
+	--default-background-light-rgb: 255, 255, 255;
 	--hover-white: #EEEEEE;
+	--hover-colour-light: #1C2527;
 	--iO-link-colour: #F53068;
 	--border: 202, 103, 2;
 	--divider: #333333;
+	--divider-light: #CCCCCC;
 	--main-font: "IBMPlexSans", "Courier", sans-serif;
 }
 
@@ -143,12 +148,16 @@ main h2, footer h2 {
 	display: table-cell;
 	height: 100%;
 	border: 1px solid transparent;
+	border-radius: 7px;
 	cursor:pointer;
 }
 
-.leftArrow:hover, .rightArrow:hover {
-	border: 1px solid var(--divider);
-	border-radius: 7px;
+.leftArrow:hover {
+	border-left-color: var(--divider);
+}
+
+.rightArrow:hover {
+	border-right-color: var(--divider);
 }
 
 .leftArrow:hover .portfolioControl {
@@ -398,11 +407,6 @@ footer .githubLogo:hover {
 		min-height: 48px;
 	}
 
-	nav a:hover {
-		color: var(--accent-colour);
-		background-color: var(--default-background);
-	}
-
 	.navbarContainer {
 		height: 48px;
 	}
@@ -508,5 +512,116 @@ footer .githubLogo:hover {
 
 	nav {
 		width: 75%;
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	html {
+		background-color: var(--default-background-light);
+	}
+
+	nav {
+		color: var(--default-text-colour-light);
+		background-color: var(--default-background-light);
+	}
+
+	nav a:hover {
+		color: var(--hover-colour-light);
+	}
+
+	main {
+		color: var(--default-text-colour-light);
+	}
+
+	main h2, footer h2 {
+		color: var(--default-text-colour-light);
+	}
+
+	.heroImage {
+		background-image: linear-gradient(to bottom, rgba(var(--default-background-light-rgb), 0.9), rgba(var(--default-background-light-rgb), 0.9)), url('images/html-code.jpg');
+	}
+
+	.projectDisplay h3 {
+		border-bottom-color: var(--hover-colour-light);
+	}
+
+	.projectDisplay a {
+		color: var(--hover-colour-light);
+	}
+
+	.projectDisplay a:hover {
+		color: var(--accent-colour);
+		border-top-color: var(--hover-colour-light);
+	}
+
+	footer a ion-icon:hover {
+		border-color: var(--hover-colour-light);
+		color: var(--hover-colour-light);
+	}
+
+	.backToTopIcon {
+		background-color: rgba(var(--default-background-light-rgb), 0.75);
+		color: var(--accent-colour);
+		border-color: var(--divider-light);
+	}
+	
+	.backToTopIcon:hover {
+		color: var(--hover-colour-light);
+		border-left-color: var(--accent-colour);
+	}
+
+	.projectDisplay {
+		border-color: var(--divider-light);
+	}
+
+	.leftArrow:hover {
+		border-left-color: var(--divider-light);
+	}
+
+	.rightArrow:hover {
+		border-right-color: var(--divider-light);
+	}
+	
+	.leftArrow:hover .portfolioControl {
+		color: var(--hover-colour-light);
+		border-left-color: var(--accent-colour);
+	}
+	
+	.rightArrow:hover .portfolioControl {
+		color: var(--hover-colour-light);
+		border-color: var(--divider-light);
+		border-right-color: var(--accent-colour);
+	}
+	
+	.portfolioControl {
+		border-color: var(--divider-light);
+	}
+	
+	.rightArrow .portfolioControl {
+		border-color: var(--divider-light);
+	}
+
+	input[type="range"]::-webkit-slider-runnable-track {
+		border-color: var(--divider-light);
+	}
+	
+	input[type="range"]::-moz-range-track  {
+		border-color: var(--divider-light);
+	}
+}
+
+@media (hover: none) and (prefers-color-scheme: light) {
+	.backToTopIcon {
+		color: var(--hover-colour-light);
+		border-left-color: var(--accent-colour);
+	}
+
+	.backToTopIcon:hover {
+		color: var(--hover-colour-light);
+		border-left-color: var(--accent-colour);
+	}
+
+	footer a ion-icon:hover {
+		color: var(--accent-colour);
 	}
 }
