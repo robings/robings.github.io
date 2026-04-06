@@ -138,26 +138,25 @@ main h2, footer h2 {
 	height: 2.5em;
 }
 
+.portfolioControlArrows {
+	width: 235px;
+	overflow: auto;
+	margin: 0 auto 16px auto;
+}
+
 .carouselContainer {
 	display: table;
 	width: 100%;
 }
 
 .leftArrow, .rightArrow {
-	width: 10%;
+	width: 42px;
 	display: table-cell;
 	height: 100%;
 	border: 1px solid transparent;
 	border-radius: 7px;
 	cursor:pointer;
-}
-
-.leftArrow:hover {
-	border-left-color: var(--divider);
-}
-
-.rightArrow:hover {
-	border-right-color: var(--divider);
+	float: left;
 }
 
 .leftArrow:hover .portfolioControl {
@@ -179,9 +178,7 @@ main h2, footer h2 {
 	width: 42px;
 	height: 42px;
 	cursor: pointer;
-	margin: 0 auto;
 	display: block;
-	transform: translateY(30px);
 }
 
 .rightArrow .portfolioControl {
@@ -286,8 +283,9 @@ input[type="range"]::-moz-range-thumb  {
 }
 
 #carouselIndicator {
-	width: 100%;
 	text-align: center;
+	float: left;
+	padding: 12.8px 40px;
 }
 
 #bankOfMumAndDad {
@@ -574,14 +572,6 @@ footer .githubLogo:hover {
 		border-color: var(--divider-light);
 	}
 
-	.leftArrow:hover {
-		border-left-color: var(--divider-light);
-	}
-
-	.rightArrow:hover {
-		border-right-color: var(--divider-light);
-	}
-	
 	.leftArrow:hover .portfolioControl {
 		color: var(--hover-colour-light);
 		border-left-color: var(--accent-colour);
