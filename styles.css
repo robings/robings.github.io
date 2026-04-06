@@ -141,7 +141,8 @@ main h2, footer h2 {
 .portfolioControlArrows {
 	width: 295px;
 	overflow: auto;
-	margin: 0 auto 16px auto;
+	margin: 0 auto;
+	padding-bottom: 16px;
 }
 
 .carouselContainer {
