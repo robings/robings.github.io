@@ -79,7 +79,11 @@ function toggleEmailForTouchScreen() {
 function buildIndicatorString(position) {
   let string = "";
   for (let i = 0; i < projects.length; i++) {
-    i == position ? (string = string + "_ ") : (string = string + ". ");
+    i == position
+      ? (string = string + "<span class='non-touch-indicator'>&nbsp;</span>")
+      : (string =
+          string +
+          "<span class='non-touch-indicator indicator-inactive'>&nbsp;</span>");
   }
 
   return string.trim();
@@ -121,10 +125,7 @@ function changeProject(newValue) {
 
   const indicatorString = buildIndicatorString(projectPosition);
 
-  document.getElementById("carouselIndicator").textContent = indicatorString;
-  // document.getElementById(
-  //   "diagnostics"
-  // ).textContent = `input value: ${diagnosticData.original}, output value: ${diagnosticData.new}, input position: ${diagnosticData.oldProjectPosition}, output position: ${diagnosticData.newProjectPosition}`;
+  document.getElementById("carouselIndicator").innerHTML = indicatorString;
 }
 
 function getTouches(evt) {
@@ -160,3 +161,6 @@ function handleTouchMove(evt) {
   xDown = null;
   yDown = null;
 }
+
+  document.getElementById("carouselIndicator").innerHTML =
+    buildIndicatorString(projectPosition);

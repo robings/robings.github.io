@@ -139,7 +139,7 @@ main h2, footer h2 {
 }
 
 .portfolioControlArrows {
-	width: 235px;
+	width: 295px;
 	overflow: auto;
 	margin: 0 auto 16px auto;
 }
@@ -227,6 +227,20 @@ input[type="range"]::-webkit-slider-thumb {
 	transform: translateY(-50%);
 }
 
+.non-touch-indicator {
+	width: 0.75em;
+  height: 0.75em;
+	background-color: transparent;
+	border: 2px solid var(--accent-colour);
+  border-radius: 50%;
+	display: inline-block;
+	margin: 0 2px;
+}
+
+.indicator-inactive {
+	border-color: var(--non-accent-colour);
+}
+
 input[type="range"]::-moz-range-thumb  {
   width: 1em;
   height: 1em;
@@ -285,7 +299,7 @@ input[type="range"]::-moz-range-thumb  {
 #carouselIndicator {
 	text-align: center;
 	float: left;
-	padding: 12.8px 40px;
+	padding: 12px 40px 14px 40px;
 }
 
 #bankOfMumAndDad {
@@ -598,6 +612,10 @@ footer .githubLogo:hover {
 	input[type="range"]::-moz-range-track  {
 		border-color: var(--divider-light);
 	}
+
+	.indicator-inactive {
+	border-color: var(--divider-light);
+}
 }
 
 @media (hover: none) and (prefers-color-scheme: light) {
