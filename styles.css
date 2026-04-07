@@ -459,11 +459,7 @@ footer .githubLogo:hover {
 		display: block;
 	}
 
-	#carouselIndicator {
-		display: none;
-	}
-
-	.leftArrow, .rightArrow {
+	.portfolioControlArrows {
 		display: none;
 	}
 
