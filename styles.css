@@ -138,26 +138,26 @@ main h2, footer h2 {
 	height: 2.5em;
 }
 
+.portfolioControlArrows {
+	width: 295px;
+	overflow: auto;
+	margin: 0 auto;
+	padding-bottom: 16px;
+}
+
 .carouselContainer {
 	display: table;
 	width: 100%;
 }
 
 .leftArrow, .rightArrow {
-	width: 10%;
+	width: 42px;
 	display: table-cell;
 	height: 100%;
 	border: 1px solid transparent;
 	border-radius: 7px;
 	cursor:pointer;
-}
-
-.leftArrow:hover {
-	border-left-color: var(--divider);
-}
-
-.rightArrow:hover {
-	border-right-color: var(--divider);
+	float: left;
 }
 
 .leftArrow:hover .portfolioControl {
@@ -179,9 +179,7 @@ main h2, footer h2 {
 	width: 42px;
 	height: 42px;
 	cursor: pointer;
-	margin: 0 auto;
 	display: block;
-	transform: translateY(30px);
 }
 
 .rightArrow .portfolioControl {
@@ -228,6 +226,20 @@ input[type="range"]::-webkit-slider-thumb {
 	border: 2px solid var(--accent-colour);
   border-radius: 50%;
 	transform: translateY(-50%);
+}
+
+.non-touch-indicator {
+	width: 0.75em;
+  height: 0.75em;
+	background-color: transparent;
+	border: 2px solid var(--accent-colour);
+  border-radius: 50%;
+	display: inline-block;
+	margin: 0 2px;
+}
+
+.indicator-inactive {
+	border-color: var(--non-accent-colour);
 }
 
 input[type="range"]::-moz-range-thumb  {
@@ -286,8 +298,9 @@ input[type="range"]::-moz-range-thumb  {
 }
 
 #carouselIndicator {
-	width: 100%;
 	text-align: center;
+	float: left;
+	padding: 12px 40px 14px 40px;
 }
 
 #bankOfMumAndDad {
@@ -446,11 +459,7 @@ footer .githubLogo:hover {
 		display: block;
 	}
 
-	#carouselIndicator {
-		display: none;
-	}
-
-	.leftArrow, .rightArrow {
+	.portfolioControlArrows {
 		display: none;
 	}
 
@@ -574,14 +583,6 @@ footer .githubLogo:hover {
 		border-color: var(--divider-light);
 	}
 
-	.leftArrow:hover {
-		border-left-color: var(--divider-light);
-	}
-
-	.rightArrow:hover {
-		border-right-color: var(--divider-light);
-	}
-	
 	.leftArrow:hover .portfolioControl {
 		color: var(--hover-colour-light);
 		border-left-color: var(--accent-colour);
@@ -608,6 +609,10 @@ footer .githubLogo:hover {
 	input[type="range"]::-moz-range-track  {
 		border-color: var(--divider-light);
 	}
+
+	.indicator-inactive {
+	border-color: var(--divider-light);
+}
 }
 
 @media (hover: none) and (prefers-color-scheme: light) {
